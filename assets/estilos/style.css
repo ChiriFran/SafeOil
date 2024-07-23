@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: #f4f4f4;
+  font-family: var(--font-family);
+}
+
+@font-face {
+  font-family: "Monserrat";
+  src: url(/assets/tipografia/Montserrat-VariableFont_wght.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Monserrat";
+  src: url(/assets/tipografia/Montserrat-VariableFont_wght.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+
+:root {
+  --main-color-grey: #737a82;
+  --main-color-aqua-green: #2ed9ad;
+  --main-color-yellow: #cbb32b;
+  --main-color-black: #000000;
+  --font-family: "Monserrat";
+}
+
+#headerContainer {
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+#logoImg {
+  width: 200px;
+  height: 200px;
+}
+
+#navMenu {
+  display: flex;
+}
+
+#navMenu ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin-right: 1rem;
+}
+
+#navMenu ul li {
+  position: relative;
+}
+
+#navMenu ul li a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+#navMenu ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color-yellow);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+#navMenu ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#navIcon {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#closeNavIcon {
+  display: none;
+}
+
+#heroContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 70vh;
+  text-align: center;
+}
+
+#leftHero,
+#rightHero {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#leftHero p,
+#rightHero p {
+  padding: 0 15%;
+}
+
+#leftHero::before,
+#rightHero::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.06;
+  z-index: 1000;
+}
+
+#leftHero::before {
+  background-image: url("../ilustraciones/escudo-con-ranura-llave.svg");
+  text-align: center;
+}
+
+#rightHero::before {
+  background-image: url("../ilustraciones/huella-digital.svg");
+  text-align: center;
+}
+
+#centerHero {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--main-color-yellow);
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 0 2rem;
+}
+
+#centerHero::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 1000;
+}
+
+#centerHero::before {
+  background-image: url("../ilustraciones/caja-con-circulo-central.svg");
+  text-align: center;
+}
+
+#centerHero h2 {
+  background-color: transparent;
+  color: var(--main-color-black);
+  padding: 0 10%;
+}
+
+#centerHero p {
+  background-color: transparent;
+  color: #000000e4;
+  font-size: 1rem;
+}
+
+#spanContacto {
+  background-color: var(--main-color-yellow);
+  color: var(--main-color-black);
+}
+
+#centerHero button {
+  display: flex;
+  width: 80%;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--main-color-black);
+  padding: 1rem 2rem;
+  text-align: center;
+  color: var(--main-color-yellow);
+  cursor: pointer;
+  z-index: 100;
+  font-size: 1.2rem;
+}
+
+#filosofia {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--main-color-yellow);
+}
+
+#filosofia p {
+  position: relative;
+  display: flex;
+  width: 70%;
+  padding: 10%;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--main-color-yellow);
+  color: var(--main-color-black);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+#filosofiaText::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  background-image: url("/assets/logo/logo-huella-negro.png");
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 700px) {
+  #logoImg {
+    width: 200px;
+    height: auto;
+  }
+
+  #navMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 200px;
+    background-color: var(--main-color-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: right 0.3s ease;
+    padding: 5rem 0;
+    z-index: 10000;
+  }
+
+  #navMenu ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #navMenu ul li a {
+    font-size: 1rem;
+  }
+
+  #navIcon {
+    display: block;
+  }
+
+  #closeNavIcon {
+    display: block;
+    font-size: 1rem;
+  }
+
+  #navMenu.active {
+    right: 0;
+  }
+
+  #heroContainer {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 180vh;
+    text-align: center;
+  }
+
+  #centerHero {
+    grid-area: 1 / 1;
+    height: 80vh;
+  }
+
+  #centerHero::before {
+    width: 100%;
+    height: 100%;
+  }
+
+  #centerHero h2 {
+    padding: 0 0;
+  }
+
+  #leftHero,
+  #rightHero {
+    justify-content: flex-end;
+    font-size: 1.1rem;
+    padding: 10% 5%;
+  }
+
+  #leftHero p,
+  #rightHero p {
+    padding: 0 5%;
+  }
+
+  #filosofia {
+    height: 70vh;
+  }
+
+  #filosofia p {
+    width: 95%;
+    padding: 0 5%;
+    font-size: 1rem;
+  }
+
+  #filosofiaText::before {
+    width: 250px;
+    height: 250px;
+    top: 70%;
+  }
+}
