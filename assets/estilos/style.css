@@ -9,14 +9,14 @@
 
 @font-face {
   font-family: "Monserrat";
-  src: url(/assets/tipografia/Montserrat-VariableFont_wght.ttf);
+  src: url(../tipografia/Montserrat-Italic-VariableFont_wght.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Monserrat";
-  src: url(/assets/tipografia/Montserrat-VariableFont_wght.ttf);
+  src: url(../tipografia/Montserrat-Italic-VariableFont_wght.ttf);
   font-weight: 800;
   font-style: normal;
 }
@@ -240,7 +240,7 @@
   width: 400px;
   height: 400px;
   top: 50%;
-  background-image: url("/assets/logo/logo-huella-negro.png");
+  background-image: url("../logo/logo-huella-negro.svg");
   text-align: center;
   background-size: contain;
   background-repeat: no-repeat;
