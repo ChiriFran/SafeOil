@@ -247,11 +247,12 @@
   width: 400px;
   height: 400px;
   top: 50%;
-  background-image: url("../logo/logo-huella.svg");
+  background-image: url("../logo/logo-todo-blanco.svg");
   text-align: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  filter: brightness(0.1);
   z-index: 1000;
 }
 
