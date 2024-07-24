@@ -338,7 +338,7 @@
     padding: 0 0;
   }
 
-  #leftHero{
+  #leftHero {
     margin-top: 6rem;
   }
 
@@ -388,6 +388,29 @@
   #mobileHero::before {
     background-image: url("../ilustraciones/flecha-circular.svg");
     text-align: center;
+  }
+
+  #leftHero::before,
+  #rightHero::before,
+  #centerHero::before,
+  #mobileHero::before {
+    opacity: 0.2;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 0.2;
+      transform: translateY(0);
+    }
+  }
+
+  .animate::before {
+    animation: fadeIn 1s ease-out forwards;
   }
 
   #filosofia {
