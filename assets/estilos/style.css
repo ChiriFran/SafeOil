@@ -393,9 +393,10 @@
   #leftHero::before,
   #rightHero::before,
   #centerHero::before,
-  #mobileHero::before {
-    opacity: 0.2;
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  #mobileHero::before,
+  #filosofiaText::before {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
 
   @keyframes fadeIn {
@@ -409,7 +410,10 @@
     }
   }
 
-  .animate::before {
+  .animate-left::before,
+  .animate-right::before,
+  .animate-mobile::before,
+  .animate-filosofia::before {
     animation: fadeIn 1s ease-out forwards;
   }
 
