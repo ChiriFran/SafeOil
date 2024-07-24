@@ -48,6 +48,9 @@
   display: flex;
 }
 
+#navMenu::before {
+  display: none;
+}
 #navMenu ul {
   list-style: none;
   display: flex;
@@ -131,7 +134,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.06;
+  opacity: 0.1;
   z-index: 1000;
 }
 
@@ -240,7 +243,7 @@
   width: 400px;
   height: 400px;
   top: 50%;
-  background-image: url("../logo/logo-huella-negro.png");
+  background-image: url("../logo/logo-huella.svg");
   text-align: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -268,6 +271,21 @@
     transition: right 0.3s ease;
     padding: 5rem 0;
     z-index: 10000;
+  }
+
+  #navMenu::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    background-image: url("../logo/logo-todo-blanco.svg");
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1000;
   }
 
   #navMenu ul {
@@ -320,6 +338,11 @@
     justify-content: flex-end;
     font-size: 1.1rem;
     padding: 10% 5%;
+  }
+
+  #leftHero::before,
+  #rightHero::before {
+    opacity: 0.2;
   }
 
   #leftHero p,
