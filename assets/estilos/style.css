@@ -338,11 +338,15 @@
     padding: 0 0;
   }
 
+  #leftHero{
+    margin-top: 6rem;
+  }
+
   #leftHero,
   #rightHero {
     justify-content: flex-end;
     font-size: 1.1rem;
-    padding: 10% 5%;
+    padding: 5% 5%;
     height: 40vh;
   }
 
