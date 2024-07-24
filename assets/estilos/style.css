@@ -392,7 +392,6 @@
 
   #leftHero::before,
   #rightHero::before,
-  #centerHero::before,
   #mobileHero::before,
   #filosofiaText::before {
     opacity: 0;
