@@ -322,6 +322,7 @@
     width: 100%;
     height: auto;
     text-align: center;
+    align-items: end;
   }
 
   #centerHero {
