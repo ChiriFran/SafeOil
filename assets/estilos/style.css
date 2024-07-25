@@ -278,6 +278,7 @@
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50vh;
 }
 
 #valoresGrid {
@@ -331,6 +332,100 @@
   transform: scale(1);
   opacity: 1;
   animation: valoresIconAnim 1s ease-in-out forwards;
+}
+
+#contactoContainer {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#contactoInfo {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 30%;
+}
+
+#contactoInfo h4 {
+  margin: 1rem 0 0.5rem 0;
+  color: var(--main-color-yellow);
+  font-size: 1rem;
+}
+
+#contactoInfo p {
+  font-size: 1rem;
+  color: var(--main-color-yellow);
+}
+
+#infoEmail,
+#infoPhone,
+#infoAddress {
+  position: relative;
+  width: 200px;
+}
+
+#infoEmail::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  position: absolute;
+  top: -150%;
+  left: 30%;
+  background-color: var(--main-color-yellow);
+  background-image: url(../icons/email.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+#infoPhone::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -150%;
+  left: 30%;
+  background-color: var(--main-color-yellow);
+  border-radius: 100%;
+  background-color: var(--main-color-yellow);
+  background-image: url(../icons/phone.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+#infoAddress::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -150%;
+  left: 30%;
+  background-color: var(--main-color-yellow);
+  border-radius: 100%;
+  background-color: var(--main-color-yellow);
+  background-image: url(../icons/location.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+#contactoForm {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 70%;
 }
 
 @keyframes valoresIconAnim {
@@ -442,7 +537,6 @@
   #leftHero::before,
   #rightHero::before {
     opacity: 0.2;
-
   }
 
   #leftHero p,
@@ -532,9 +626,12 @@
     position: relative;
     background-color: var(--main-color-black);
     width: 100%;
-    height: auto;
-    padding-bottom: auto;
+    height: 100%;
+    margin-bottom: 25vh;
+
   }
+
+
 
   #valoresGrid {
     display: flex;
@@ -569,4 +666,35 @@
     /* Initial state */
     transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
   }
+
+  #contactoContainer {
+    height: 100vh;
+  }
+
+  #contactoInfo {
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    height: auto;
+  }
+
+  #infoEmail,
+  #infoPhone,
+  #infoAddress {
+    margin: 5rem 0;
+    z-index: 10000;
+  }
+
+  #contactoForm {
+    position: relative;
+    height: 50vh;
+  }
+
+  #infoEmail::after, #infoPhone::after, #infoAddress::after {
+    width: 60px;
+    height: 60px;
+    top: -2rem;
+    left: -30%;
+  }
+
 }
