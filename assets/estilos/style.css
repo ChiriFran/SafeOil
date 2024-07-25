@@ -183,11 +183,11 @@
 @keyframes heroImgAnim {
   from {
     transform: scale(0.8);
-    transform: translateY(0);
+    transform: translateY(50px);
   }
   to {
-    transform: scale(1.1);
-    transform: translateY(-50px);
+    transform: scale(1);
+    transform: translateY(0);
   }
 }
 
