@@ -37,6 +37,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  z-index: 10000;
 }
 
 #logoImg {
@@ -79,7 +80,7 @@
   background-color: var(--main-color-yellow);
   transform: scaleX(0);
   transform-origin: bottom right;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
 #navMenu ul li a:hover::before {
@@ -170,12 +171,24 @@
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.1;
-  z-index: 1000;
+  z-index: 100;
 }
 
 #centerHero::before {
   background-image: url("../ilustraciones/caja-con-circulo-central.svg");
   text-align: center;
+  animation: heroImgAnim 2s ease-in-out forwards;
+}
+
+@keyframes heroImgAnim {
+  from {
+    transform: scale(0.8);
+    transform: translateY(0);
+  }
+  to {
+    transform: scale(1.1);
+    transform: translateY(-50px);
+  }
 }
 
 #centerHero h2 {
@@ -306,6 +319,29 @@
   flex-basis: 45%; /* Ajusta el tamaño para centrar los últimos dos elementos */
 }
 
+.valoresIcon {
+  /* Initial state */
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.animate-icon {
+  /* Example animation: scale up and fade in */
+  transform: scale(1);
+  opacity: 1;
+  animation: valoresIconAnim 1s ease-in-out forwards;
+}
+
+@keyframes valoresIconAnim {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
 @media screen and (max-width: 700px) {
   #logoImg {
     width: 200px;
@@ -354,6 +390,7 @@
 
   #navIcon {
     display: block;
+    z-index: 1000;
   }
 
   #closeNavIcon {
@@ -405,6 +442,7 @@
   #leftHero::before,
   #rightHero::before {
     opacity: 0.2;
+
   }
 
   #leftHero p,
@@ -453,10 +491,12 @@
   @keyframes fadeIn {
     from {
       opacity: 0;
+      scale: 0.8;
       transform: translateY(50px);
     }
     to {
       opacity: 0.2;
+      scale: 1;
       transform: translateY(0);
     }
   }
@@ -465,7 +505,7 @@
   .animate-right::before,
   .animate-mobile::before,
   .animate-filosofia::before {
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 1.2s ease-out forwards;
   }
 
   #filosofia {
@@ -528,13 +568,5 @@
   .valoresIcon {
     /* Initial state */
     transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
-    opacity: 0;
-    transform: scale(0.8);
-  }
-
-  .animate-icon {
-    /* Example animation: scale up and fade in */
-    transform: scale(1.2);
-    opacity: 1;
   }
 }
