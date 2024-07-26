@@ -508,7 +508,8 @@ label {
 .textarea-field {
   width: 100%;
   padding: 10px;
-  border: 1px solid rgba(255, 255, 0, 0.229);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 0, 0.229);
   color: var(--main-color-yellow);
   resize: none;
   margin-top: 0.5rem;
