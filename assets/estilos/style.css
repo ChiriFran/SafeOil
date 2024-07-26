@@ -446,6 +446,24 @@
     0% 30% /* Left side */
   );
 }
+
+#infoEmail::after,
+#infoPhone::after,
+#infoAddress::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s, transform 2s;
+}
+
+#infoEmail.animate-info::after,
+#infoPhone.animate-info::after,
+#infoAddress.animate-info::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #contactoForm {
   display: flex;
   flex-flow: column;
@@ -506,7 +524,7 @@ label {
 }
 
 .submit-button:hover {
-  background-color: #0056b3;
+  background-color: #2ed9ad;
 }
 
 @keyframes valoresIconAnim {
@@ -777,7 +795,7 @@ label {
     left: -30%;
   }
 
-  #main-container{
+  #main-container {
     width: 90%;
   }
 
@@ -790,4 +808,3 @@ label {
     width: 100%;
   }
 }
- 

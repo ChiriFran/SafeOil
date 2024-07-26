@@ -3,70 +3,78 @@ document.addEventListener("DOMContentLoaded", () => {
   const rightHero = document.querySelector("#rightHero");
   const mobileHero = document.querySelector("#mobileHero");
   const filosofiaText = document.querySelector("#filosofiaText");
-  const valoresIcons = document.querySelectorAll(".valoresIcon"); // Select all images
+  const valoresIcons = document.querySelectorAll(".valoresIcon");
+  const infoEmail = document.querySelector("#infoEmail");
+  const infoPhone = document.querySelector("#infoPhone");
+  const infoAddress = document.querySelector("#infoAddress");
 
-  // Observer options for non-icon elements
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 1, // Trigger animation when 100% of the element is in view
+    threshold: 1,
   };
 
-  // Observer options for icon elements
   const iconObserverOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.6, // Trigger animation when 60% of the element is in view
+    threshold: 0.6,
   };
 
-  // Observer callback function
   const observerCallback = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         if (entry.target.id === "leftHero") {
           entry.target.classList.remove("animate-left");
-          void entry.target.offsetWidth; // Trigger reflow to restart animation
+          void entry.target.offsetWidth;
           entry.target.classList.add("animate-left");
         } else if (entry.target.id === "rightHero") {
           entry.target.classList.remove("animate-right");
-          void entry.target.offsetWidth; // Trigger reflow to restart animation
+          void entry.target.offsetWidth;
           entry.target.classList.add("animate-right");
         } else if (entry.target.id === "mobileHero") {
           entry.target.classList.remove("animate-mobile");
-          void entry.target.offsetWidth; // Trigger reflow to restart animation
+          void entry.target.offsetWidth;
           entry.target.classList.add("animate-mobile");
         } else if (entry.target.id === "filosofiaText") {
           entry.target.classList.remove("animate-filosofia");
-          void entry.target.offsetWidth; // Trigger reflow to restart animation
+          void entry.target.offsetWidth;
           entry.target.classList.add("animate-filosofia");
         } else if (entry.target.classList.contains("valoresIcon")) {
           entry.target.classList.remove("animate-icon");
-          void entry.target.offsetWidth; // Trigger reflow to restart animation
+          void entry.target.offsetWidth;
           entry.target.classList.add("animate-icon");
+        } else if (
+          entry.target.id === "infoEmail" ||
+          entry.target.id === "infoPhone" ||
+          entry.target.id === "infoAddress"
+        ) {
+          entry.target.classList.remove("animate-info");
+          void entry.target.offsetWidth;
+          entry.target.classList.add("animate-info");
         }
-        observer.unobserve(entry.target); // Stop observing after the first time element is in view
+        observer.unobserve(entry.target);
       }
     });
   };
 
-  // Create observers with different thresholds
   const observer = new IntersectionObserver(observerCallback, observerOptions);
   const iconObserver = new IntersectionObserver(
     observerCallback,
     iconObserverOptions
   );
 
-  // Observe non-icon elements
   [leftHero, rightHero, mobileHero, filosofiaText].forEach((element) => {
     if (element) observer.observe(element);
   });
 
-  // Observe icon elements
   valoresIcons.forEach((element) => {
     if (element) iconObserver.observe(element);
   });
 
-  // Apply animations on load if elements are already in view
+  [infoEmail, infoPhone, infoAddress].forEach((element) => {
+    if (element) iconObserver.observe(element);
+  });
+
   const checkVisibilityOnLoad = () => {
     [leftHero, rightHero, mobileHero, filosofiaText].forEach((element) => {
       if (element) {
@@ -92,6 +100,17 @@ document.addEventListener("DOMContentLoaded", () => {
           rect.bottom > window.innerHeight * 0.4
         ) {
           element.classList.add("animate-icon");
+        }
+      }
+    });
+    [infoEmail, infoPhone, infoAddress].forEach((element) => {
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (
+          rect.top < window.innerHeight * 0.6 &&
+          rect.bottom > window.innerHeight * 0.4
+        ) {
+          element.classList.add("animate-info");
         }
       }
     });
