@@ -396,14 +396,14 @@
   margin-bottom: 25vh;
 }
 
-#contactoContainer h3 {
+#contactoTitle {
   color: var(--main-color-yellow);
   font-size: 5rem;
   margin: 2rem 0 1rem 0;
   text-align: center;
 }
 
-#contactoContainer p {
+#contactoTtext {
   color: var(--main-color-grey);
   font-size: 1.2rem;
   margin-bottom: 2rem;
@@ -925,6 +925,12 @@ label {
     display: flex;
     flex-flow: column;
     width: 90%;
+    margin-top: 5rem;
+    height: auto;
+  }
+
+  #contactoForm{
+    margin-top: 5rem;
   }
 
   #infoEmail,
@@ -945,7 +951,6 @@ label {
 
   #main-container {
     width: 90%;
-    margin-top: 50vh;
   }
 
   #main-container h3 {
@@ -971,6 +976,20 @@ label {
 
   #contactoForm button {
     width: 100%;
+  }
+  
+  #serviciosTitle, #valoresTitle, #contactoTitle {
+    font-size: 1.8rem;
+    color: var(--main-color-yellow);
+    text-align: center;
+  }
+
+    
+  #serviciosText, #valoresText, #contactoText {
+    font-size: 1rem;
+    padding: 0 5%;
+    color: var(--main-color-grey);
+    text-align: center;
   }
 
   #footerContainer {
