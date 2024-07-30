@@ -861,7 +861,7 @@ label {
     line-height: 1.2;
   }
 
-  #centerHero p {
+  #centerHero p{
     font-size: 0.8rem;
     filter: grayscale(1);
   }
@@ -967,7 +967,7 @@ label {
   }
 
   #servicios {
-    height: 185vh;
+    height: 200vh;
   }
 
   #serviciosGrid {
