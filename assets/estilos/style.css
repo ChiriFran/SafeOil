@@ -241,8 +241,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: 20vh;
-  height: 40vh;
+  height: 60vh;
   background-color: var(--main-color-yellow);
 }
 
