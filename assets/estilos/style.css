@@ -404,7 +404,6 @@
   width: 60px;
   height: 60px;
   font-size: 36px;
-  font-family: sans-serif, Arial;
   text-align: center;
   line-height: 60px; /* Centra el texto verticalmente */
   cursor: pointer;
@@ -428,7 +427,7 @@
 }
 
 .serviciosItemsText {
-  position: absolute;
+  position: absolute; /* Posiciona el contenido desplegable de manera absoluta */
   top: 100%; /* Justo debajo del botón */
   left: 0;
   width: 100%;
@@ -442,11 +441,11 @@
   box-sizing: border-box;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
   height: 300px; /* Altura fija para el contenido desplegable */
-  z-index: 1; /* Asegura que el contenido esté debajo del botón */
+  z-index: 1; /* Asegura que el contenido esté sobre otros elementos */
 }
 
 .serviciosItem.open .serviciosItemsText {
-  max-height: 150px; /* Altura máxima fija cuando se despliega */
+  max-height: 300px; /* Altura máxima fija cuando se despliega */
   opacity: 1;
 }
 
@@ -1055,7 +1054,7 @@ label {
   }
 
   #servicios {
-    height: 200vh;
+    height: 230vh;
   }
 
   #serviciosGrid {
@@ -1064,7 +1063,8 @@ label {
   }
 
   .serviciosItem {
-    margin: 20% 0 0 0;
+    margin: 5% 0;
+    margin-bottom: 250px;
   }
 
   #valores {
@@ -1196,8 +1196,8 @@ label {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 380px) {
   #servicios {
-    height: 300vh;
+    height: 260vh;
   }
 }
