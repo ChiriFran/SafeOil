@@ -861,6 +861,11 @@ label {
     line-height: 1.2;
   }
 
+  #centerHero p{
+    font-size: 0.8rem;
+    filter: grayscale(1);
+  }
+
   #leftHero {
     margin-top: 6rem;
   }
