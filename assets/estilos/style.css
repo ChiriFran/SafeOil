@@ -404,6 +404,7 @@
   width: 60px;
   height: 60px;
   font-size: 36px;
+  font-family: sans-serif, Arial;
   text-align: center;
   line-height: 60px; /* Centra el texto verticalmente */
   cursor: pointer;
