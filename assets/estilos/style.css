@@ -235,6 +235,65 @@
 #mobileHero {
   display: none;
 }
+#estadisticasContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20vh;
+  height: 40vh;
+  background-color: var(--main-color-yellow);
+}
+
+.counters {
+  text-align: center;
+  background-color: var(--main-color-yellow);
+}
+
+.counters > div {
+  margin: 0 auto;
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem 8%;
+  background-color: var(--main-color-yellow);
+}
+
+.counter {
+  position: relative;
+  background-color: var(--main-color-yellow);
+}
+
+.counterText {
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: var(--main-color-yellow);
+  color: var(--main-color-black);
+  margin-top: 1rem;
+}
+
+.counterNumber {
+  background-color: var(--main-color-yellow);
+  color: var(--main-color-black);
+}
+
+.counterNumber span {
+  font-size: 4rem;
+  background-color: var(--main-color-yellow);
+  color: var(--main-color-black);
+}
+
+.counter:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 5em;
+  top: 50%;
+  right: -6em;
+  transform: translateY(-50%);
+  background-color: var(--main-color-black);
+}
 
 #filosofia {
   position: relative;
@@ -244,7 +303,7 @@
   flex-flow: column;
   align-items: center;
   text-align: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: var(--main-color-yellow);
 }
 
@@ -1032,6 +1091,27 @@ label {
   .animate-mobile::before,
   .animate-filosofia::before {
     animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  #estadisticasContainer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    height: 100vh;
+  }
+
+  .counters > div {
+    grid-template-columns: 1fr;
+    row-gap: 5em;
+  }
+
+  .counter:not(:last-child)::before {
+    width: 90%;
+    height: 2px;
+    top: initial;
+    right: initial;
+    left: 50%;
+    bottom: -3em;
+    transform: translateX(-50%);
   }
 
   #filosofia {
