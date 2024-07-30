@@ -280,7 +280,7 @@
 #servicios {
   display: flex;
   width: 100%;
-  height: 165vh;
+  height: 100vh;
   flex-flow: column;
   align-items: center;
   justify-content: center;
@@ -861,7 +861,7 @@ label {
     line-height: 1.2;
   }
 
-  #centerHero p{
+  #centerHero p {
     font-size: 0.8rem;
     filter: grayscale(1);
   }
@@ -964,6 +964,10 @@ label {
     width: 250px;
     height: 250px;
     top: 70%;
+  }
+
+  #servicios {
+    height: 185vh;
   }
 
   #serviciosGrid {
