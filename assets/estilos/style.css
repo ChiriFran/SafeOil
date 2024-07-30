@@ -319,6 +319,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 5%;
+  margin: 0 1rem;
 }
 
 .serviciosItem::before {
@@ -385,10 +386,11 @@
   background-color: transparent;
   margin-top: 1rem;
 }
+
 .serviciosItem {
   position: relative;
   display: flex;
-  flex-direction: column; /* Organiza el contenido en una columna */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -402,25 +404,50 @@
   width: 60px;
   height: 60px;
   font-size: 36px;
+  font-family: sans-serif, Arial;
   text-align: center;
-  line-height: 40px;
+  line-height: 60px; /* Centra el texto verticalmente */
   cursor: pointer;
   margin-top: 1rem; /* Espacio entre el título y el botón */
   transition: transform 0.4s ease, background-color 0.4s ease;
   clip-path: polygon(
     30% 0%,
     70% 0%,
-    /* Top side */ 100% 30%,
+    100% 30%,
     100% 70%,
-    /* Right side */ 70% 100%,
+    70% 100%,
     30% 100%,
-    /* Bottom side */ 0% 70%,
-    0% 30% /* Left side */
+    0% 70%,
+    0% 30%
   );
+  transform: rotate(0deg); /* Ángulo de rotación inicial */
 }
 
 .toggleButton.open {
-  transform: rotate(45deg);
+  transform: rotate(45deg); /* Rota el botón 45 grados al abrir */
+}
+
+.serviciosItemsText {
+  position: absolute;
+  top: 100%; /* Justo debajo del botón */
+  left: 0;
+  width: 100%;
+  max-height: 0; /* Oculto inicialmente */
+  opacity: 0;
+  overflow: hidden;
+  background-color: var(
+    --main-color-yellow
+  ); /* Asegura visibilidad del contenido */
+  padding: 0 1rem; /* Opcional: Ajusta el espaciado del contenido */
+  box-sizing: border-box;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  height: 300px; /* Altura fija para el contenido desplegable */
+  z-index: 1; /* Asegura que el contenido esté debajo del botón */
+}
+
+.serviciosItem.open .serviciosItemsText {
+  max-height: 150px; /* Altura máxima fija cuando se despliega */
+  opacity: 1;
 }
 
 .toggleButton.open::before {
@@ -440,7 +467,7 @@
 }
 
 .serviciosItem.open .serviciosItemsText {
-  height: auto; /* Altura de despliegue */
+  max-height: 300px; /* Ajusta según el tamaño máximo esperado */
   opacity: 1;
 }
 
