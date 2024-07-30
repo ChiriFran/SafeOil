@@ -130,7 +130,7 @@
 #rightHero::before {
   content: "";
   position: absolute;
-  width: 180px;
+  width: 220px;
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -140,12 +140,14 @@
 }
 
 #leftHero::before {
-  background-image: url("../ilustraciones/escudo-con-ranura-llave.svg");
+  background-image: url("../ilustraciones/flecha-circular.svg");
+
   text-align: center;
 }
 
 #rightHero::before {
-  background-image: url("../ilustraciones/huella-digital.svg");
+  background-image: url("../ilustraciones/escudo-con-ranura-llave.svg");
+
   text-align: center;
 }
 
@@ -197,6 +199,12 @@
   padding: 0 10%;
 }
 
+#centerHero h3 {
+  background-color: transparent;
+  color: var(--main-color-black);
+  padding: 0 10%;
+  font-size: 1.2rem;
+}
 #centerHero p {
   background-color: transparent;
   color: #000000e4;
@@ -312,7 +320,6 @@
   justify-content: center;
   padding: 0 5%;
 }
-
 
 .serviciosItem::before {
   content: "";
@@ -844,6 +851,14 @@ label {
 
   #centerHero h2 {
     padding: 0 0;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  #centerHero h3 {
+    padding: 0 0;
+    font-size: 1rem;
+    line-height: 1.2;
   }
 
   #leftHero {
@@ -884,7 +899,7 @@ label {
   #mobileHero::before {
     content: "";
     position: absolute;
-    width: 180px;
+    width: 220px;
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -894,7 +909,7 @@ label {
   }
 
   #mobileHero::before {
-    background-image: url("../ilustraciones/flecha-circular.svg");
+    background-image: url("../ilustraciones/nodos-en-subida-blanco.svg");
     text-align: center;
   }
 
