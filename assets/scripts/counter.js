@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function animateCounters() {
-    const duration = 2000; // Duración de la animación en milisegundos
+    const duration = 4000; // Duración de la animación en milisegundos
     const startTime = Date.now();
 
     function updateCounts() {
