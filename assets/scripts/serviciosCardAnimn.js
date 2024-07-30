@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button.classList.toggle("open");
 
       if (item.classList.contains("open")) {
-        text.style.maxHeight = "300px"; // Altura de despliegue fija
+        text.style.maxHeight = "200px"; // Altura de despliegue fija
         text.style.opacity = 1; // Asegura que el texto sea visible
       } else {
         text.style.maxHeight = 0; // Altura cuando está colapsado

@@ -399,15 +399,24 @@
   background-color: var(--main-color-yellow);
   color: var(--main-color-black);
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  font-size: 36px;
   text-align: center;
   line-height: 40px;
   cursor: pointer;
   margin-top: 1rem; /* Espacio entre el título y el botón */
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    /* Top side */ 100% 30%,
+    100% 70%,
+    /* Right side */ 70% 100%,
+    30% 100%,
+    /* Bottom side */ 0% 70%,
+    0% 30% /* Left side */
+  );
 }
 
 .toggleButton.open {
@@ -426,12 +435,12 @@
   display: block;
   max-height: 0; /* Oculto inicialmente */
   opacity: 0;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  transition: max-height 01s ease-out, opacity 0.8s ease-out;
   overflow: hidden;
 }
 
 .serviciosItem.open .serviciosItemsText {
-  max-height: 300px; /* Altura de despliegue */
+  height: auto; /* Altura de despliegue */
   opacity: 1;
 }
 
