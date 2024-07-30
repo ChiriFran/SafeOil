@@ -861,7 +861,7 @@ label {
     line-height: 1.2;
   }
 
-  #centerHero p{
+  #centerHero p {
     font-size: 0.8rem;
     filter: grayscale(1);
   }
@@ -1104,5 +1104,11 @@ label {
   #footerContainer {
     padding: 10% 5%;
     height: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #servicios {
+    height: 300vh;
   }
 }
