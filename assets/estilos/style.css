@@ -1095,7 +1095,7 @@ label {
   #estadisticasContainer {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    height: 100vh;
+    height: 125vh;
   }
 
   .counters > div {
@@ -1134,7 +1134,7 @@ label {
   }
 
   #servicios {
-    height: 230vh;
+    height: 260vh;
   }
 
   #serviciosGrid {
