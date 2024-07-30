@@ -1109,6 +1109,7 @@ label {
 
   #main-container {
     width: 90%;
+    height: 85vh;
   }
 
   #main-container h3 {
