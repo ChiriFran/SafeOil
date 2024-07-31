@@ -326,12 +326,11 @@
   width: 400px;
   height: 400px;
   top: 50%;
-  background-image: url("../logo/logo-todo-blanco.svg");
+  background-image: url("../logo/logo-huella.webp");
   text-align: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  filter: brightness(0.1);
   z-index: 1000;
 }
 
@@ -912,7 +911,6 @@ label {
 #footerLogo img {
   background-color: var(--main-color-yellow);
   width: 200px;
-  opacity: 0.2;
 }
 
 @media screen and (max-width: 700px) {
