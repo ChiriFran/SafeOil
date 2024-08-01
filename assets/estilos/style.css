@@ -294,6 +294,72 @@
   background-color: var(--main-color-black);
 }
 
+#estadisticasMercado {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  margin: auto 0;
+  background-color: var(--main-color-yellow);
+}
+
+.chart-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  height: 300px; /* Altura máxima del gráfico */
+  width: 600px; /* Ancho total del gráfico */
+}
+
+.bar {
+  width: 40px;
+  background-color: #3498db;
+  margin: 0 5px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar span {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.years {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.year {
+  text-align: center;
+}
+
+.max-values {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+.max-value {
+  margin-bottom: 10px;
+}
+
 #filosofia {
   position: relative;
   display: flex;
@@ -768,6 +834,7 @@
   font-size: 1.2rem;
   font-weight: 800;
   color: var(--main-color-yellow);
+  margin-top: 5rem;
 }
 
 #main-container {
@@ -1094,7 +1161,7 @@ label {
     animation: fadeInFilosofia 1.2s ease-out forwards;
   }
 
-  @keyframes fadeInFilosofia{
+  @keyframes fadeInFilosofia {
     from {
       opacity: 0;
       scale: 0.8;
