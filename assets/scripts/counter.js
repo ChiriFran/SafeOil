@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function animateCounters() {
-    const duration = 1500; // Duración de la animación en milisegundos
+    const duration = 2000; // Duración de la animación en milisegundos
     const startTime = Date.now();
 
     function updateCounts() {
@@ -37,25 +37,21 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCounts();
   }
 
-  function onScroll() {
-    const containerTop =
-      container.getBoundingClientRect().top + window.pageYOffset;
-    const containerHeight = container.offsetHeight;
-    const scrollTop = window.pageYOffset;
-    const scrollBottom = scrollTop + window.innerHeight;
-
-    if (
-      scrollBottom > containerTop &&
-      scrollTop < containerTop + containerHeight
-    ) {
-      if (!activated) {
+  function onIntersection(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !activated) {
         animateCounters();
         activated = true;
-        // Remove the scroll event listener to ensure animation runs only once
-        window.removeEventListener("scroll", onScroll);
+        // Detener la observación una vez que la animación se haya activado
+        observer.unobserve(entry.target);
       }
-    }
+    });
   }
 
-  window.addEventListener("scroll", onScroll);
+  const observer = new IntersectionObserver(onIntersection, {
+    threshold: 0.5, // Ajusta el umbral según la cantidad de visibilidad necesaria para activar la animación
+  });
+
+  // Comenzar a observar el contenedor
+  observer.observe(container);
 });
