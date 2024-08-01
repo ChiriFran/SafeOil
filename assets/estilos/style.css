@@ -999,7 +999,7 @@ label {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
     width: 100%;
-    height: auto;
+    height: 220vh;
     text-align: center;
     align-items: end;
     margin-bottom: 10rem;
@@ -1038,13 +1038,15 @@ label {
   #rightHero {
     justify-content: flex-end;
     font-size: 1.1rem;
-    padding: 5% 5%;
-    height: 40vh;
+    height: 20vh;
+    overflow: visible;
+    padding: 5% 0;
   }
 
   #leftHero::before,
   #rightHero::before {
-    opacity: 0.2;
+    opacity: 0.1;
+    top: -80%;
   }
 
   #leftHero p,
@@ -1055,21 +1057,26 @@ label {
   #mobileHero {
     display: flex;
     width: 100%;
-    height: 60vh;
+    height: 30vh;
     flex-flow: column;
     align-items: center;
     justify-content: flex-end;
     font-size: 1.1rem;
-    padding: 10% 5%;
+    padding: 0% 5%;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+  }
+
+  #mobileHero p {
+    line-height: 1.5;
   }
 
   #mobileHero::before {
     content: "";
     position: absolute;
-    width: 220px;
+    width: 180px;
     height: 100%;
+    top: -40%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1158,6 +1165,7 @@ label {
     width: 95%;
     padding: 0 5%;
     font-size: 1rem;
+    margin-top: 3rem;
   }
 
   #filosofiaText::before {
