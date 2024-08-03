@@ -81,4 +81,65 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   checkVisibilityOnLoad();
+
+  // Toggle button and visibility logic
+  const serviciosItems = document.querySelectorAll(".serviciosItem");
+
+  const serviciosObserverOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  };
+
+  const serviciosObserverCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const serviciosItem = entry.target;
+        const toggleButton = serviciosItem.querySelector(".toggleButton");
+
+        if (toggleButton) {
+          // Simular el clic en el botón de toggle
+          toggleButton.click();
+          toggleButton.style.opacity = "1";
+        }
+
+        // Deja de observar después de la primera intersección si solo quieres una activación
+        observer.unobserve(serviciosItem);
+      }
+    });
+  };
+
+  const serviciosObserver = new IntersectionObserver(
+    serviciosObserverCallback,
+    serviciosObserverOptions
+  );
+
+  serviciosItems.forEach((item) => {
+    if (item) {
+      serviciosObserver.observe(item);
+    }
+  });
+
+  // Handling manual toggle
+  const handleToggle = (event) => {
+    const button = event.target;
+    const targetSelector = button.dataset.toggleTarget;
+    const targetElement = document.querySelector(targetSelector);
+
+    if (targetElement) {
+      if (targetElement.classList.contains("expanded")) {
+        targetElement.classList.remove("expanded");
+        button.textContent = "+";
+      } else {
+        targetElement.classList.add("expanded");
+        button.textContent = "-";
+      }
+      // Restart observation
+      serviciosObserver.observe(button.closest(".serviciosItem"));
+    }
+  };
+
+  document.querySelectorAll(".toggleButton").forEach((button) => {
+    button.addEventListener("click", handleToggle);
+  });
 });
