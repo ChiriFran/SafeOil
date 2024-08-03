@@ -160,7 +160,6 @@
   align-items: center;
   justify-content: space-around;
   background-color: var(--main-color-yellow);
-  font-size: 1rem;
   font-weight: 900;
   padding: 0 2rem;
 }
@@ -198,7 +197,7 @@
   background-color: transparent;
   color: var(--main-color-black);
   padding: 0 8%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 800;
   line-height: 1.2;
 }
@@ -1018,7 +1017,7 @@ label {
 
   #centerHero h2 {
     padding: 0 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   #centerHero h3 {
