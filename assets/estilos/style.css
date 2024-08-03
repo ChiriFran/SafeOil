@@ -869,6 +869,7 @@ label {
   background-color: var(--main-color-yellow);
   margin-top: 10vh;
   padding: 0 5%;
+  overflow: hidden;
 }
 
 #footerLinks {
