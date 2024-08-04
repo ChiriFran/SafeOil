@@ -1,26 +1,35 @@
-emailjs.init("gBb_LAjfDmkyqiaHF"); // Reemplaza con tu User ID
+// Inicializa EmailJS con tu User ID
+emailjs.init("gBb_LAjfDmkyqiaHF");
 
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita el envío por defecto del formulario
+// Obtiene una referencia al formulario y al botón de envío
+const form = document.getElementById("contactForm");
+const submitButton = document.getElementById("submitButton");
 
-    var loadingIndicator = document.getElementById("loading");
-    loadingIndicator.style.display = "block"; // Muestra el indicador de carga
+// Función para manejar el envío del formulario
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Evita el envío por defecto del formulario
 
-    emailjs
-      .sendForm("service_rfeh7zq", "template_rxkkikf", this)
-      .then(
-        function (response) {
-          console.log("Éxito:", response);
-          document.getElementById("contactForm").reset(); // Limpia los campos del formulario
-        },
-        function (error) {
-          console.log("Error:", error);
-          alert("Hubo un error al enviar el mensaje");
-        }
-      )
-      .finally(function () {
-        loadingIndicator.style.display = "none"; // Oculta el indicador de carga
-      });
-  });
+  // Cambia el texto del botón a "Enviando..."
+  submitButton.disabled = true;
+  submitButton.textContent = "Enviando...";
+
+  emailjs.sendForm("service_rfeh7zq", "template_rxkkikf", form).then(
+    function (response) {
+      console.log("Éxito:", response);
+      // Cambia el texto del botón a "Mensaje enviado" y limpia el formulario
+      submitButton.textContent = "Mensaje enviado";
+      setTimeout(() => {
+        submitButton.textContent = "Enviar";
+        submitButton.disabled = false;
+        form.reset(); // Limpia el formulario
+      }, 2000); // Mantén el texto "Mensaje enviado" visible por 2 segundos
+    },
+    function (error) {
+      console.log("Error:", error);
+      // Restaura el texto del botón y habilítalo de nuevo
+      submitButton.textContent = "Enviar";
+      submitButton.disabled = false;
+      alert("Hubo un error al enviar el mensaje");
+    }
+  );
+});
