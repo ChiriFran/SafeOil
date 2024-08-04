@@ -226,26 +226,32 @@
       <div id="contactoForm">
         <span id="formTitle">Formulario de contacto</span>
         <div id="main-container">
-          <div id="form-container" class="container">
-              <form id="contactForm">
-                  <div class="form-group">
-                      <input type="text" id="name" class="input-field" name="name" autocomplete="off" placeholder="Nombre: " required>
-                  </div>
-                  <div class="form-group">
-                      <input type="email" id="email" class="input-field" name="email" placeholder="Email: " required>
-                  </div>
-                  <div class="form-group">
-                    <input type="tel" id="tel" class="input-field" name="tel" placeholder="Tel: " required>
-                </div>
-                  <div class="form-group">
-                      <input type="text" id="subject" class="input-field" name="subject" autocomplete="off" placeholder="Motivo: " required>
-                  </div>
-                  <div class="form-group">
-                      <textarea id="message" class="textarea-field" name="message" rows="4" placeholder="Mensaje: " required></textarea>
-                  </div>
-                  <button type="submit" id="submit-button" class="submit-button">Enviar</button>
-              </form>
-          </div>
+    <div id="form-container" class="container">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" class="input-field" name="name" autocomplete="off"  required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="input-field" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Tel:</label>
+                <input type="tel" id="tel" class="input-field" name="tel" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Motivo:</label>
+                <input type="text" id="subject" class="input-field" name="subject" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" class="textarea-field" name="message"  required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar</button>
+            <div id="loading" class="loading">Enviando...</div>
+        </form>
+    </div>
       </div>
     </section>
 
@@ -277,5 +283,7 @@
     <script src="./assets/scripts/scrollAnimation.js"></script>
     <script src="./assets/scripts/serviciosCardAnimn.js"></script>
     <script src="./assets/scripts/counter.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="./assets/scripts/emailJs.js"></script>
   </body>
 </html>

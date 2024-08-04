@@ -638,7 +638,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 150vh;
+  height: 175vh;
   margin-top: 50vh;
   margin-bottom: 25vh;
 }
@@ -798,7 +798,7 @@
   align-items: center;
   width: 40%;
   height: 70vh;
-  margin: 0;
+  margin: 3rem 0;
   background-color: var(--main-color-black);
   font-family: Arial, sans-serif;
 }
@@ -807,7 +807,6 @@
   display: block;
   width: 100%;
   background-color: var(--main-color-black);
-  padding: 20px;
 }
 
 form {
@@ -832,8 +831,8 @@ label {
   border: none;
   border-bottom: 1px solid var(--main-color-yellow);
   color: var(--main-color-yellow);
-  resize: none;
   margin-top: 0.5rem;
+  resize: none;
 }
 
 .submit-button {
@@ -851,6 +850,12 @@ label {
   transition: 0.2s;
 }
 
+.loading {
+  display: none;
+  margin-top: 10px;
+  color: var(--main-color-yellow);
+}
+
 @keyframes valoresIconAnim {
   from {
     transform: translateY(0);
@@ -859,7 +864,6 @@ label {
     transform: translateY(-20px);
   }
 }
-
 #footerContainer {
   display: flex;
   flex-flow: row;
@@ -1190,7 +1194,7 @@ label {
     margin-bottom: 250px;
   }
 
-  .serviciosItem p{
+  .serviciosItem p {
     padding: 1rem 0;
   }
 
