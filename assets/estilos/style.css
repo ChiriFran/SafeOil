@@ -233,7 +233,7 @@
   color: var(--main-color-yellow);
   cursor: pointer;
   z-index: 100;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #mobileHero {
@@ -379,7 +379,7 @@
 
 #serviciosGrid {
   display: flex;
-  width: 60%;
+  width: 80%;
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
