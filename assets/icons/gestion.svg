@@ -1,27 +1,159 @@
-<?xml version="1.0" ?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 64 64" id="Layer_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 64 64"
+   id="Layer_1"
+   version="1.1"
+   xml:space="preserve"
+   sodipodi:docname="gestion.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs823" /><sodipodi:namedview
+   id="namedview821"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="1.05375"
+   inkscape:cx="391.45907"
+   inkscape:cy="400.94899"
+   inkscape:window-width="1920"
+   inkscape:window-height="1001"
+   inkscape:window-x="-9"
+   inkscape:window-y="1341"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+
+<style
+   type="text/css"
+   id="style787">
 	.st0{fill:#7D828C;}
 	.st1{fill:#CE9D36;}
 	.st2{fill:#5C6373;}
 	.st3{fill:#A4A5A6;}
 </style>
-<g id="Layer_16">
-<polyline class="st0" points="6,6 6,2 12,2 12,6  "/>
-<rect class="st0" height="34" width="24" x="2" y="6"/>
-<path class="st1" d="M17.5,22.9c0.7,0.9,0.7,2.2,0.1,3.1c-1.3,2-4,2.5-6,1.2c-0.5-0.3-0.9-0.7-1.2-1.2c-0.6-1-0.5-2.2,0.1-3.1   L14,18L17.5,22.9z"/>
-<rect class="st2" height="4" width="24" x="2" y="6"/>
-<rect class="st2" height="4" width="24" x="2" y="36"/>
-<polyline class="st0" points="42,6 42,2 48,2 48,6  "/>
-<rect class="st0" height="34" width="24" x="38" y="6"/>
-<path class="st1" d="M53.5,22.9c0.7,0.9,0.7,2.2,0.1,3.1c-1.3,2-4,2.5-6,1.2c-0.5-0.3-0.9-0.7-1.2-1.2c-0.6-1-0.5-2.2,0.1-3.1   L50,18L53.5,22.9z"/>
-<rect class="st2" height="4" width="24" x="38" y="6"/>
-<rect class="st2" height="4" width="24" x="38" y="36"/>
-<polyline class="st2" points="24,28 24,24 30,24 30,28  "/>
-<rect class="st0" height="34" width="24" x="20" y="28"/>
-<path class="st1" d="M35.5,44.9c0.7,0.9,0.7,2.2,0.1,3.1c-1.3,2-4,2.5-6,1.2c-0.5-0.3-0.9-0.7-1.2-1.2c-0.6-1-0.5-2.2,0.1-3.1   L32,40L35.5,44.9z"/>
-<rect class="st3" height="4" width="24" x="20" y="28"/>
-<rect class="st3" height="4" width="24" x="20" y="58"/>
-</g>
-</svg>
+
+<g
+   id="Layer_16">
+
+<polyline
+   class="st0"
+   points="6,6 6,2 12,2 12,6  "
+   id="polyline789" />
+
+<rect
+   class="st0"
+   height="34"
+   width="24"
+   x="2"
+   y="6"
+   id="rect791" />
+
+<path
+   class="st1"
+   d="M17.5,22.9c0.7,0.9,0.7,2.2,0.1,3.1c-1.3,2-4,2.5-6,1.2c-0.5-0.3-0.9-0.7-1.2-1.2c-0.6-1-0.5-2.2,0.1-3.1   L14,18L17.5,22.9z"
+   id="path793"
+   style="fill:#cbb32b;fill-opacity:1" />
+
+<rect
+   class="st2"
+   height="4"
+   width="24"
+   x="2"
+   y="6"
+   id="rect795"
+   style="fill:#cbb32b;fill-opacity:1" />
+
+<rect
+   class="st2"
+   height="4"
+   width="24"
+   x="2"
+   y="36"
+   id="rect797" />
+
+<polyline
+   class="st0"
+   points="42,6 42,2 48,2 48,6  "
+   id="polyline799" />
+
+<rect
+   class="st0"
+   height="34"
+   width="24"
+   x="38"
+   y="6"
+   id="rect801" />
+
+<path
+   class="st1"
+   d="M53.5,22.9c0.7,0.9,0.7,2.2,0.1,3.1c-1.3,2-4,2.5-6,1.2c-0.5-0.3-0.9-0.7-1.2-1.2c-0.6-1-0.5-2.2,0.1-3.1   L50,18L53.5,22.9z"
+   id="path803"
+   style="fill:#cbb32b;fill-opacity:1" />
+
+<rect
+   class="st2"
+   height="4"
+   width="24"
+   x="38"
+   y="6"
+   id="rect805"
+   style="fill:#cbb32b;fill-opacity:1" />
+
+<rect
+   class="st2"
+   height="4"
+   width="24"
+   x="38"
+   y="36"
+   id="rect807" />
+
+<polyline
+   class="st2"
+   points="24,28 24,24 30,24 30,28  "
+   id="polyline809" />
+
+<rect
+   class="st0"
+   height="34"
+   width="24"
+   x="20"
+   y="28"
+   id="rect811" />
+
+<path
+   class="st1"
+   d="M35.5,44.9c0.7,0.9,0.7,2.2,0.1,3.1c-1.3,2-4,2.5-6,1.2c-0.5-0.3-0.9-0.7-1.2-1.2c-0.6-1-0.5-2.2,0.1-3.1   L32,40L35.5,44.9z"
+   id="path813"
+   style="fill:#cbb32b;fill-opacity:1" />
+
+<rect
+   class="st3"
+   height="4"
+   width="24"
+   x="20"
+   y="28"
+   id="rect815"
+   style="fill:#cbb32b;fill-opacity:1" />
+
+<rect
+   class="st3"
+   height="4"
+   width="24"
+   x="20"
+   y="58"
+   id="rect817" />
+
+</g>
+
+</svg>

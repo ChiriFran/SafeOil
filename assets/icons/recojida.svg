@@ -1,7 +1,32 @@
-<?xml version="1.0" ?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 64 64" id="Layer_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800"
+   height="800"
+   viewBox="0 0 64 64"
+   id="Layer_1"
+   version="1.1"
+   xml:space="preserve"
+   sodipodi:docname="recojida.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs58" /><sodipodi:namedview
+   id="namedview56"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false" />
+
+<style
+   type="text/css"
+   id="style2">
 	.st0{fill:#7D828C;}
 	.st1{fill:#5C6373;}
 	.st2{fill:#A6A6A6;}
@@ -9,31 +34,172 @@
 	.st4{fill:#BF7D2C;}
 	.st5{fill:#9F3A37;}
 </style>
-<g id="Layer_12">
-<polyline class="st0" points="46,12 46,8 50,8 50,12  "/>
-<path class="st1" d="M43,16v-2c0-1.1,0.9-2,2-2h6c1.1,0,2,0.9,2,2v2"/>
-<polyline class="st0" points="52,38 52,34 32,34 32,38  "/>
-<polygon class="st0" points="57,46 57,42 2,42 2,50 20,50 20,46  "/>
-<rect class="st2" height="4" width="26" x="30" y="46"/>
-<rect class="st1" height="4" width="44" x="18" y="38"/>
-<path class="st2" d="M31,16h22c5,0,9,4,9,9l0,0c0,5-4,9-9,9H31c-5,0-9-4-9-9l0,0C22,20,26,16,31,16z"/>
-<rect class="st1" height="22" width="2" x="33" y="10"/>
-<rect class="st1" height="22" width="2" x="29" y="10"/>
-<rect class="st1" height="2" width="4" x="30" y="20"/>
-<rect class="st1" height="2" width="4" x="30" y="16"/>
-<rect class="st1" height="2" width="4" x="30" y="24"/>
-<rect class="st1" height="2" width="4" x="30" y="12"/>
-<rect class="st1" height="2" width="4" x="30" y="28"/>
-<circle class="st0" cx="57" cy="50" r="5"/>
-<path class="st3" d="M57,56c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6C63,53.3,60.3,56,57,56z M57,46c-2.2,0-4,1.8-4,4s1.8,4,4,4   s4-1.8,4-4S59.2,46,57,46z"/>
-<circle class="st0" cx="41" cy="50" r="5"/>
-<path class="st3" d="M41,56c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6C47,53.3,44.3,56,41,56z M41,46c-2.2,0-4,1.8-4,4s1.8,4,4,4   s4-1.8,4-4S43.2,46,41,46z"/>
-<circle class="st0" cx="11" cy="50" r="5"/>
-<path class="st3" d="M11,56c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6C17,53.3,14.3,56,11,56z M11,46c-2.2,0-4,1.8-4,4s1.8,4,4,4   s4-1.8,4-4S13.2,46,11,46z"/>
-<polygon class="st1" points="30,46 20,46 20,54 32,54 32,50 30,50  "/>
-<rect class="st2" height="2" width="4" x="11" y="35"/>
-<path class="st4" d="M52.5,24.9c0.7,0.9,0.7,2.2,0.1,3.1c-1.3,2-4,2.5-6,1.2c-0.5-0.3-0.9-0.7-1.2-1.2c-0.6-1-0.5-2.2,0.1-3.1   L49,20L52.5,24.9z"/>
-<path class="st5" d="M18,42H2V30.1c0-2.7,1.1-5.2,2.9-7.1l2.1-2.1c1.9-1.9,4.4-2.9,7.1-2.9H18V42z"/>
-<path class="st2" d="M2,32h12V18c-2.6,0-5.1,1.1-6.9,2.9l-2.1,2.1C3.1,24.9,2,27.5,2,30.1V32z"/>
-</g>
-</svg>
+
+<g
+   id="Layer_12">
+
+<polyline
+   class="st0"
+   points="46,12 46,8 50,8 50,12  "
+   id="polyline4" />
+
+<path
+   class="st1"
+   d="m 43,16 v -2 c 0,-1.1 0.9,-2 2,-2 h 6 c 1.1,0 2,0.9 2,2 v 2"
+   id="path6" />
+
+<polyline
+   class="st0"
+   points="52,38 52,34 32,34 32,38  "
+   id="polyline8" />
+
+<polygon
+   class="st0"
+   points="20,50 20,46 57,46 57,42 2,42 2,50 "
+   id="polygon10" />
+
+<rect
+   class="st2"
+   height="4"
+   width="26"
+   x="30"
+   y="46"
+   id="rect12" />
+
+<rect
+   class="st1"
+   height="4"
+   width="44"
+   x="18"
+   y="38"
+   id="rect14" />
+
+<path
+   class="st2"
+   d="m 31,16 h 22 c 5,0 9,4 9,9 v 0 c 0,5 -4,9 -9,9 H 31 c -5,0 -9,-4 -9,-9 v 0 c 0,-5 4,-9 9,-9 z"
+   id="path16" />
+
+<rect
+   class="st1"
+   height="22"
+   width="2"
+   x="33"
+   y="10"
+   id="rect18" />
+
+<rect
+   class="st1"
+   height="22"
+   width="2"
+   x="29"
+   y="10"
+   id="rect20" />
+
+<rect
+   class="st1"
+   height="2"
+   width="4"
+   x="30"
+   y="20"
+   id="rect22" />
+
+<rect
+   class="st1"
+   height="2"
+   width="4"
+   x="30"
+   y="16"
+   id="rect24" />
+
+<rect
+   class="st1"
+   height="2"
+   width="4"
+   x="30"
+   y="24"
+   id="rect26" />
+
+<rect
+   class="st1"
+   height="2"
+   width="4"
+   x="30"
+   y="12"
+   id="rect28" />
+
+<rect
+   class="st1"
+   height="2"
+   width="4"
+   x="30"
+   y="28"
+   id="rect30" />
+
+<circle
+   class="st0"
+   cx="57"
+   cy="50"
+   r="5"
+   id="circle32" />
+
+<path
+   class="st3"
+   d="m 57,56 c -3.3,0 -6,-2.7 -6,-6 0,-3.3 2.7,-6 6,-6 3.3,0 6,2.7 6,6 0,3.3 -2.7,6 -6,6 z m 0,-10 c -2.2,0 -4,1.8 -4,4 0,2.2 1.8,4 4,4 2.2,0 4,-1.8 4,-4 0,-2.2 -1.8,-4 -4,-4 z"
+   id="path34" />
+
+<circle
+   class="st0"
+   cx="41"
+   cy="50"
+   r="5"
+   id="circle36" />
+
+<path
+   class="st3"
+   d="m 41,56 c -3.3,0 -6,-2.7 -6,-6 0,-3.3 2.7,-6 6,-6 3.3,0 6,2.7 6,6 0,3.3 -2.7,6 -6,6 z m 0,-10 c -2.2,0 -4,1.8 -4,4 0,2.2 1.8,4 4,4 2.2,0 4,-1.8 4,-4 0,-2.2 -1.8,-4 -4,-4 z"
+   id="path38" />
+
+<circle
+   class="st0"
+   cx="11"
+   cy="50"
+   r="5"
+   id="circle40" />
+
+<path
+   class="st3"
+   d="m 11,56 c -3.3,0 -6,-2.7 -6,-6 0,-3.3 2.7,-6 6,-6 3.3,0 6,2.7 6,6 0,3.3 -2.7,6 -6,6 z m 0,-10 c -2.2,0 -4,1.8 -4,4 0,2.2 1.8,4 4,4 2.2,0 4,-1.8 4,-4 0,-2.2 -1.8,-4 -4,-4 z"
+   id="path42" />
+
+<polygon
+   class="st1"
+   points="32,50 30,50 30,46 20,46 20,54 32,54 "
+   id="polygon44" />
+
+<rect
+   class="st2"
+   height="2"
+   width="4"
+   x="11"
+   y="35"
+   id="rect46" />
+
+<path
+   class="st4"
+   d="m 52.5,24.9 c 0.7,0.9 0.7,2.2 0.1,3.1 -1.3,2 -4,2.5 -6,1.2 -0.5,-0.3 -0.9,-0.7 -1.2,-1.2 -0.6,-1 -0.5,-2.2 0.1,-3.1 L 49,20 Z"
+   id="path48"
+   style="fill:#cbb32b;fill-opacity:1" />
+
+<path
+   class="st5"
+   d="M 18,42 H 2 V 30.1 C 2,27.4 3.1,24.9 4.9,23 L 7,20.9 C 8.9,19 11.4,18 14.1,18 H 18 Z"
+   id="path50" />
+
+<path
+   class="st2"
+   d="M 2,32 H 14 V 18 c -2.6,0 -5.1,1.1 -6.9,2.9 L 5,23 c -1.9,1.9 -3,4.5 -3,7.1 z"
+   id="path52" />
+
+</g>
+
+</svg>
