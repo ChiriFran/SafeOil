@@ -200,13 +200,17 @@
   line-height: 1.2;
 }
 
-#centerHero h3 {
-  background-color: transparent;
+#heroKeywords {
+  font-size: 1.8rem;
+  background-color: var(--main-color-yellow);
   color: var(--main-color-black);
-  padding: 0 10%;
-  font-size: 1rem;
-  line-height: 1.2;
 }
+
+#heroSmallwords {
+  background-color: var(--main-color-yellow);
+  color: var(--main-color-black);
+}
+
 #centerHero p {
   background-color: transparent;
   color: #000000e4;
@@ -832,7 +836,7 @@ label {
   margin-top: 0.5rem;
 }
 
-.textarea-field{
+.textarea-field {
   resize: none;
   height: 150px;
 }
@@ -852,13 +856,12 @@ label {
   transition: 0.2s;
 }
 
-
 @keyframes valoresIconAnim {
   from {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   to {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 }
 
@@ -1021,12 +1024,11 @@ label {
 
   #centerHero h2 {
     padding: 0 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
-  #centerHero h3 {
-    padding: 0 0;
-    font-size: 1rem;
+  #heroKeywords {
+    font-size: 1.2rem;
   }
 
   #centerHero p {
@@ -1192,7 +1194,7 @@ label {
     margin-bottom: 250px;
   }
 
-  .serviciosItem p{
+  .serviciosItem p {
     padding: 1rem 0;
   }
 
@@ -1325,6 +1327,10 @@ label {
 
 @media screen and (max-width: 380px) {
   #servicios {
-    height: 260vh;
+    height: 290vh;
+  }
+
+  #contactoContainer {
+    height: 250vh;
   }
 }
