@@ -370,13 +370,24 @@
   margin-top: 10vh;
 }
 
-#serviciosText {
+#serviciosTextContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  gap: 3rem;
+  padding: 0 10%;
+  margin-top: 5rem;
+
+}
+
+.serviciosText {
   color: var(--main-color-grey);
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  padding: 0 20%;
-  text-align: center;
+  text-align: start;
   line-height: 1.2;
+
 }
 
 #serviciosGrid {
