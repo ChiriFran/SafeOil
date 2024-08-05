@@ -136,19 +136,17 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.6;
+  opacity: 0;
   z-index: 1000;
 }
 
 #leftHero::before {
   background-image: url("../ilustraciones/flecha-circular-celeste.svg");
-
   text-align: center;
 }
 
 #rightHero::before {
   background-image: url("../ilustraciones/escudo-con-ranura-llave-celeste.svg");
-
   text-align: center;
 }
 
@@ -1105,7 +1103,7 @@ label {
 
   @keyframes fadeIn {
     from {
-      opacity: 0.4;
+      opacity: 0;
       scale: 0.8;
       transform: translateY(50px);
     }
