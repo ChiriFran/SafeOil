@@ -300,15 +300,117 @@
   background-color: var(--main-color-black);
 }
 
-#estadisticasMercado {
+#estadisticasMercadoLubricantes {
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 50vh;
-  margin: auto 0;
   background-color: var(--main-color-yellow);
+}
+
+#lubricantesContainer {
+  display: flex;
+  flex-flow: row;
+  align-items: start;
+  justify-content: center;
+  width: 80%;
+  height: 50vh;
+  padding-top: 5%;
+  background-color: var(--main-color-yellow);
+}
+
+.lubricantesSides {
+  width: 20%;
+  background-color: var(--main-color-yellow);
+}
+
+.lubricantesSides p {
+  background-color: var(--main-color-yellow);
+  color: var(--main-color-black);
+  line-height: 1.4;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.lubricantesMain {
+  position: relative;
+  width: 60%;
+  height: 200px;
+  display: flex;
+  flex-flow: row;
+  align-items: end;
+  justify-content: space-evenly;
+  background-color: var(--main-color-yellow);
+}
+
+#graficoTitle {
+  position: absolute;
+  bottom: -30%;
+  z-index: 1000;
+  background-color: var(--main-color-yellow);
+  color: var(--main-color-black);
+  opacity: 0.3;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.lubricantesMain::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60%;
+  height: 2px;
+  border-top: 4px dashed var(--main-color-aqua-green);
+}
+
+.lubricantesMain::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  height: 4px;
+  background-color: var(--main-color-black);
+}
+
+#lubricantes24 {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 15%;
+  height: 100%;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--main-color-aqua-green);
+}
+
+#lubricantes24::before {
+  content: "2024";
+  position: absolute;
+  bottom: -2rem;
+  color: var(--main-color-black);
+}
+
+#lubricantes29 {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 15%;
+  height: 130%;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--main-color-aqua-green);
+}
+
+#lubricantes29::before {
+  content: "2029";
+  position: absolute;
+  bottom: -2rem;
+  color: var(--main-color-black);
 }
 
 #filosofia {
@@ -378,7 +480,6 @@
   gap: 3rem;
   padding: 0 10%;
   margin-top: 5rem;
-
 }
 
 .serviciosText {
@@ -387,7 +488,6 @@
   margin-bottom: 2rem;
   text-align: start;
   line-height: 1.2;
-
 }
 
 #serviciosGrid {
@@ -1152,8 +1252,7 @@ label {
 
   #estadisticasContainer {
     padding-top: 5rem;
-    padding-bottom: 5rem;
-    height: 125vh;
+    height: 100vh;
   }
 
   .counters > div {
@@ -1169,6 +1268,57 @@ label {
     left: 50%;
     bottom: -3em;
     transform: translateX(-50%);
+  }
+
+  #lubricantesContainer {
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 70vh;
+    background-color: var(--main-color-yellow);
+    margin-bottom: 5rem;
+  }
+
+  #graficoTitle {
+    bottom: -50%;
+  }
+
+  .lubricantesMain {
+    width: 100%;
+    order: 2;
+    margin-top: 3rem;
+  }
+
+  .lubricantesMain::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+  }
+
+  .lubricantesMain::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 90%;
+  }
+
+  #lubricantes24 {
+    width: 30%;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #lubricantes29 {
+    width: 30%;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .lubricantesSides {
+    width: 90%;
+    order: 1;
   }
 
   #filosofia {
@@ -1191,8 +1341,17 @@ label {
     top: 70%;
   }
 
+  #serviciosTextContainer {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 3rem;
+    padding: 0 10%;
+    margin-top: 5rem;
+  }
+
   #servicios {
-    height: 260vh;
+    height: 330vh;
   }
 
   #serviciosGrid {
