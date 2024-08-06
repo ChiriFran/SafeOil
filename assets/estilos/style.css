@@ -1275,7 +1275,7 @@ label {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     background-color: var(--main-color-yellow);
     margin-bottom: 5rem;
   }
@@ -1351,7 +1351,7 @@ label {
   }
 
   #servicios {
-    height: 330vh;
+    height: 350vh;
   }
 
   #serviciosGrid {
@@ -1497,7 +1497,7 @@ label {
 
 @media screen and (max-width: 380px) {
   #servicios {
-    height: 290vh;
+    height: 350vh;
   }
 
   #contactoContainer {
