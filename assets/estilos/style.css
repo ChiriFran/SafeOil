@@ -1330,6 +1330,10 @@ label {
     bottom: -3em;
     transform: translateX(-50%);
   }
+  
+  .counterNumber span {
+    font-size: 3rem;
+  }
 
   #lubricantesContainer {
     flex-flow: column;
@@ -1381,6 +1385,10 @@ label {
     width: 90%;
     order: 1;
     margin-bottom: 3rem;
+  }
+
+  .lubricantesSides:last-of-type{
+    display: none;
   }
 
   #filosofia {
