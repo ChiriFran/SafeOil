@@ -1330,7 +1330,7 @@ label {
     bottom: -3em;
     transform: translateX(-50%);
   }
-  
+
   .counterNumber span {
     font-size: 3rem;
   }
@@ -1432,6 +1432,10 @@ label {
   .serviciosItem {
     margin: 5% 0;
     margin-bottom: 250px;
+  }
+
+  .serviciosText{
+    margin-bottom: 0;
   }
 
   .serviciosItem p {
