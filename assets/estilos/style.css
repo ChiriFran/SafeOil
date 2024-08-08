@@ -495,12 +495,20 @@
   margin-top: 5rem;
 }
 
+#serviciosTitleContainer{
+  display: flex;
+  width: 100%;
+  flex-flow: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
 #serviciosTitle {
   color: var(--main-color-yellow);
-  font-size: 5rem;
+  font-size: 2rem;
   margin: 2rem 0 1rem 0;
-  text-align: center;
   margin-top: 10vh;
+  padding: 0 10%;
 }
 
 #serviciosTextContainer {
@@ -517,7 +525,6 @@
   color: var(--main-color-grey);
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  text-align: start;
   line-height: 1.2;
 }
 
@@ -1550,9 +1557,10 @@ label {
   #serviciosTitle,
   #valoresTitle,
   #contactoTitle {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
     color: var(--main-color-yellow);
-    text-align: center;
+    padding: 0 10%;
   }
 
   #serviciosText,
