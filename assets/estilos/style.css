@@ -29,6 +29,12 @@
   --font-family: "Monserrat";
 }
 
+::selection {
+  background: var(--main-color-yellow);
+  /*Color naranja para el fondo*/
+  color: var(--main-color-black);
+}
+
 #headerContainer {
   display: flex;
   width: 100%;
@@ -486,6 +492,7 @@
 }
 
 #servicios {
+  position: relative;
   display: flex;
   width: 100%;
   height: 140vh;
@@ -495,33 +502,19 @@
   margin-top: 5rem;
 }
 
-#serviciosTitleContainer{
-  position: relative;
+#serviciosTitleContainer {
   display: flex;
   width: 100%;
   flex-flow: column;
   align-items: baseline;
   justify-content: center;
+  overflow: hidden;
 }
-/* 
-#serviciosTitleContainer::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-image: url(../background/blockchain.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100px;
-  height: 100px;
-  opacity: 0.3;
-} */
-
 
 #serviciosTitle {
   color: var(--main-color-yellow);
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
   margin: 2rem 0 1rem 0;
   margin-top: 10vh;
   padding: 0 10%;
@@ -1410,7 +1403,7 @@ label {
     margin-bottom: 3rem;
   }
 
-  .lubricantesSides:last-of-type{
+  .lubricantesSides:last-of-type {
     display: none;
   }
 
@@ -1457,7 +1450,7 @@ label {
     margin-bottom: 250px;
   }
 
-  .serviciosText{
+  .serviciosText {
     margin-bottom: 0;
   }
 
