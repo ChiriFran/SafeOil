@@ -495,7 +495,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  height: 250vh;
+  height: auto;
   flex-flow: column;
   align-items: center;
   justify-content: center;
@@ -540,7 +540,7 @@
 #blockchainInfoContainer {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   flex-flow: column;
   align-items: start;
   justify-self: center;
@@ -564,7 +564,7 @@
 }
 
 .blockchainInfoText {
-  width: 49%;
+  width: 32%;
 }
 
 .blockchainInfoText p {
@@ -1473,10 +1473,6 @@ label {
     margin-top: 5rem;
   }
 
-  #servicios {
-    height: auto;
-  }
-
   #blockchainInfoContainer {
     height: 120vh;
     flex-flow: column;
@@ -1649,10 +1645,6 @@ label {
 
   #lubricantesContainer {
     height: 120vh;
-  }
-
-  #servicios {
-    height: auto;
   }
 
   #contactoContainer {
