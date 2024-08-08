@@ -496,12 +496,28 @@
 }
 
 #serviciosTitleContainer{
+  position: relative;
   display: flex;
   width: 100%;
   flex-flow: column;
   align-items: baseline;
   justify-content: center;
 }
+
+#serviciosTitleContainer::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../background/blockchain.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100px;
+  height: 100px;
+  opacity: 0.3;
+}
+
 
 #serviciosTitle {
   color: var(--main-color-yellow);
