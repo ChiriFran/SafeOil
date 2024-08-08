@@ -554,16 +554,20 @@
   line-height: 1.2;
 }
 
-#blockchainInfoTextContainer{
+#blockchainInfoTextContainer {
   display: flex;
   flex-flow: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   width: 100%;
   margin-top: 3rem;
 }
 
-.blockchainInfoText p{
+.blockchainInfoText {
+  width: 49%;
+}
+
+.blockchainInfoText p {
   color: var(--main-color-grey);
   font-size: 1.2rem;
   line-height: 1.2;
@@ -1470,7 +1474,28 @@ label {
   }
 
   #servicios {
-    height: 350vh;
+    height: auto;
+  }
+
+  #blockchainInfoContainer {
+    height: 120vh;
+    flex-flow: column;
+  }
+
+  #blockchainInfoTitleContainer p {
+    font-size: 1.4rem;
+  }
+
+  #blockchainInfoTextContainer {
+    flex-flow: column;
+  }
+
+  .blockchainInfoText {
+    width: 100%;
+  }
+
+  .blockchainInfoText p {
+    margin: 1rem 0;
   }
 
   #serviciosGrid {
@@ -1599,7 +1624,7 @@ label {
   #serviciosTitle,
   #valoresTitle,
   #contactoTitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.2;
     color: var(--main-color-yellow);
     padding: 0 10%;
@@ -1608,7 +1633,7 @@ label {
   #serviciosText,
   #valoresText,
   #contactoText {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0 5%;
     color: var(--main-color-grey);
     text-align: center;
@@ -1627,7 +1652,7 @@ label {
   }
 
   #servicios {
-    height: 450vh;
+    height: auto;
   }
 
   #contactoContainer {
