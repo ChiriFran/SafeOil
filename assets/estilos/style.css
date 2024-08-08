@@ -503,7 +503,7 @@
   align-items: baseline;
   justify-content: center;
 }
-
+/* 
 #serviciosTitleContainer::after{
   content: '';
   position: absolute;
@@ -516,7 +516,7 @@
   width: 100px;
   height: 100px;
   opacity: 0.3;
-}
+} */
 
 
 #serviciosTitle {
