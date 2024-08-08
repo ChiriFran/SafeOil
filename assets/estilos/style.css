@@ -495,7 +495,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  height: 140vh;
+  height: 250vh;
   flex-flow: column;
   align-items: center;
   justify-content: center;
@@ -536,6 +536,39 @@
   margin-bottom: 2rem;
   line-height: 1.2;
 }
+
+#blockchainInfoContainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-flow: column;
+  align-items: start;
+  justify-self: center;
+  padding: 0 10%;
+  margin-top: 15vh;
+}
+
+#blockchainInfoTitleContainer p {
+  color: var(--main-color-yellow);
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+#blockchainInfoTextContainer{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.blockchainInfoText p{
+  color: var(--main-color-grey);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
 
 #serviciosGrid {
   display: flex;
