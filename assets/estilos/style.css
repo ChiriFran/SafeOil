@@ -573,6 +573,13 @@
   line-height: 1.2;
 }
 
+#blockchainImgContainer{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
 #serviciosGrid {
   display: flex;
