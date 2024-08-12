@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button.classList.toggle("open"); // Agrega o quita la clase para rotar el botón
 
       if (item.classList.contains("open")) {
-        text.style.maxHeight = "150px"; // Altura fija
+        text.style.maxHeight = "400px"; // Altura fija
         text.style.opacity = 1;
       } else {
         text.style.maxHeight = 0; // Oculta el contenido

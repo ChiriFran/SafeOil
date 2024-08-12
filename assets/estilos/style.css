@@ -454,12 +454,13 @@
   position: relative;
   display: flex;
   width: 100%;
-  height: 90vh;
+  height: 100%;
   flex-flow: column;
   align-items: center;
   text-align: center;
   justify-content: flex-start;
   background-color: var(--main-color-yellow);
+  padding-bottom: 12%;
 }
 
 #filosofia p {
@@ -545,7 +546,6 @@
   align-items: start;
   justify-self: center;
   padding: 0 10%;
-  margin-top: 15vh;
 }
 
 #blockchainInfoTitleContainer p {
@@ -648,13 +648,25 @@
 }
 
 .serviciosItem p {
-  text-align: center;
-  font-size: 1rem;
+  position: relative;
+  text-align: start;
+  font-size: 1.2rem;
   line-height: 1.1;
   color: var(--main-color-black);
-  background-color: var(--main-color-yellow);
   padding: 0.5rem 1rem;
   margin-top: 1rem;
+}
+
+.serviciosItem p::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.494) 0%, rgba(85, 75, 18, 0.618) 58%, #cbb32b 80%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
 }
 
 .serviciosItem img {
@@ -671,7 +683,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0 5%;
+  padding: 0 0;
 }
 
 .toggleButton {
@@ -718,20 +730,40 @@
   /* Oculto inicialmente */
   opacity: 0;
   overflow: hidden;
-  background-color: var(--main-color-yellow);
   /* Asegura visibilidad del contenido */
   padding: 0 1rem;
   /* Opcional: Ajusta el espaciado del contenido */
   box-sizing: border-box;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-  height: 300px;
+  height: 400px;
   /* Altura fija para el contenido desplegable */
   z-index: 1;
   /* Asegura que el contenido esté sobre otros elementos */
 }
 
+.backgroundImgLogistica {
+  background-image: url(../blockchain/logistica.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backgroundImgRefinacion {
+  background-image: url(../blockchain/refinacion.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backgroundImgReintegracion {
+  background-image: url(../blockchain/reintegracion.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .serviciosItem.open .serviciosItemsText {
-  max-height: 300px;
+  max-height: 400px;
   /* Altura máxima fija cuando se despliega */
   opacity: 1;
 }
@@ -754,16 +786,16 @@
 }
 
 .serviciosItem.open .serviciosItemsText {
-  max-height: 300px;
+  max-height: 400px;
   /* Ajusta según el tamaño máximo esperado */
   opacity: 1;
 }
-
+/* 
 #blockchainGridContainer {
   display: flex;
   flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   width: 100%;
   height: auto;
   padding: 0 10%;
@@ -771,65 +803,26 @@
 }
 
 .blockchainItem {
-  width: 33%;
-  margin: 1rem 0;
-  padding: 1rem 0;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.blockchainItem span {
   position: relative;
-  font-size: 1.4rem;
-  color: var(--main-color-black);
-  margin: 0 1rem;
-  padding: 1rem 1rem;
-  z-index: 1000;
-}
+  width: 30%;
+  height: 250px;
+  display: flex;
+  flex-flow: column;
+  align-items: baseline;
+  justify-content: center;
+} */
 
-.blockchainItem span::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -6%;
-  width: 50px;
-  height: 50px;
-  background-color: var(--main-color-yellow);
-  clip-path: polygon(30% 0%,
-      70% 0%,
-      /* Top side */
-      100% 30%,
-      100% 70%,
-      /* Right side */
-      70% 100%,
-      30% 100%,
-      /* Bottom side */
-      0% 70%,
-      0% 30%
-      /* Left side */
-    );
-  z-index: -10;
-}
-
-.blockchainItem p {
-  font-size: 1.2rem;
-  color: var(--main-color-grey);
-  line-height: 1.2;
-  width: 80%;
-}
 
 #valores {
   position: relative;
   background-color: var(--main-color-black);
   width: 100%;
-  height: 120vh;
+  height: 100%;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50vh;
+  margin-top: 10%;
 }
 
 #valoresTitle {
@@ -853,7 +846,7 @@
   flex-wrap: wrap;
   width: 80%;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 8%;
 }
 
 .valoresItem {
@@ -865,6 +858,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 3rem 0;
 }
 
 .valoresItem h3 {
@@ -912,9 +906,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 190vh;
-  margin-top: 50vh;
-  margin-bottom: 25vh;
+  height: 100%;
+  margin-top: 10%;
 }
 
 #contactoTitle {
@@ -927,7 +920,7 @@
 #contactoText {
   color: var(--main-color-grey);
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   text-align: center;
 }
 
@@ -939,7 +932,7 @@
   justify-content: space-between;
   width: 60%;
   height: 30%;
-  margin-top: 10vh;
+  margin-top: 8%;
 }
 
 #contactoInfo h4 {
@@ -1152,12 +1145,11 @@ label {
   display: flex;
   flex-flow: row;
   width: 100%;
-  height: 40vh;
   align-items: center;
   justify-content: space-around;
   background-color: var(--main-color-yellow);
   margin-top: 10vh;
-  padding: 0 5%;
+  padding: 3% 5%;
   overflow: hidden;
 }
 
@@ -1505,10 +1497,10 @@ label {
   }
 
   #filosofia {
-    height: 50vh;
     text-align: center;
     justify-content: flex-start;
     background-color: var(--main-color-yellow);
+    padding-bottom: 60%;
   }
 
   #filosofia p {
@@ -1570,22 +1562,22 @@ label {
   }
 
   .serviciosItem p {
-    padding: 1rem 0;
+    padding: 1rem 1rem;
   }
 
   #blockchainGridContainer {
     flex-flow: column;
     align-items: center;
     margin: 0 0;
-    padding: 0 0 ;
+    padding: 0 0;
   }
-  
+
   .blockchainItem {
     width: 90%;
     margin: 0.5rem 0.5rem;
     padding: 1rem 0;
   }
-  
+
   .blockchainItem p {
     width: 100%;
   }
@@ -1634,7 +1626,6 @@ label {
   }
 
   #contactoContainer {
-    height: 200vh;
     margin-top: 0;
     justify-content: flex-start;
   }
@@ -1667,7 +1658,6 @@ label {
 
   #main-container {
     width: 90%;
-    height: 85vh;
   }
 
   #main-container h3 {
@@ -1715,17 +1705,5 @@ label {
 
   #footerContainer {
     padding: 10% 5%;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 380px) {
-
-  #lubricantesContainer {
-    height: 120vh;
-  }
-
-  #contactoContainer {
-    height: 250vh;
   }
 }
