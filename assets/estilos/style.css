@@ -826,15 +826,15 @@
   align-items: center;
   justify-content: center;
   margin: 5% 0;
-  background-color: rgba(0, 0, 0, 0.751);
+  background-color: rgba(0, 0, 0, 0.71);
   backdrop-filter: blur(2px);
+  margin-right: 1rem;
 }
 
 .blockchainItemImgContainer {
-  width: 40%;
+  width: 30%;
   height: 100%;
   background-color: transparent;
-  backdrop-filter: blur(3px);
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -848,9 +848,8 @@
   background-color: transparent;
 }
 
-
 .blockchainItemDescription {
-  width: 60%;
+  width: 70%;
   height: 80%;
   margin: 1.5rem 1.5rem;
   padding: 1.5rem 0.5rem;
@@ -870,7 +869,7 @@
 .blockchainItemDescription p {
   font-size: 1.2rem;
   line-height: 1.2;
-  width: 70%;
+  width: 100%;
   color: var(--main-color-grey);
   background-color: transparent;
 }
@@ -1639,42 +1638,40 @@ label {
     align-items: center;
     padding: 5% 3%;
     margin-top: 15%;
-    background-size: 10%;
+    background-size: 15%;
   }
 
   #blockchainGridContainer::before {
     position: relative;
     padding: 0 10%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.2;
-  }
-
-  .blockchainItemImgContainer img {
-    width: 80%;
-    height: 80%;
-    background-color: transparent;
-  }
-
-
-  .blockchainItemDescription {
-    width: 100%;
-    height: 80%;
-    margin: 1.5rem 1.5rem;
-    padding: 1.5rem 0.5rem;
-  }
-
-  .blockchainItemDescription p {
-    width: 100%;
   }
 
   .blockchainItem {
     width: 100%;
+    height: auto;
     margin: 3% 0;
     padding: 0 0;
   }
 
   .blockchainItem p {
     width: 100%;
+  }
+
+  .blockchainItemImgContainer img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .blockchainItemDescription {
+    width: 100%;
+    height: 70%;
+  }
+
+  .blockchainItemDescription p {
+    width: 100%;
+    font-size: 1rem;
   }
 
   #valores {
