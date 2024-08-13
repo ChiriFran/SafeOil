@@ -577,7 +577,7 @@
   display: flex;
   width: 100%;
   flex-flow: row;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   padding: 10% 10%;
 }
@@ -662,7 +662,7 @@
   width: 100%;
   height: 100%;
   background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.494) 0%, rgba(85, 75, 18, 0.618) 58%, #cbb32b 80%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.494) 0%, rgba(85, 75, 18, 0.718) 58%, #cbb32b 80%);
   position: absolute;
   top: 0;
   left: 0;
@@ -732,8 +732,6 @@
   overflow: hidden;
   /* Asegura visibilidad del contenido */
   padding: 0 1rem;
-  /* Opcional: Ajusta el espaciado del contenido */
-  box-sizing: border-box;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
   height: 400px;
   /* Altura fija para el contenido desplegable */
@@ -790,27 +788,92 @@
   /* Ajusta según el tamaño máximo esperado */
   opacity: 1;
 }
-/* 
+
 #blockchainGridContainer {
+  position: relative;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   height: auto;
+  padding: 3% 10%;
+  margin-top: 8%;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23cbb32b' fill-opacity='0.13' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 4%;
+}
+
+#blockchainGridContainer::before {
+  content: 'Etapas en la creacion y verificacion de la informacion en la blockchain';
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2rem 0;
   padding: 0 10%;
-  margin-top: 5%;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: var(--main-color-yellow);
+  text-decoration: underline;
+
 }
 
 .blockchainItem {
-  position: relative;
   width: 30%;
-  height: 250px;
+  height: 150px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 0;
+  background-color: rgba(0, 0, 0, 0.751);
+  backdrop-filter: blur(2px);
+}
+
+.blockchainItemImgContainer {
+  width: 40%;
+  height: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(3px);
   display: flex;
   flex-flow: column;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
-} */
+
+}
+
+.blockchainItemImgContainer img {
+  width: 80%;
+  height: 80%;
+  background-color: transparent;
+}
+
+
+.blockchainItemDescription {
+  width: 60%;
+  height: 80%;
+  margin: 1.5rem 1.5rem;
+  padding: 1.5rem 0.5rem;
+  border-left: 4px dashed var(--main-color-yellow);
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+
+.blockchainItemDescription span {
+  font-size: 1.4rem;
+  color: var(--main-color-yellow);
+  background-color: transparent;
+}
+
+.blockchainItemDescription p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  width: 70%;
+  color: var(--main-color-grey);
+  background-color: transparent;
+}
 
 
 #valores {
@@ -1550,11 +1613,17 @@ label {
   #serviciosGrid {
     width: 100%;
     flex-flow: column;
+    padding: 10% 0;
   }
 
   .serviciosItem {
     margin: 5% 0;
     margin-bottom: 250px;
+  }
+
+
+  .serviciosItem p::before {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.494) 0%, rgba(85, 75, 18, 0.818) 28%, #cbb32b 80%);
   }
 
   .serviciosText {
@@ -1568,14 +1637,45 @@ label {
   #blockchainGridContainer {
     flex-flow: column;
     align-items: center;
-    margin: 0 0;
-    padding: 0 0;
+    padding: 5% 3%;
+    margin-top: 15%;
+    background-size: 10%;
+  }
+
+  #blockchainGridContainer::before {
+    position: relative;
+    padding: 0 10%;
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  .blockchainItemImgContainer img {
+    width: 80%;
+    height: 80%;
+    background-color: transparent;
+  }
+
+
+  .blockchainItemDescription {
+    width: 100%;
+    height: 80%;
+    margin: 1.5rem 1.5rem;
+    padding: 1.5rem 0.5rem;
+    border-left: 4px dashed var(--main-color-yellow);
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    background-color: transparent;
+  }
+
+  .blockchainItemDescription p {
+    width: 100%;
   }
 
   .blockchainItem {
-    width: 90%;
-    margin: 0.5rem 0.5rem;
-    padding: 1rem 0;
+    width: 100%;
+    margin: 3% 0;
+    padding: 0 0;
   }
 
   .blockchainItem p {
