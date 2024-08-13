@@ -1661,11 +1661,6 @@ label {
     height: 80%;
     margin: 1.5rem 1.5rem;
     padding: 1.5rem 0.5rem;
-    border-left: 4px dashed var(--main-color-yellow);
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
-    background-color: transparent;
   }
 
   .blockchainItemDescription p {
