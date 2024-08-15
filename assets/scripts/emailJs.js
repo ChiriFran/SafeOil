@@ -16,12 +16,13 @@ form.addEventListener("submit", function (event) {
   emailjs.sendForm("service_rfeh7zq", "template_rxkkikf", form).then(
     function (response) {
       console.log("Éxito:", response);
-      // Cambia el texto del botón a "Mensaje enviado" y limpia el formulario
+      // Cambia el texto del botón a "Mensaje enviado" y desactiva el botón
       submitButton.textContent = "Mensaje enviado";
       setTimeout(() => {
         submitButton.textContent = "Enviar";
-        submitButton.disabled = false;
+        // Limpia el formulario y reactiva el botón
         form.reset(); // Limpia el formulario
+        submitButton.disabled = false; // Reactiva el botón
       }, 2000); // Mantén el texto "Mensaje enviado" visible por 2 segundos
     },
     function (error) {
