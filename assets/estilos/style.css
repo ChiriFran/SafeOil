@@ -14,6 +14,14 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: "Monserrat";
+  src: url(../tipografia/Montserrat-Italic-VariableFont_wght.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Monserrat";
   src: url(../tipografia/Montserrat-Italic-VariableFont_wght.ttf);
@@ -203,13 +211,13 @@
   background-color: transparent;
   color: var(--main-color-black);
   padding: 0 8%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 800;
   line-height: 1.2;
 }
 
 #heroKeywords {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   background-color: var(--main-color-yellow);
   color: var(--main-color-black);
 }
@@ -473,7 +481,7 @@
   justify-content: start;
   background-color: var(--main-color-yellow);
   color: var(--main-color-black);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 800;
   line-height: 1.4;
 }
@@ -514,7 +522,7 @@
 
 #serviciosTitle {
   color: var(--main-color-yellow);
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   line-height: 1.2;
   margin: 2rem 0 1rem 0;
   margin-top: 10vh;
@@ -533,44 +541,10 @@
 
 .serviciosText {
   color: var(--main-color-grey);
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
   line-height: 1.2;
-}
-
-#blockchainInfoContainer {
-  display: flex;
-  width: 100%;
-  height: auto;
-  flex-flow: column;
-  align-items: start;
-  justify-self: center;
-  padding: 0 10%;
-}
-
-#blockchainInfoTitleContainer p {
-  color: var(--main-color-yellow);
-  font-size: 1.6rem;
-  line-height: 1.2;
-}
-
-#blockchainInfoTextContainer {
-  display: flex;
-  flex-flow: row;
-  align-items: baseline;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 3rem;
-}
-
-.blockchainInfoText {
-  width: 32%;
-}
-
-.blockchainInfoText p {
-  color: var(--main-color-grey);
-  font-size: 1.2rem;
-  line-height: 1.2;
+  font-weight: 500;
 }
 
 #serviciosGrid {
@@ -650,7 +624,7 @@
 .serviciosItem p {
   position: relative;
   text-align: start;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.1;
   color: var(--main-color-black);
   padding: 0.5rem 1rem;
@@ -662,7 +636,7 @@
   width: 100%;
   height: 100%;
   background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.494) 0%, rgba(85, 75, 18, 0.718) 58%, #cbb32b 80%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.494) 0%, rgba(85, 75, 18, 0.718) 38%, #cbb32b 80%);
   position: absolute;
   top: 0;
   left: 0;
@@ -733,7 +707,7 @@
   /* Asegura visibilidad del contenido */
   padding: 0 1rem;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-  height: 400px;
+  height: 300px;
   /* Altura fija para el contenido desplegable */
   z-index: 1;
   /* Asegura que el contenido esté sobre otros elementos */
@@ -761,7 +735,7 @@
 }
 
 .serviciosItem.open .serviciosItemsText {
-  max-height: 400px;
+  max-height: 300px;
   /* Altura máxima fija cuando se despliega */
   opacity: 1;
 }
@@ -789,6 +763,42 @@
   opacity: 1;
 }
 
+#blockchainInfoContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-flow: column;
+  align-items: start;
+  justify-self: center;
+  padding: 0 10%;
+}
+
+#blockchainInfoTitleContainer p {
+  color: var(--main-color-yellow);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+#blockchainInfoTextContainer {
+  display: flex;
+  flex-flow: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.blockchainInfoText {
+  width: 32%;
+}
+
+.blockchainInfoText p {
+  color: var(--main-color-grey);
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
 #blockchainGridContainer {
   position: relative;
   display: flex;
@@ -799,8 +809,11 @@
   height: auto;
   padding: 3% 10%;
   margin-top: 8%;
-  background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23cbb32b' fill-opacity='0.13' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-color: #000000; 
+
+/*   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.5));
+ */  
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23cbb32b' fill-opacity='0.3' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-size: 4%;
 }
 
@@ -811,7 +824,7 @@
   left: 0;
   margin: 2rem 0;
   padding: 0 10%;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   line-height: 1.2;
   color: var(--main-color-yellow);
   text-decoration: underline;
@@ -819,16 +832,15 @@
 }
 
 .blockchainItem {
-  width: 30%;
+  width: 33%;
   height: 150px;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: center;
   margin: 5% 0;
-  background-color: rgba(0, 0, 0, 0.71);
-  backdrop-filter: blur(2px);
-  margin-right: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
 }
 
 .blockchainItemImgContainer {
@@ -852,11 +864,11 @@
   width: 70%;
   height: 80%;
   margin: 1.5rem 1.5rem;
-  padding: 1.5rem 0.5rem;
+  padding-left: 1rem;
   border-left: 4px dashed var(--main-color-yellow);
   display: flex;
   flex-flow: column;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: transparent;
 }
 
@@ -867,8 +879,9 @@
 }
 
 .blockchainItemDescription p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.2;
+  font-weight: 500;
   width: 100%;
   color: var(--main-color-grey);
   background-color: transparent;
@@ -1121,6 +1134,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: 10%;
 }
 
 #formTitle {
@@ -1404,7 +1418,7 @@ label {
     flex-flow: column;
     align-items: center;
     justify-content: flex-end;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0% 5%;
     position: relative;
     overflow: visible;
