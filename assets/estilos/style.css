@@ -651,7 +651,7 @@
   position: relative;
   text-align: start;
   font-size: 1rem;
-  line-height: 1.1;
+  line-height: 1.2;
   color: var(--main-color-black);
   padding: 0.5rem 1rem;
   margin-top: 1rem;
@@ -707,7 +707,7 @@
 
 .backgroundImgRefinacion {
   background-image: url(../blockchain/refinacion.jpg);
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #cbb32b88;
