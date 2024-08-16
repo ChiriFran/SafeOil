@@ -592,10 +592,10 @@
 
 .serviciosItem::before {
   content: "";
-  width: 180px;
-  height: 180px;
+  width: 90px;
+  height: 90px;
   position: absolute;
-  top: -1.4rem;
+  top: 1.8rem;
   clip-path: polygon(30% 0%,
       70% 0%,
       /* Top side */
@@ -615,10 +615,10 @@
 
 .serviciosItem::after {
   content: "";
-  width: 187px;
-  height: 187px;
+  width: 97px;
+  height: 97px;
   position: absolute;
-  top: -1.6rem;
+  top: 1.6rem;
   clip-path: polygon(30% 0%,
       70% 0%,
       /* Top side */
@@ -658,8 +658,7 @@
   content: '';
   width: 100%;
   height: 100%;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.494) 0%, rgba(85, 75, 18, 0.718) 38%, #cbb32b 80%);
+  background-color: var(--main-color-yellow);
   position: absolute;
   top: 0;
   left: 0;
@@ -667,10 +666,10 @@
 }
 
 .serviciosItem img {
-  width: 100px;
+  width: 60px;
   z-index: 1000;
   background-color: transparent;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
 }
 
 .serviciosItem {
@@ -683,57 +682,15 @@
   padding: 0 0;
 }
 
-.toggleButton {
-  opacity: 0;
-  background-color: var(--main-color-yellow);
-  color: var(--main-color-black);
-  border: none;
-  width: 36px;
-  height: 36px;
-  font-size: 26px;
-  font-family: sans-serif, Arial;
-  text-align: center;
-  line-height: 30px;
-  /* Centra el texto verticalmente */
-  cursor: pointer;
-  margin-top: 1rem;
-  /* Espacio entre el título y el botón */
-  transition: transform 0.4s ease, background-color 0.4s ease, opacity 1s ease;
-  clip-path: polygon(30% 0%,
-      70% 0%,
-      100% 30%,
-      100% 70%,
-      70% 100%,
-      30% 100%,
-      0% 70%,
-      0% 30%);
-  transform: rotate(0deg);
-  /* Ángulo de rotación inicial */
-}
-
-.toggleButton.open {
-  transform: rotate(45deg);
-  /* Rota el botón 45 grados al abrir */
-}
-
 .serviciosItemsText {
   position: absolute;
-  /* Posiciona el contenido desplegable de manera absoluta */
   top: 100%;
-  /* Justo debajo del botón */
   left: 0;
   width: 100%;
-  max-height: 0;
-  /* Oculto inicialmente */
-  opacity: 0;
+  height: 180px;
   overflow: hidden;
-  /* Asegura visibilidad del contenido */
   padding: 0 1rem;
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-  height: 300px;
-  /* Altura fija para el contenido desplegable */
   z-index: 1;
-  /* Asegura que el contenido esté sobre otros elementos */
 }
 
 .backgroundImgLogistica {
@@ -757,33 +714,10 @@
   background-size: cover;
 }
 
-.serviciosItem.open .serviciosItemsText {
-  max-height: 300px;
-  /* Altura máxima fija cuando se despliega */
-  opacity: 1;
-}
-
-.toggleButton.open::before {
-  content: "";
-}
-
-.toggleButton::before {
-  content: "";
-}
-
 .serviciosItemsText {
   display: block;
-  max-height: 0;
-  /* Oculto inicialmente */
-  opacity: 0;
-  transition: max-height 1s ease-out, opacity 1s ease-out;
-  overflow: hidden;
-}
-
-.serviciosItem.open .serviciosItemsText {
   max-height: 400px;
-  /* Ajusta según el tamaño máximo esperado */
-  opacity: 1;
+  overflow: hidden;
 }
 
 #blockchainInfoContainer {
@@ -1599,6 +1533,18 @@ label {
     height: 100%;
   }
 
+  #econCircularImgContainer {
+    width: 120%;
+    height: 150%;
+    background-color: var(--main-color-yellow);
+  }
+
+  #econCircularImg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(20deg);
+  }
+
   #filosofia {
     text-align: center;
     justify-content: flex-start;
@@ -1658,12 +1604,7 @@ label {
 
   .serviciosItem {
     margin: 5% 0;
-    margin-bottom: 250px;
-  }
-
-
-  .serviciosItem p::before {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.494) 0%, rgba(85, 75, 18, 0.818) 28%, #cbb32b 80%);
+    margin-bottom: 80px;
   }
 
   .serviciosText {
