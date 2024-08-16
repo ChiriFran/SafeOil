@@ -1535,8 +1535,9 @@ label {
 
   #econCircularImgContainer {
     width: 120%;
-    height: 150%;
+    height: 180%;
     background-color: var(--main-color-yellow);
+    overflow: hidden;
   }
 
   #econCircularImg {
