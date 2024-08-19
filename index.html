@@ -40,7 +40,13 @@
     <div id="centerHero">
       <h2>Unete a nuestro sistema de <br><span id="heroKeywords">TRAZABILIDAD EN BLOCKCHAIN</span><br><span
           id="heroSmallwords">para el reciclaje de aceites usados</span></h2>
-      <button>¡Comenzar!</button>
+      <button id="openModal">¡Comenzar!</button>
+
+      <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+          <h2>Comenzar</h2>
+        </div>
+      </div>
       <p>
         Recicle su aceite usado y conviértalo en un recurso que impulsa la
         economía circular y protege el medio ambiente.
@@ -115,7 +121,7 @@
 
   <section id="econCircularIlustracion">
     <div id="econCircularImgContainer">
-      <img src="./assets/ilustraciones/econ-circular/econ-circular-amarillo.jpeg" alt="" id="econCircularImg">
+      <img src="./assets/ilustraciones/econ-circular/econ-circular.svg" alt="" id="econCircularImg">
     </div>
   </section>
 
@@ -368,6 +374,7 @@
 
   <script src="./assets/scripts/nav.js"></script>
   <script src="./assets/scripts/scrollAnimation.js"></script>
+  <script src="./assets/scripts/modal.js"></script>
   <script src="./assets/scripts/counter.js"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="./assets/scripts/emailJs.js"></script>
