@@ -44,10 +44,38 @@
 
       <div class="modal-overlay" id="modalOverlay">
         <div class="modal-content">
-          <h2>Comenzar</h2>
+          <div id="modalInfoContainer">
+            <div class="modalInfo">
+              <img src="./assets/icons/email.svg" alt="">
+              <h4>Email: </h4>
+              <p>contacto@safeoil.com</p>
+            </div>
+            <div class="modalInfo">
+              <img src="./assets/icons/phone.svg" alt="">
+              <h4>Tel: </h4>
+              <p>+54 11 59403454</p>
+            </div>
+            <div class="modalInfo">
+              <img src="./assets/icons/location.svg" alt="">
+              <h4>Ubicacion: </h4>
+              <p>Argentina</p>
+            </div>
+          </div>
+          <div id="modalFormContainer">
+            <form>
+              <div class="modalFormContainer">
+                <label for="modalName"></label>
+                <input type="text" id="modalName">
+              </div>
+              <div class="modalFormContainer">
+                <label for="modalEmail"></label>
+                <input type="email" id="modalEmail">
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-      <p>
+      <p id="centerHeroFooter">
         Recicle su aceite usado y conviértalo en un recurso que impulsa la
         economía circular y protege el medio ambiente.
       </p>
