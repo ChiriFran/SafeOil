@@ -1501,8 +1501,8 @@ label {
   }
 
   #estadisticasContainer {
-    padding-top: 5rem;
-    height: 100vh;
+    padding: 10% 0;
+    height: auto;
   }
 
   .counters>div {
