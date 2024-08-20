@@ -2003,7 +2003,7 @@ label {
   #serviciosTitle,
   #valoresTitle,
   #contactoTitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.2;
     color: var(--main-color-yellow);
     padding: 0 10%;
