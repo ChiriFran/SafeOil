@@ -313,7 +313,7 @@
 .modalInfo {
   display: flex;
   width: 100%;
-  flex-flow: row;
+  flex-flow: column;
   align-items: center;
   justify-content: flex-start;
   background-color: rgba(0, 0, 0, 0.7);
@@ -325,6 +325,7 @@
   width: 50px;
   background-color: var(--main-color-yellow);
   padding: 0.5rem 0.5rem;
+  margin: 1rem 0;
 }
 
 .modalInfo h4 {
@@ -334,6 +335,7 @@
 
 .modalInfo p {
   color: var(--main-color-yellow);
+  margin-bottom: 1rem;
 }
 
 #modalFormContainer {
