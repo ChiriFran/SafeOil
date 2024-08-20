@@ -245,7 +245,7 @@
   color: var(--main-color-black);
 }
 
-#centerHero button {
+#openModal {
   display: flex;
   width: 80%;
   flex-flow: column;
@@ -280,8 +280,8 @@
 .modal-content {
   position: relative;
   width: 60%;
-  height: 400px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23cbb32b' fill-opacity='0.5' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  height: 500px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23cbb32b' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-size: 8%;
   border: 5px solid var(--main-color-yellow);
   padding: 20px;
@@ -290,12 +290,19 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   display: flex;
   flex-flow: row;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+/* Mostrar modal con animación */
+.modal-overlay.show .modal-content {
+  opacity: 1;
+  transform: scale(1);
 }
 
 #modalInfoContainer {
   display: flex;
+  width: 49%;
   height: 100%;
   flex-flow: column;
   align-items: baseline;
@@ -329,10 +336,53 @@
   color: var(--main-color-yellow);
 }
 
-/* Mostrar modal con animación */
-.modal-overlay.show .modal-content {
-  opacity: 1;
-  transform: scale(1);
+#modalFormContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 49%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  padding: 1rem 1rem;
+}
+
+#modalFormContainer span {
+  background-color: transparent;
+  color: var(--main-color-yellow);
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+#modalFormContainer form {
+  text-align: start;
+  background-color: transparent;
+}
+
+#modalFormContainer input {
+  border: none;
+  background-color: var(--main-color-yellow);
+  color: var(--main-color-black);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+#modalSubmitButton{
+  width: 100%;
+  border: 2px solid var(--main-color-yellow);
+  background-color: var(--main-color-black);
+  color: var(--main-color-yellow);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+#modalFormContainer input:last-of-type {
+  height: 100px;
 }
 
 #mobileHero {
@@ -1450,7 +1500,7 @@ label {
     font-size: 1.2rem;
   }
 
-  #centerHero p {
+  #centerHeroFooter {
     font-size: 0.8rem;
     filter: grayscale(1);
   }
@@ -1481,435 +1531,492 @@ label {
 
   .modal-content {
     width: 90%;
-    height: 400px;
-    padding: 20px;
+    padding: 12px;
     display: flex;
+    flex-flow: column;
+    overflow-y: scroll;
+    background-size: 15%;
+  }
+
+  #modalInfoContainer {
+    width: 100%;
+  }
+
+  .modalInfo{
+    margin: 1rem 0;
+  }
+
+  .modalInfo img {
+    width: 40px;
+    padding: 0.2rem 0.2rem;
+  }
+
+  .modalInfo h4 {
+    color: var(--main-color-yellow);
+    padding: 0 0;
+  }
+
+  .modalInfo p {
+    color: var(--main-color-yellow);
+    padding-left: 1rem;
+  }
+
+  #modalFormContainer {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem;
+  }
+
+  #modalFormContainer span {
+    background-color: transparent;
+    color: var(--main-color-yellow);
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  #modalFormContainer form {
+    text-align: start;
+    background-color: transparent;
+  }
+
+  #modalFormContainer input {
+    border: none;
+    background-color: var(--main-color-yellow);
+    color: var(--main-color-black);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  #modalFormContainer input:last-of-type {
+    height: 100px;
+  }
+
+  #mobileHero {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1rem;
+    padding: 0% 5%;
+    position: relative;
+    overflow: visible;
+  }
+
+  #mobileHero p {
+    line-height: 1.5;
+  }
+
+  #mobileHero::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 100%;
+    top: -40%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    z-index: 1000;
+  }
+
+  #mobileHero::before {
+    background-image: url("../ilustraciones/nodos-en-subida-celeste.svg");
+    text-align: center;
+  }
+
+  #leftHero::before,
+  #rightHero::before,
+  #mobileHero::before,
+  #filosofiaText::before {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      scale: 0.8;
+      transform: translateY(50px);
+    }
+
+    to {
+      opacity: 0.5;
+      scale: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-left::before,
+  .animate-right::before,
+  .animate-mobile::before {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  .animate-filosofia::before {
+    animation: fadeInFilosofia 1.2s ease-out forwards;
+  }
+
+  @keyframes fadeInFilosofia {
+    from {
+      opacity: 0;
+      scale: 0.8;
+      transform: translateY(50px);
+    }
+
+    to {
+      opacity: 1;
+      scale: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .problematicaReciclaje {
+    display: flex;
+    width: 100%;
+    padding: 15% 3%;
+  }
+
+  .problematicaReciclaje:nth-of-type(2) {
+    padding: 10% 3%;
+  }
+
+  .problematicaReciclaje p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  #estadisticasContainer {
+    padding: 10% 0;
+    height: auto;
+  }
+
+  .counters>div {
+    grid-template-columns: 1fr;
+    row-gap: 5em;
+  }
+
+  .counter:not(:last-child)::before {
+    width: 90%;
+    height: 2px;
+    top: initial;
+    right: initial;
+    left: 50%;
+    bottom: -3em;
+    transform: translateX(-50%);
+  }
+
+  .counterNumber span {
+    font-size: 3rem;
+  }
+
+  #lubricantesContainer {
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--main-color-yellow);
+    margin-bottom: 5rem;
+  }
+
+  #graficoTitle {
+    bottom: -50%;
+  }
+
+  .lubricantesMain {
+    width: 100%;
+    order: 2;
+    margin-top: 3rem;
+  }
+
+  .lubricantesMain::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+  }
+
+  .lubricantesMain::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 90%;
+  }
+
+  #lubricantes24 {
+    width: 30%;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #lubricantes29 {
+    width: 30%;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .lubricantesSides {
+    width: 90%;
+    order: 1;
+    margin-bottom: 3rem;
+  }
+
+  .lubricantesSides {
+    display: none;
+  }
+
+  #econCircularIlustracion {
+    overflow: hidden;
+  }
+
+  #econCircularImgContainer {
+    width: 95%;
+    background-color: var(--main-color-yellow);
+  }
+
+  #econCircularImg {
+    width: 100%;
+    height: 100%;
+  }
+
+  #filosofia {
+    text-align: center;
+    justify-content: flex-start;
+    background-color: var(--main-color-yellow);
+    padding-bottom: 60%;
+  }
+
+  #filosofia p {
+    width: 95%;
+    padding: 0 5%;
+    font-size: 1rem;
+    margin-top: 3rem;
+  }
+
+  #filosofiaText::before {
+    width: 250px;
+    height: 250px;
+    top: 70%;
+  }
+
+  #serviciosTextContainer {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 3rem;
+    padding: 0 10%;
+    margin-top: 5rem;
+  }
+
+  #blockchainInfoContainer {
+    height: auto;
+    margin-bottom: 3rem;
     flex-flow: column;
   }
 
-    #mobileHero {
-      display: flex;
-      width: 100%;
-      height: 30vh;
-      flex-flow: column;
-      align-items: center;
-      justify-content: flex-end;
-      font-size: 1rem;
-      padding: 0% 5%;
-      position: relative;
-      overflow: visible;
-    }
-
-    #mobileHero p {
-      line-height: 1.5;
-    }
-
-    #mobileHero::before {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 100%;
-      top: -40%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.6;
-      z-index: 1000;
-    }
-
-    #mobileHero::before {
-      background-image: url("../ilustraciones/nodos-en-subida-celeste.svg");
-      text-align: center;
-    }
-
-    #leftHero::before,
-    #rightHero::before,
-    #mobileHero::before,
-    #filosofiaText::before {
-      opacity: 0;
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        scale: 0.8;
-        transform: translateY(50px);
-      }
-
-      to {
-        opacity: 0.5;
-        scale: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-left::before,
-    .animate-right::before,
-    .animate-mobile::before {
-      animation: fadeIn 1.2s ease-out forwards;
-    }
-
-    .animate-filosofia::before {
-      animation: fadeInFilosofia 1.2s ease-out forwards;
-    }
-
-    @keyframes fadeInFilosofia {
-      from {
-        opacity: 0;
-        scale: 0.8;
-        transform: translateY(50px);
-      }
-
-      to {
-        opacity: 1;
-        scale: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .problematicaReciclaje {
-      display: flex;
-      width: 100%;
-      padding: 15% 3%;
-    }
-
-    .problematicaReciclaje:nth-of-type(2) {
-      padding: 10% 3%;
-    }
-
-    .problematicaReciclaje p {
-      font-size: 1.2rem;
-      line-height: 1.2;
-    }
-
-    #estadisticasContainer {
-      padding: 10% 0;
-      height: auto;
-    }
-
-    .counters>div {
-      grid-template-columns: 1fr;
-      row-gap: 5em;
-    }
-
-    .counter:not(:last-child)::before {
-      width: 90%;
-      height: 2px;
-      top: initial;
-      right: initial;
-      left: 50%;
-      bottom: -3em;
-      transform: translateX(-50%);
-    }
-
-    .counterNumber span {
-      font-size: 3rem;
-    }
-
-    #lubricantesContainer {
-      flex-flow: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: auto;
-      background-color: var(--main-color-yellow);
-      margin-bottom: 5rem;
-    }
-
-    #graficoTitle {
-      bottom: -50%;
-    }
-
-    .lubricantesMain {
-      width: 100%;
-      order: 2;
-      margin-top: 3rem;
-    }
-
-    .lubricantesMain::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 90%;
-    }
-
-    .lubricantesMain::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 90%;
-    }
-
-    #lubricantes24 {
-      width: 30%;
-      padding-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    #lubricantes29 {
-      width: 30%;
-      padding-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .lubricantesSides {
-      width: 90%;
-      order: 1;
-      margin-bottom: 3rem;
-    }
-
-    .lubricantesSides {
-      display: none;
-    }
-
-    #econCircularIlustracion {
-      overflow: hidden;
-    }
-
-    #econCircularImgContainer {
-      width: 95%;
-      background-color: var(--main-color-yellow);
-    }
-
-    #econCircularImg {
-      width: 100%;
-      height: 100%;
-    }
-
-    #filosofia {
-      text-align: center;
-      justify-content: flex-start;
-      background-color: var(--main-color-yellow);
-      padding-bottom: 60%;
-    }
-
-    #filosofia p {
-      width: 95%;
-      padding: 0 5%;
-      font-size: 1rem;
-      margin-top: 3rem;
-    }
-
-    #filosofiaText::before {
-      width: 250px;
-      height: 250px;
-      top: 70%;
-    }
-
-    #serviciosTextContainer {
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: 1fr;
-      width: 100%;
-      gap: 3rem;
-      padding: 0 10%;
-      margin-top: 5rem;
-    }
-
-    #blockchainInfoContainer {
-      height: auto;
-      margin-bottom: 3rem;
-      flex-flow: column;
-    }
-
-    #blockchainInfoTitleContainer p {
-      font-size: 1.4rem;
-    }
-
-    #blockchainInfoTextContainer {
-      flex-flow: column;
-    }
-
-    .blockchainInfoText {
-      width: 100%;
-    }
-
-    .blockchainInfoText p {
-      margin: 1rem 0;
-    }
-
-    #serviciosGrid {
-      width: 100%;
-      flex-flow: column;
-      padding: 10% 0;
-    }
-
-    .serviciosItem {
-      margin: 5% 0;
-      margin-bottom: 80px;
-    }
-
-    .serviciosText {
-      margin-bottom: 0;
-    }
-
-    .serviciosItem p {
-      padding: 1rem 1rem;
-    }
-
-    #blockchainGridContainer {
-      flex-flow: column;
-      align-items: center;
-      padding: 5% 3%;
-      margin-top: 15%;
-      background-size: 15%;
-    }
-
-    #blockchainGridContainer::before {
-      position: relative;
-      padding: 0 10%;
-      font-size: 1.2rem;
-      line-height: 1.2;
-    }
-
-    .blockchainItem {
-      width: 100%;
-      height: auto;
-      margin: 3% 0;
-      padding: 0 0;
-    }
-
-    .blockchainItem p {
-      width: 100%;
-    }
-
-    .blockchainItemImgContainer img {
-      width: 80%;
-      height: 80%;
-    }
-
-    .blockchainItemDescription {
-      width: 100%;
-      height: 70%;
-    }
-
-    .blockchainItemDescription p {
-      width: 100%;
-      font-size: 1rem;
-    }
-
-    #valores {
-      position: relative;
-      background-color: var(--main-color-black);
-      width: 100%;
-      height: 100%;
-      margin-bottom: 25vh;
-    }
-
-    #valoresGrid {
-      display: flex;
-      flex-flow: column;
-      width: 100%;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .valoresItem {
-      width: 90%;
-      padding: 0 0;
-      margin: 5% 0;
-      padding: 5% 0;
-    }
-
-    .valoresItem h3 {
-      font-size: 1rem;
-    }
-
-    .valoresItem p {
-      padding: 0 10%;
-      font-size: 0.8rem;
-    }
-
-    .valoresIcon {
-      width: 100px;
-      height: 90px;
-    }
-
-    .valoresIcon {
-      /* Initial state */
-      transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
-    }
-
-    #contactoContainer {
-      margin-top: 0;
-      justify-content: flex-start;
-    }
-
-    #contactoInfo {
-      display: flex;
-      flex-flow: column;
-      width: 90%;
-      margin-top: 5rem;
-      height: auto;
-    }
-
-    #contactoForm {
-      margin-top: 5rem;
-    }
-
-    #infoEmail,
-    #infoPhone,
-    #infoAddress {
-      margin: 3rem 0;
-      z-index: 10000;
-    }
-
-    #infoEmail::after,
-    #infoPhone::after,
-    #infoAddress::after {
-      top: -2rem;
-      left: -30%;
-    }
-
-    #main-container {
-      width: 90%;
-    }
-
-    #main-container h3 {
-      text-align: center;
-      font-size: 3rem;
-      margin: 2rem 0 1rem 0;
-    }
-
-    #main-container p {
-      text-align: center;
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .container {
-      padding: 0 0;
-    }
-
-    #contactoForm input,
-    #contactoForm textarea {
-      width: 100%;
-    }
-
-    #contactoForm button {
-      width: 100%;
-    }
-
-    #serviciosTitle,
-    #valoresTitle,
-    #contactoTitle {
-      font-size: 1.4rem;
-      line-height: 1.2;
-      color: var(--main-color-yellow);
-      padding: 0 10%;
-    }
-
-    #serviciosText,
-    #valoresText,
-    #contactoText {
-      font-size: 1.2rem;
-      padding: 0 5%;
-      color: var(--main-color-grey);
-      text-align: center;
-    }
-
-    #footerContainer {
-      padding: 10% 5%;
-    }
+  #blockchainInfoTitleContainer p {
+    font-size: 1.4rem;
   }
+
+  #blockchainInfoTextContainer {
+    flex-flow: column;
+  }
+
+  .blockchainInfoText {
+    width: 100%;
+  }
+
+  .blockchainInfoText p {
+    margin: 1rem 0;
+  }
+
+  #serviciosGrid {
+    width: 100%;
+    flex-flow: column;
+    padding: 10% 0;
+  }
+
+  .serviciosItem {
+    margin: 5% 0;
+    margin-bottom: 80px;
+  }
+
+  .serviciosText {
+    margin-bottom: 0;
+  }
+
+  .serviciosItem p {
+    padding: 1rem 1rem;
+  }
+
+  #blockchainGridContainer {
+    flex-flow: column;
+    align-items: center;
+    padding: 5% 3%;
+    margin-top: 15%;
+    background-size: 15%;
+  }
+
+  #blockchainGridContainer::before {
+    position: relative;
+    padding: 0 10%;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .blockchainItem {
+    width: 100%;
+    height: auto;
+    margin: 3% 0;
+    padding: 0 0;
+  }
+
+  .blockchainItem p {
+    width: 100%;
+  }
+
+  .blockchainItemImgContainer img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .blockchainItemDescription {
+    width: 100%;
+    height: 70%;
+  }
+
+  .blockchainItemDescription p {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #valores {
+    position: relative;
+    background-color: var(--main-color-black);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 25vh;
+  }
+
+  #valoresGrid {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .valoresItem {
+    width: 90%;
+    padding: 0 0;
+    margin: 5% 0;
+    padding: 5% 0;
+  }
+
+  .valoresItem h3 {
+    font-size: 1rem;
+  }
+
+  .valoresItem p {
+    padding: 0 10%;
+    font-size: 0.8rem;
+  }
+
+  .valoresIcon {
+    width: 100px;
+    height: 90px;
+  }
+
+  .valoresIcon {
+    /* Initial state */
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+  }
+
+  #contactoContainer {
+    margin-top: 0;
+    justify-content: flex-start;
+  }
+
+  #contactoInfo {
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    margin-top: 5rem;
+    height: auto;
+  }
+
+  #contactoForm {
+    margin-top: 5rem;
+  }
+
+  #infoEmail,
+  #infoPhone,
+  #infoAddress {
+    margin: 3rem 0;
+    z-index: 10000;
+  }
+
+  #infoEmail::after,
+  #infoPhone::after,
+  #infoAddress::after {
+    top: -2rem;
+    left: -30%;
+  }
+
+  #main-container {
+    width: 90%;
+  }
+
+  #main-container h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  #main-container p {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    padding: 0 0;
+  }
+
+  #contactoForm input,
+  #contactoForm textarea {
+    width: 100%;
+  }
+
+  #contactoForm button {
+    width: 100%;
+  }
+
+  #serviciosTitle,
+  #valoresTitle,
+  #contactoTitle {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: var(--main-color-yellow);
+    padding: 0 10%;
+  }
+
+  #serviciosText,
+  #valoresText,
+  #contactoText {
+    font-size: 1.2rem;
+    padding: 0 5%;
+    color: var(--main-color-grey);
+    text-align: center;
+  }
+
+  #footerContainer {
+    padding: 10% 5%;
+  }
+}
