@@ -223,17 +223,6 @@
   line-height: 1.2;
 }
 
-#heroKeywords {
-  font-size: 1.2rem;
-  background-color: var(--main-color-yellow);
-  color: var(--main-color-black);
-}
-
-#heroSmallwords {
-  background-color: var(--main-color-yellow);
-  color: var(--main-color-black);
-}
-
 #centerHeroFooter {
   background-color: transparent;
   color: #000000e4;
@@ -254,11 +243,10 @@
   border: none;
   background-color: var(--main-color-black);
   padding: 1rem 2rem;
-  text-align: center;
   color: var(--main-color-yellow);
   cursor: pointer;
+  line-height: 1.2;
   z-index: 100;
-  font-size: 1rem;
 }
 
 /* Fondo del modal */
@@ -591,8 +579,8 @@
 }
 
 #econCircularImgContainer {
-  width: 55%;
-  height: 55%;
+  width: 50%;
+  height: 50%;
   background-color: var(--main-color-yellow);
 }
 
