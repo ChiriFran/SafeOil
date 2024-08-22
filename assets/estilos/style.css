@@ -1454,10 +1454,6 @@ label {
     font-size: 1rem;
   }
 
-  #heroKeywords {
-    font-size: 1.2rem;
-  }
-
   #centerHeroFooter {
     font-size: 0.8rem;
     filter: grayscale(1);
@@ -1485,6 +1481,12 @@ label {
   #leftHero p,
   #rightHero p {
     padding: 0 5%;
+  }
+  
+  #openModal {
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 
   .modal-content {
@@ -1621,7 +1623,7 @@ label {
   }
 
   .problematicaReciclaje p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.2;
   }
 
@@ -1656,7 +1658,7 @@ label {
     width: 100%;
     height: auto;
     background-color: var(--main-color-yellow);
-    margin-bottom: 5rem;
+    margin: 5rem;
   }
 
   #graficoTitle {
@@ -1755,7 +1757,7 @@ label {
   }
 
   #blockchainInfoTitleContainer p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   #blockchainInfoTextContainer {
