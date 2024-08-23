@@ -244,10 +244,16 @@
   border: none;
   background-color: var(--main-color-black);
   padding: 1rem 2rem;
-  color: var(--main-color-yellow);
   cursor: pointer;
-  line-height: 1.2;
   z-index: 100;
+}
+
+#openModal h2{
+  color: var(--main-color-yellow);
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 500;
+
 }
 
 /* Fondo del modal */
@@ -1454,6 +1460,7 @@ label {
 
   #centerHero h1 {
     padding: 0 0;
+    font-size: 1rem;
   }
 
   #centerHeroFooter {
@@ -1487,8 +1494,13 @@ label {
   
   #openModal {
     width: 100%;
+
+  }
+  
+  #openModal h2{
     font-size: 0.8rem;
     line-height: 1.4;
+
   }
 
   .modal-content {
