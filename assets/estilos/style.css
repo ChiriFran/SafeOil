@@ -292,8 +292,8 @@
 #modalFormContainer {
   display: flex;
   flex-flow: column;
-  align-items: stretch;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -327,6 +327,7 @@
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   font-weight: 500;
+  width: 400px;
 }
 
 #modalSubmitButton {
@@ -1526,6 +1527,7 @@ label {
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
     font-weight: 500;
+    width: auto;
   }
 
   #modalFormContainer input:last-of-type {
