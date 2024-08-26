@@ -317,7 +317,7 @@
   line-height: 1.2;
 }
 
-#modalContactoMedios{
+#modalContactoMedios {
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -327,7 +327,7 @@
   margin: 1rem 0;
 }
 
-.contactoMediosItem{
+.contactoMediosItem {
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -335,7 +335,7 @@
   background-color: transparent;
 }
 
-.contactoMediosItem > p{
+.contactoMediosItem>p {
   padding: 0 1rem;
   background-color: transparent;
   color: var(--main-color-yellow);
@@ -343,24 +343,24 @@
   font-weight: 500;
 }
 
-.contactoMediosImg{
+.contactoMediosImg {
   width: 40px;
   height: 40px;
   padding: 0.5rem 0.5rem;
   background-color: var(--main-color-yellow);
   clip-path: polygon(30% 0%,
-  70% 0%,
-  /* Top side */
-  100% 30%,
-  100% 70%,
-  /* Right side */
-  70% 100%,
-  30% 100%,
-  /* Bottom side */
-  0% 70%,
-  0% 30%
-  /* Left side */
-);
+      70% 0%,
+      /* Top side */
+      100% 30%,
+      100% 70%,
+      /* Right side */
+      70% 100%,
+      30% 100%,
+      /* Bottom side */
+      0% 70%,
+      0% 30%
+      /* Left side */
+    );
 }
 
 #modalFormContainer form {
@@ -399,10 +399,10 @@
   height: 100px;
 }
 
-#modalSubmitButton:hover{
+#modalSubmitButton:hover {
   background-color: var(--main-color-aqua-green);
   color: var(--main-color-black);
-  transition: .3s; 
+  transition: .3s;
 }
 
 .modalContacto {
@@ -439,7 +439,7 @@
   transition: .5s;
 }
 
-.modalRedesImg:hover{
+.modalRedesImg:hover {
   transform: translateY(-5px);
   transition: .3s;
 }
@@ -1560,7 +1560,7 @@ label {
   #centerHeroFooter {
     font-size: 0.8rem;
     filter: grayscale(1);
-    padding: 0 0 ;
+    padding: 0 0;
   }
 
   #leftHero {
@@ -1605,7 +1605,7 @@ label {
     flex-flow: column;
     background-size: 30%;
   }
-  
+
   #modalFormContainer {
     justify-content: space-around;
     padding: 1rem 1rem;
@@ -1618,12 +1618,12 @@ label {
     margin: 1rem 0;
   }
 
-  #modalContactoMedios{
+  #modalContactoMedios {
     flex-flow: column;
     align-items: baseline;
   }
 
-  .contactoMediosItem{
+  .contactoMediosItem {
     margin: 1rem 0;
   }
 
