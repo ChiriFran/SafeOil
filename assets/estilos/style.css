@@ -229,6 +229,7 @@
   background-color: transparent;
   color: #000000e4;
   font-size: 0.8rem;
+  padding: 0 15%;
 }
 
 #spanContacto {
@@ -1559,6 +1560,7 @@ label {
   #centerHeroFooter {
     font-size: 0.8rem;
     filter: grayscale(1);
+    padding: 0 0 ;
   }
 
   #leftHero {
