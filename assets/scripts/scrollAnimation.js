@@ -7,14 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: "#infoEmail", animationClass: "animate-info" },
     { id: "#infoPhone", animationClass: "animate-info" },
     { id: "#infoAddress", animationClass: "animate-info" },
+    { id: "#econCircularIlustracion", animationClass: "econCircularIlustracionAnim", targetId: "#econCircularImg" }
   ];
 
   const valoresIcons = document.querySelectorAll(".valoresIcon");
 
+  // Modificar el threshold para que la animación se active antes
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 1,
+    threshold: 0.3,  // Ajusta este valor para que la animación se active cuando el 30% del elemento sea visible
   };
 
   const iconObserverOptions = {
@@ -27,24 +29,23 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const animationClass = entry.target.dataset.animationClass;
-        entry.target.classList.remove(animationClass);
-        void entry.target.offsetWidth;
-        entry.target.classList.add(animationClass);
+        const targetElement = entry.target.querySelector(entry.target.dataset.targetId) || entry.target;
+        targetElement.classList.remove(animationClass);
+        void targetElement.offsetWidth;
+        targetElement.classList.add(animationClass);
         observer.unobserve(entry.target);
       }
     });
   };
 
   const observer = new IntersectionObserver(observerCallback, observerOptions);
-  const iconObserver = new IntersectionObserver(
-    observerCallback,
-    iconObserverOptions
-  );
+  const iconObserver = new IntersectionObserver(observerCallback, iconObserverOptions);
 
   elementsToObserve.forEach((elementInfo) => {
     const element = document.querySelector(elementInfo.id);
     if (element) {
       element.dataset.animationClass = elementInfo.animationClass;
+      if (elementInfo.targetId) element.dataset.targetId = elementInfo.targetId;
       observer.observe(element);
     }
   });
@@ -62,7 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (element) {
         const rect = element.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-          element.classList.add(elementInfo.animationClass);
+          const targetElement = element.querySelector(elementInfo.targetId) || element;
+          targetElement.classList.add(elementInfo.animationClass);
         }
       }
     });
@@ -109,10 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  const serviciosObserver = new IntersectionObserver(
-    serviciosObserverCallback,
-    serviciosObserverOptions
-  );
+  const serviciosObserver = new IntersectionObserver(serviciosObserverCallback, serviciosObserverOptions);
 
   serviciosItems.forEach((item) => {
     if (item) {

@@ -691,6 +691,25 @@
   width: 100%;
   height: 100%;
   background-color: transparent;
+  opacity: 0;
+  transform: translateY(-15px);
+}
+
+.econCircularIlustracionAnim{
+  animation: ilustracionAnim 1.4s ease-in-out forwards;
+}
+
+@keyframes ilustracionAnim {
+  from{
+    opacity: 0;
+    transform: scale(0.8);
+    transform: translateY(0);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(-15px);
+  }
 }
 
 #filosofia {
@@ -1827,6 +1846,7 @@ label {
 
   #econCircularIlustracion {
     overflow: hidden;
+    padding: 10% 0;
   }
 
   #econCircularImgContainer {
