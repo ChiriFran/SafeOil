@@ -1,7 +1,7 @@
 function updateImageSource() {
     const econCircularImg = document.getElementById('econCircularImg');
-    const smallScreenSrc = './assets/ilustraciones/econ-circular/econ-circular-editsvg.svg';
-    const largeScreenSrc = './assets/ilustraciones/econ-circular/econ-circular-copia.svg';
+    const smallScreenSrc = './assets/ilustraciones/econ-circular/econ-circular-mobile.svg';
+    const largeScreenSrc = './assets/ilustraciones/econ-circular/econ-circular-desktop.svg';
 
     if (window.innerWidth < 1000) {
         econCircularImg.src = smallScreenSrc;
