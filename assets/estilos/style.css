@@ -14,14 +14,6 @@
   font-style: normal;
 }
 
-
-@font-face {
-  font-family: "Monserrat";
-  src: url(../tipografia/Montserrat-Italic-VariableFont_wght.ttf);
-  font-weight: 500;
-  font-style: oblique;
-}
-
 @font-face {
   font-family: "Monserrat";
   src: url(../tipografia/Montserrat-Italic-VariableFont_wght.ttf);
@@ -181,7 +173,7 @@
   align-items: center;
   justify-content: space-around;
   background-color: var(--main-color-yellow);
-  font-weight: 900;
+  font-weight: 800;
   padding: 0 2rem;
 }
 
