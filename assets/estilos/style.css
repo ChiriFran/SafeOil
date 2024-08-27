@@ -1948,7 +1948,9 @@ label {
 
 
   #reRefinacion {
-    height: 180vh;
+    justify-content: center;
+    height: 120vh;
+    margin-bottom: 10vh;
   }
 
   #reRefinacion img {
@@ -1958,7 +1960,7 @@ label {
   
   #reRefinacionTextContainer {
     width: 90%;
-    height: 80%;
+    height: 90%;
   }
 
   #reRefinacionTextContainer span {
@@ -1975,7 +1977,7 @@ label {
   #reRefinacionTextContainer span {
     padding: 0.5rem 0.5rem;
     background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
   }
 
   #blockchainInfoContainer {
