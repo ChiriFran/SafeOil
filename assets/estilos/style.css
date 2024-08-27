@@ -687,17 +687,18 @@
   transform: translateY(-15px);
 }
 
-.econCircularIlustracionAnim{
+.econCircularIlustracionAnim {
   animation: ilustracionAnim 1.4s ease-in-out forwards;
 }
 
 @keyframes ilustracionAnim {
-  from{
+  from {
     opacity: 0;
     transform: scale(0.8);
     transform: translateY(0);
   }
-  to{
+
+  to {
     opacity: 1;
     transform: scale(1);
     transform: translateY(-15px);
@@ -954,6 +955,70 @@
   overflow: hidden;
 }
 
+#reRefinacion {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  margin: 5% 0;
+  position: relative;
+  /* Añadido para que el contenido hijo con posición absoluta funcione correctamente */
+}
+
+#reRefinacion img {
+  width: 100%;
+  height: auto;
+  /* Cambiado para mantener la proporción de la imagen */
+  mask-image: linear-gradient(to bottom, transparent 5%, black 30%, rgb(0, 0, 0) 70%, transparent 90%);
+  z-index: 10;
+}
+
+#reRefinacionTextContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Centrado absoluto */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 84%;
+  height: 70%;
+  text-align: center;
+  line-height: 1.2;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+#reRefinacionTextContainer span {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--main-color-yellow);
+}
+
+#reRefinacionTextContainer p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: start;
+  color: var(--main-color-yellow);
+}
+
+#reRefinacionTextContainer p,
+#reRefinacionTextContainer span {
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.reRefinacionKeywords {
+  font-weight: 800;
+  background-color: transparent;
+  color: var(--main-color-yellow);
+}
+
 #blockchainInfoContainer {
   display: flex;
   width: 100%;
@@ -968,6 +1033,7 @@
   color: var(--main-color-yellow);
   font-size: 1.2rem;
   line-height: 1.2;
+  font-weight: 500;
 }
 
 #blockchainInfoTextContainer {
@@ -1878,6 +1944,38 @@ label {
     gap: 3rem;
     padding: 0 10%;
     margin-top: 5rem;
+  }
+
+
+  #reRefinacion {
+    height: 180vh;
+  }
+
+  #reRefinacion img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #reRefinacionTextContainer {
+    width: 90%;
+    height: 80%;
+  }
+
+  #reRefinacionTextContainer span {
+    font-size: 1.2rem;
+
+  }
+
+  #reRefinacionTextContainer p {
+    font-size: 1rem;
+
+  }
+
+  #reRefinacionTextContainer p,
+  #reRefinacionTextContainer span {
+    padding: 0.5rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
   }
 
   #blockchainInfoContainer {

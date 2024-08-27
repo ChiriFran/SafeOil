@@ -1,15 +1,22 @@
-function updateImageSource() {
+function updateImageSources() {
     const econCircularImg = document.getElementById('econCircularImg');
-    const smallScreenSrc = './assets/ilustraciones/econ-circular/econ-circular-mobile.svg';
-    const largeScreenSrc = './assets/ilustraciones/econ-circular/econ-circular-desktop.svg';
+    const reRefinacionImg = document.getElementById('reRefinacionImg');
+    
+    const smallScreenSrcEcon = './assets/ilustraciones/econ-circular/econ-circular-mobile.svg';  // Verifica esta ruta
+    const largeScreenSrcEcon = './assets/ilustraciones/econ-circular/econ-circular-desktop.svg'; // Verifica esta ruta
+    
+    const smallScreenSrcReRef = './assets/ilustraciones/re-refinacion-mobile.jpg';
+    const largeScreenSrcReRef = './assets/ilustraciones/re-refinacion.jpg';
 
     if (window.innerWidth < 1000) {
-        econCircularImg.src = smallScreenSrc;
+        econCircularImg.src = smallScreenSrcEcon;
+        reRefinacionImg.src = smallScreenSrcReRef;
     } else {
-        econCircularImg.src = largeScreenSrc;
+        econCircularImg.src = largeScreenSrcEcon;
+        reRefinacionImg.src = largeScreenSrcReRef;
     }
 }
 
 // Ejecuta la función al cargar la página y cuando se cambia el tamaño de la ventana
-window.addEventListener('load', updateImageSource);
-window.addEventListener('resize', updateImageSource);
+window.addEventListener('load', updateImageSources);
+window.addEventListener('resize', updateImageSources);
