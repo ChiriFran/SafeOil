@@ -960,6 +960,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  aspect-ratio: 16/9;
   overflow: hidden;
   margin: 5% 0;
   position: relative;
@@ -1948,7 +1949,7 @@ label {
 
   #reRefinacion {
     justify-content: center;
-    height: 120vh;
+    height: 140vh;
     margin-bottom: 10vh;
   }
 
