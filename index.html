@@ -65,18 +65,17 @@
               </div>
             </div>
 
-            <form>
+            <form id="modalForm">
               <label for="modalName">Nombre:</label>
-              <input type="text" id="modalName" name="modalName">
+              <input type="text" id="modalName" name="modalName" class="input-field" autocomplete="given-name">
 
               <label for="modalEmail">Email:</label>
-              <input type="text" id="modalEmail" name="modalEmail">
+              <input type="text" id="modalEmail" name="modalEmail" class="input-field" autocomplete="email">
 
-              <label for="modalMessege">Mensaje:</label>
-              <input type="text" id="modalMessege" name="modalMessege">
+              <label for="modalMessage">Mensaje:</label>
+              <input type="text" id="modalMessage" name="modalMessage" class="textarea-field">
 
-              <button id="modalSubmitButton" class="modal-submit-button" type="submit">Enviar</button>
-
+              <button id="submitButtonModal" class="submit-button" type="submit">Enviar</button>
             </form>
 
             <div class="modalContacto">
@@ -231,8 +230,11 @@
       <img id="reRefinacionImg" src="./assets/ilustraciones/re-refinacion.jpg" alt="Oil factory / Desingned by Freepik">
       <div id="reRefinacionTextContainer">
         <span>Re-refinación de Aceites Lubricantes Usados: Una Solución Sostenible</span>
-        <p>La re-refinación de aceites minerales usados es un proceso avanzado que, similar al refinamiento del petróleo
-          crudo, permite recuperar aceites base y fuel oil. Este proceso es altamente <strong class="reRefinacionKeywords">eficiente y respetuoso</strong> con el medio ambiente, eliminando las impurezas sin generar residuos perjudiciales. <br><br>
+        <p>La <strong class="reRefinacionKeywords">re-refinación</strong> de aceites minerales usados es un proceso
+          avanzado que, similar al refinamiento del petróleo
+          crudo, permite recuperar aceites base y fuel oil. Este proceso es altamente <strong
+            class="reRefinacionKeywords">eficiente y respetuoso</strong> con el medio ambiente, eliminando las impurezas
+          sin generar residuos perjudiciales. <br><br>
 
           A nivel global, la re-refinación ha demostrado ser <strong class="reRefinacionKeywords">exitosa</strong>, no
           solo en términos financieros, sino también en
@@ -242,8 +244,10 @@
 
           Este proceso no solo ofrece una solución eficaz para la gestión de residuos peligrosos, sino que también
           representa una oportunidad única para alinear los intereses de inversión privada y las políticas
-          gubernamentales en torno a la <strong class="reRefinacionKeywords">sostenibilidad</strong>. Con la expansión de las
-          operaciones de recolección de aceites, se promueve una mayor concienciación sobre las mejores prácticas para la disposición de residuos, contribuyendo así a un
+          gubernamentales en torno a la <strong class="reRefinacionKeywords">sostenibilidad</strong>. Con la expansión
+          de las
+          operaciones de recolección de aceites, se promueve una mayor concienciación sobre las mejores prácticas para
+          la disposición de residuos, contribuyendo así a un
           futuro más limpio y sostenible.</p>
       </div>
     </div>
@@ -401,16 +405,16 @@
         <div id="form-container" class="container">
           <form id="contactForm">
             <div class="form-group">
-              <label for="name">Nombre:</label>
-              <input type="text" id="name" class="input-field" name="nombre" autocomplete="given-name" required>
+              <label for="footerName"> Nombre:</label>
+              <input type="text" id="footerName" name="footerName" class="input-field" autocomplete="given-name">
             </div>
             <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" class="input-field" name="email" autocomplete="email" required>
+              <label for="footerEmail">Email:</label>
+              <input type="text" id="footerEmail" name="footerEmail" class="input-field" autocomplete="email">
             </div>
             <div class="form-group">
-              <label for="message">Mensaje:</label>
-              <textarea id="message" class="textarea-field" name="message" required></textarea>
+              <label for="footerMessage">Mensaje:</label>
+              <input type="text" id="footerMessage" name="footerMessage" class="textarea-field">
             </div>
             <button id="submitButton" class="submit-button" type="submit">Enviar</button>
           </form>

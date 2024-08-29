@@ -38,7 +38,6 @@
 
 ::selection {
   background: var(--main-color-yellow);
-  /*Color naranja para el fondo*/
   color: var(--main-color-black);
 }
 
