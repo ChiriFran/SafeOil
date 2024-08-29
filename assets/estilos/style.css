@@ -228,6 +228,11 @@
   color: var(--main-color-black);
 }
 
+.error {
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.382);
+}
+
 #openModal {
   display: flex;
   width: 80%;
@@ -1449,7 +1454,7 @@ label {
 }
 
 .submit-button {
-  padding: 10px 15px;
+  padding: 0.2rem 1rem;
   background-color: var(--main-color-yellow);
   color: var(--main-color-black);
   border: none;

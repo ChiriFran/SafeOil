@@ -3,16 +3,23 @@ emailjs.init("gBb_LAjfDmkyqiaHF");
 
 // Función para manejar el envío del formulario
 function handleFormSubmit(formId, serviceId, templateId, buttonId) {
-  document.getElementById(formId).addEventListener("submit", function (event) {
+  const form = document.getElementById(formId);
+  const submitButton = document.getElementById(buttonId);
+
+  form.addEventListener("submit", function (event) {
     event.preventDefault(); // Evita el envío por defecto del formulario
 
-    const submitButton = document.getElementById(buttonId);
+    // Validación básica
+    if (!validateForm(form)) {
+      alert("Por favor, completa todos los campos obligatorios.");
+      return;
+    }
 
     // Cambia el texto del botón a "Enviando..."
     submitButton.disabled = true;
     submitButton.textContent = "Enviando...";
 
-    emailjs.sendForm(serviceId, templateId, this).then(
+    emailjs.sendForm(serviceId, templateId, form).then(
       function (response) {
         console.log("Éxito:", response);
         // Cambia el texto del botón a "Mensaje enviado" y desactiva el botón
@@ -20,7 +27,7 @@ function handleFormSubmit(formId, serviceId, templateId, buttonId) {
         setTimeout(() => {
           submitButton.textContent = "Enviar";
           // Limpia el formulario y reactiva el botón
-          document.getElementById(formId).reset(); // Limpia el formulario
+          form.reset(); // Limpia el formulario
           submitButton.disabled = false; // Reactiva el botón
         }, 2000); // Mantén el texto "Mensaje enviado" visible por 2 segundos
       },
@@ -33,6 +40,23 @@ function handleFormSubmit(formId, serviceId, templateId, buttonId) {
       }
     );
   });
+}
+
+// Función para validar el formulario
+function validateForm(form) {
+  let isValid = true;
+  const inputs = form.querySelectorAll("input[required], textarea[required]");
+
+  inputs.forEach((input) => {
+    if (input.value.trim() === "") {
+      isValid = false;
+      input.classList.add("error"); // Añade una clase para destacar el error
+    } else {
+      input.classList.remove("error"); // Elimina la clase si ya no hay error
+    }
+  });
+
+  return isValid;
 }
 
 // Configura el envío para ambos formularios
