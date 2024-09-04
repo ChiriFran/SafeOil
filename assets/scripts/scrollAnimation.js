@@ -12,11 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const valoresIcons = document.querySelectorAll(".valoresIcon");
 
-  // Modificar el threshold para que la animación se active antes
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.3,  // Ajusta este valor para que la animación se active cuando el 30% del elemento sea visible
+    threshold: 0.3,
   };
 
   const iconObserverOptions = {
@@ -70,14 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     valoresIcons.forEach((element) => {
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (
-          rect.top < window.innerHeight * 0.6 &&
-          rect.bottom > window.innerHeight * 0.4
-        ) {
-          element.classList.add("animate-icon");
-        }
+      const rect = element.getBoundingClientRect();
+      if (
+        rect.top < window.innerHeight * 0.6 &&
+        rect.bottom > window.innerHeight * 0.4
+      ) {
+        element.classList.add("animate-icon");
       }
     });
   };
@@ -100,12 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const toggleButton = serviciosItem.querySelector(".toggleButton");
 
         if (toggleButton) {
-          // Simular el clic en el botón de toggle
           toggleButton.click();
           toggleButton.style.opacity = "1";
         }
 
-        // Deja de observar después de la primera intersección si solo quieres una activación
         observer.unobserve(serviciosItem);
       }
     });
@@ -133,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
         targetElement.classList.add("expanded");
         button.textContent = "-";
       }
-      // Restart observation
       serviciosObserver.observe(button.closest(".serviciosItem"));
     }
   };
@@ -165,7 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
           lubricantes29.classList.add("animate-lubricantes-29");
         }
 
-        // Deja de observar después de la primera intersección si solo quieres una activación
         observer.unobserve(entry.target);
       }
     });
@@ -176,4 +169,34 @@ document.addEventListener("DOMContentLoaded", () => {
   if (lubricantesContainer) {
     containerObserver.observe(lubricantesContainer);
   }
+
+  // Nuevo código para animar blockchainItems
+  const blockchainItems = document.querySelectorAll(".blockchainItem");
+  const blockchainObserverOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.8,
+  };
+
+  const blockchainObserverCallback = (entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        const blockchainItem = entry.target;
+
+        setTimeout(() => {
+          blockchainItem.classList.add("animate-blockchain");
+        }, index * 250); // 200ms de delay entre cada uno
+
+        observer.unobserve(blockchainItem);
+      }
+    });
+  };
+
+  const blockchainObserver = new IntersectionObserver(blockchainObserverCallback, blockchainObserverOptions);
+
+  blockchainItems.forEach((item) => {
+    if (item) {
+      blockchainObserver.observe(item);
+    }
+  });
 });
