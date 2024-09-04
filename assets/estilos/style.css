@@ -1563,6 +1563,28 @@ label {
   width: 150px;
 }
 
+#footerRedes{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-color: transparent;
+  margin-right: -0.6rem;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+#footerRedes img{
+  width: 26px;
+  margin: 1rem 0.5rem;
+  transition: .6s;
+}
+
+#footerRedes img:hover{
+  transform: translateY(-5px);
+  transition: .4s;
+}
+
 @media screen and (max-width: 700px) {
   #logoImg {
     width: 200px;
