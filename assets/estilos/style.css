@@ -2223,4 +2223,12 @@ label {
   #footerContainer {
     padding: 10% 5%;
   }
+
+  #footerRedes{
+    margin-right: 0.2rem;
+  }
+
+  #footerRedes img{
+    width: 20px;
+  }
 }
