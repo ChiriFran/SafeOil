@@ -331,7 +331,13 @@
   background-color: transparent;
 }
 
-.contactoMediosItem>p {
+.contactoMediosItem a{
+  color: var(--main-color-yellow);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.contactoMediosItem p {
   padding: 0 1rem;
   background-color: transparent;
   color: var(--main-color-yellow);
@@ -411,6 +417,7 @@
   padding: 0 2rem;
   margin: 2rem 0;
 }
+
 
 .modalRedesImg {
   width: 40px;
@@ -1103,7 +1110,7 @@
   margin: 5% 0;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(3px);
-  
+
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.4s ease-in-out, transform 0.6s ease-in-out;
@@ -1298,6 +1305,16 @@
 #infoAddress {
   position: relative;
   width: 200px;
+}
+
+#infoPhone a {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--main-color-yellow);
+}
+
+#infoEmail a{
+  text-decoration: none;
 }
 
 #infoEmail::after {
@@ -1563,7 +1580,7 @@ label {
   width: 150px;
 }
 
-#footerRedes{
+#footerRedes {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1574,13 +1591,13 @@ label {
   overflow: hidden;
 }
 
-#footerRedes img{
+#footerRedes img {
   width: 26px;
   margin: 1rem 0.5rem;
   transition: .6s;
 }
 
-#footerRedes img:hover{
+#footerRedes img:hover {
   transform: translateY(-5px);
   transition: .4s;
 }
@@ -2224,11 +2241,11 @@ label {
     padding: 10% 5%;
   }
 
-  #footerRedes{
+  #footerRedes {
     margin-right: 0.2rem;
   }
 
-  #footerRedes img{
+  #footerRedes img {
     width: 20px;
   }
 }
