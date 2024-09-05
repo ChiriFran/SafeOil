@@ -1197,7 +1197,7 @@
 
 #valoresGrid {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row;
   width: 80%;
   justify-content: center;
   margin-top: 8%;
@@ -1205,8 +1205,7 @@
 
 .valoresItem {
   display: flex;
-  width: 33%;
-  /* Ajusta el tamaño según sea necesario */
+  width: 32%;
   height: 100%;
   flex-flow: column;
   align-items: center;
@@ -1231,12 +1230,6 @@
 .valoresIcon {
   width: 120px;
   height: 100px;
-}
-
-/* Para centrar los últimos dos elementos */
-.valoresItem:nth-last-child(-n + 2) {
-  flex-basis: 45%;
-  /* Ajusta el tamaño para centrar los últimos dos elementos */
 }
 
 .valoresIcon {
