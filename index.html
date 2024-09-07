@@ -2,24 +2,46 @@
 <html lang="es">
 
 <head>
+  <!-- Author: Coding Solutions Arg. by Chiri Francisco -->
+  <title>Safe Oil</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Estilos / Boostrap Icons -->
   <link rel="stylesheet" href="./assets/estilos/normalize.css">
   <link rel="stylesheet" href="./assets/estilos/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
   <link rel="icon" href="./assets/isotipo/isotipo-normal.svg">
-  <title>Safe Oil</title>
+  <!-- Canonical Url -->
+  <link rel="canonical" href="https://chirifran.github.io/SafeOil/"> <!-- PROVISORIO -->
+  <!-- Robotags -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="publisher" content="Coding Solutions Arg">
+  <!-- Description & Keywords -->
+  <meta name="description"
+    content="Safe Oil revoluciona la gestión de aceites lubricantes usados con tecnología blockchain, garantizando trazabilidad y sostenibilidad en cada etapa del proceso de reciclaje. Descubre cómo contribuimos a un futuro más limpio a través de la economía circular.">
+  <meta name="keywords"
+    content="Safe Oil, aceites lubricantes, aceite usado, reciclaje de aceites lubricantes, trazabilidad blockchain, economía circular, sostenibilidad, gestión de residuos, re-refinación, tecnología blockchain, medio ambiente, gestión de aceites lubricantes, reciclaje de aceite, residuos peligrosos">
+  <!-- Metadatos Open Graph básicos / Compartir en redes sociales-->
+  <meta property="og:title" content="Safe Oil">
+  <meta property="og:description" content="Safe Oil revoluciona la gestión de aceites lubricantes usados con tecnología blockchain, garantizando trazabilidad y sostenibilidad en cada etapa del proceso de reciclaje. Descubre cómo contribuimos a un futuro más limpio a través de la economía circular.">
+  <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/safe-oil.appspot.com/o/logoSafeOil.png?alt=media&token=406760a5-aa8f-496d-b316-690ada1f1833">
+  <meta property="og:url" content="https://chirifran.github.io/SafeOil/"> <!-- PROVISORIO -->
+  <meta property="og:site_name" content="Safe Oil">
+  <meta property="og:locale" content="es_AR">
 </head>
 
 <body>
   <header id="headerContainer">
     <section id="logo">
       <a href="#logo">
-        <img src="./assets/logo/logo-nombre-blanco.svg" alt="Safe Oil Logo" id="logoImg">
+        <img src="./assets/logo/logo-nombre-blanco.svg" alt="Safe Oil Logo" id="logoImg" title="Safe Oil">
       </a>
 
     </section>
-    <nav id="navMenu">
+    <nav id="navMenu" aria-label="Barra de navegación">
       <div id="closeNavIcon" class="bi bi-x-lg"></div>
       <ul>
         <li><a href="#servicios">Servicios</a></li>
@@ -48,7 +70,7 @@
         </h2>
       </button>
 
-      <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-overlay" id="modalOverlay" aria-labelledby="modalTitle" aria-hidden="true">
         <div class="modal-content">
           <div id="modalFormContainer">
             <span>Nos encantaría escuchar de ti.</span>
@@ -56,13 +78,13 @@
 
             <div id="modalContactoMedios">
               <div class="contactoMediosItem">
-                <img src="./assets/icons/email.svg" alt="" class="contactoMediosImg">
+                <img src="./assets/icons/email.svg" alt="Email" title="Email" class="contactoMediosImg">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=codingsolutionsarg@gmail.com" target="_blank">
                   <p>contacto@safeoil.com</p>
                 </a>
               </div>
               <div class="contactoMediosItem">
-                <img src="./assets/icons/phone.svg" alt="" class="contactoMediosImg">
+                <img src="./assets/icons/phone.svg" alt="Tel" title="Tel" class="contactoMediosImg">
                 <a href="tel:+5493516549350" target="_blank" rel="nofollow" class="phoneNumberModal">
                   <p>+54 9 351 654-9350</p>
                 </a>
@@ -84,16 +106,16 @@
 
             <div class="modalContacto">
               <a href="https://www.instagram.com/safeoil.aceiteslubricantes/" target="_blank" rel="nofollow">
-                <img src="./assets/icons/instagram.svg" alt="Instagram" class="modalRedesImg">
+                <img src="./assets/icons/instagram.svg" alt="Instagram" title="Instagram" class="modalRedesImg">
               </a>
               <a href="https://www.facebook.com/profile.php?id=61564787620037" target="_blank" rel="nofollow">
-                <img src="./assets/icons/facebook.svg" alt="Facebook" class="modalRedesImg">
+                <img src="./assets/icons/facebook.svg" alt="Facebook" title="Facebook" class="modalRedesImg">
               </a>
               <a href="https://x.com/SafeOil_arg" target="_blank" rel="nofollow">
-                <img src="./assets/icons/twitter.svg" alt="Twitter/X" class="modalRedesImg">
+                <img src="./assets/icons/twitter.svg" alt="Twitter/X" title="X / Twitter" class="modalRedesImg">
               </a>
               <a href="https://www.linkedin.com/in/safe-oil-851969325/" target="_blank" rel="nofollow">
-                <img src="./assets/icons/linkedin.svg" alt="Linkedin" class="modalRedesImg">
+                <img src="./assets/icons/linkedin.svg" alt="Linkedin" title="Linkedin" class="modalRedesImg">
               </a>
             </div>
           </div>
@@ -176,7 +198,7 @@
   <div id="econCircularIlustracion">
     <div id="econCircularImgContainer">
       <img src="./assets/ilustraciones/econ-circular/econ-circular-desktop.svg" alt="Economia circular ilustracion"
-        id="econCircularImg">
+        title="Grafico Econ Circular" loading="lazy" id="econCircularImg">
     </div>
   </div>
 
@@ -210,21 +232,21 @@
 
     <section id="serviciosGrid">
       <div class="serviciosItem backgroundImgLogistica">
-        <img src="./assets/icons/recojida.svg" alt="">
+        <img src="./assets/icons/recojida.svg" alt="Recogida Icon" title="Recogida">
         <h4>Logistica</h4>
         <p class="serviciosItemsText">El control sobre la manipulación de residuos es un elemento clave para el
           tratamiento de residuos peligrosos. Es por ello que se lleva un riguroso control en cuanto a la manipulación y
           transporte de estos productos.</p>
       </div>
       <div class="serviciosItem backgroundImgRefinacion">
-        <img src="./assets/icons/tratamiento.svg" alt="">
+        <img src="./assets/icons/tratamiento.svg" alt="Tratamiento Icon" title="Tratamiento">
         <h4>La re-refinación</h4>
         <p class="serviciosItemsText">En el proceso de re-refinación, los aceites usados son revalorizados y vuelven a
           ser bases lubricantes con óptimas propiedades de funcionamiento. A través de su correcta trazabilidad podremos
           garantizar su correcta gestión y procedencia.</p>
       </div>
       <div class="serviciosItem backgroundImgReintegracion">
-        <img src="./assets/icons/gestion.svg" alt="">
+        <img src="./assets/icons/gestion.svg" alt="Reintegracion Icon" title="Reintegracion">
         <h4>Reintegración</h4>
         <p class="serviciosItemsText">En su reinserción al circuito productivo, nuestro sistema de trazabilidad toma
           mayor relevancia, ya que permite asegurar de manera transparente y segura toda la información de los
@@ -233,7 +255,8 @@
     </section>
 
     <div id="reRefinacion">
-      <img id="reRefinacionImg" src="./assets/ilustraciones/re-refinacion.jpg" alt="Oil factory / Desingned by Freepik">
+      <img id="reRefinacionImg" src="./assets/ilustraciones/re-refinacion.jpg" alt="Oil factory / Desingned by Freepik"
+        title="Planta de re-refinacion" loading="lazy">
       <div id="reRefinacionTextContainer">
         <span>Re-refinación de Aceites Lubricantes Usados: Una Solución Sostenible</span>
         <p>La <strong class="reRefinacionKeywords">re-refinación</strong> de aceites minerales usados es un proceso
@@ -283,7 +306,7 @@
     <section id="blockchainGridContainer">
       <div class="blockchainItem">
         <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/usuario-config-amarillo.svg" alt="">
+          <img src="./assets/blockchain/usuario-config-amarillo.svg" alt="Usuario" title="Usuario">
         </div>
         <div class="blockchainItemDescription">
           <span>01</span>
@@ -292,7 +315,7 @@
       </div>
       <div class="blockchainItem">
         <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/cubo-amarillo.svg" alt="">
+          <img src="./assets/blockchain/cubo-amarillo.svg" alt="Bloque de información" title="Bloque de información">
         </div>
         <div class="blockchainItemDescription">
           <span>02</span>
@@ -301,7 +324,8 @@
       </div>
       <div class="blockchainItem">
         <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/distribucion-amarillo.svg" alt="">
+          <img src="./assets/blockchain/distribucion-amarillo.svg" alt="Transmisión de información"
+            title="Transmisión de información">
         </div>
         <div class="blockchainItemDescription">
           <span>03</span>
@@ -310,31 +334,32 @@
       </div>
       <div class="blockchainItem">
         <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/distribucion-aprobada-amarillo.svg" alt="">
+          <img src="./assets/blockchain/distribucion-aprobada-amarillo.svg" alt="Recepción y validación"
+            title="Recepción y validación">
+          <div class="blockchainItemDescription">
+            <span>04</span>
+            <p>Todos los nodos reciben y validan la información.</p>
+          </div>
         </div>
-        <div class="blockchainItemDescription">
-          <span>04</span>
-          <p>Todos los nodos reciben y validan la información.</p>
+        <div class="blockchainItem">
+          <div class="blockchainItemImgContainer">
+            <img src="./assets/blockchain/bloque-añadido-amarillo.svg" alt="Bloque añadido" title="Bloque añadido">
+          </div>
+          <div class="blockchainItemDescription">
+            <span>05</span>
+            <p>El bloque se añade a la cadena de bloques.</p>
+          </div>
         </div>
-      </div>
-      <div class="blockchainItem">
-        <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/bloque-añadido-amarillo.svg" alt="">
+        <div class="blockchainItem">
+          <div class="blockchainItemImgContainer">
+            <img src="./assets/blockchain/informacion-lista-amarillo.svg" alt="Información lista"
+              title="Información lista">
+          </div>
+          <div class="blockchainItemDescription">
+            <span>06</span>
+            <p> La información está disponible para su consulta. </p>
+          </div>
         </div>
-        <div class="blockchainItemDescription">
-          <span>05</span>
-          <p>El bloque se añade a la cadena de bloques.</p>
-        </div>
-      </div>
-      <div class="blockchainItem">
-        <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/informacion-lista-amarillo.svg" alt="">
-        </div>
-        <div class="blockchainItemDescription">
-          <span>06</span>
-          <p> La información está disponible para su consulta. </p>
-        </div>
-      </div>
     </section>
   </article>
 
@@ -345,21 +370,22 @@
     </p>
     <div id="valoresGrid">
       <div class="valoresItem">
-        <img src="./assets/ilustraciones/candado-marron.svg" alt="" class="valoresIcon" />
+        <img src="./assets/ilustraciones/candado-marron.svg" alt="Seguro" title="Seguro" class="valoresIcon" />
         <h3>Seguro</h3>
         <p>
           Contamos con el respaldo de la blockchain para garantizar máxima seguridad.
         </p>
       </div>
       <div class="valoresItem">
-        <img src="./assets/ilustraciones/huella-pie-marron.svg" alt="" class="valoresIcon" />
+        <img src="./assets/ilustraciones/huella-pie-marron.svg" alt="Sostenible" title="Sostenible"
+          class="valoresIcon" />
         <h3>Sostenible</h3>
         <p>
           Sostenibilidad es satisfacer las necesidades del presente sin comprometer el futuro.
         </p>
       </div>
       <div class="valoresItem">
-        <img src="./assets/ilustraciones/nube-marron.svg" alt="" class="valoresIcon" />
+        <img src="./assets/ilustraciones/nube-marron.svg" alt="Transparente" title="Transparente" class="valoresIcon" />
         <h3>Transparente</h3>
         <p>
           La tecnología blockchain garantiza transparencia en la sostenibilidad de nuestras tareas.
@@ -433,20 +459,20 @@
     </div>
     <div id="footerLogo">
       <a href="#logo">
-        <img src="./assets/isotipo/isotipo-negro.webp" alt="Safe Oil">
+        <img src="./assets/isotipo/isotipo-negro.webp" alt="Safe Oil" title="Safe Oil">
       </a>
       <div id="footerRedes">
         <a href="https://www.instagram.com/safeoil.aceiteslubricantes/" target="_blank" rel="nofollow">
-          <img src="./assets/icons/instagram.svg" alt="Instagram" class="footerRedesImg">
+          <img src="./assets/icons/instagram.svg" alt="Instagram" class="footerRedesImg" loading="lazy">
         </a>
         <a href="https://www.facebook.com/profile.php?id=61564787620037" target="_blank" rel="nofollow">
-          <img src="./assets/icons/facebook.svg" alt="Facebook" class="footerRedesImg">
+          <img src="./assets/icons/facebook.svg" alt="Facebook" class="footerRedesImg" loading="lazy">
         </a>
         <a href="https://x.com/SafeOil_arg" target="_blank" rel="nofollow">
-          <img src="./assets/icons/twitter.svg" alt="Twitter/X" class=footerlRedesImg">
+          <img src="./assets/icons/twitter.svg" alt="Twitter/X" class="footerlRedesImg" loading="lazy">
         </a>
         <a href="https://www.linkedin.com/in/safe-oil-851969325/" target="_blank" rel="nofollow">
-          <img src="./assets/icons/linkedin.svg" alt="Linkedin" class="footerRedesImg">
+          <img src="./assets/icons/linkedin.svg" alt="Linkedin" class="footerRedesImg" loading="lazy">
         </a>
       </div>
     </div>
