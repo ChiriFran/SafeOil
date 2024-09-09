@@ -1,5 +1,5 @@
 // Inicializa EmailJS con tu User ID
-emailjs.init("PRfHgaldwqK0JEemJQue2");
+emailjs.init("CsBmwag2gHy1yjluk");
 
 // Función para manejar el envío del formulario
 function handleFormSubmit(formId, serviceId, templateId, buttonId) {
@@ -60,5 +60,5 @@ function validateForm(form) {
 }
 
 // Configura el envío para ambos formularios
-handleFormSubmit("contactForm", "service_zy617c8", "template_34vrw0g", "submitButton");
-handleFormSubmit("modalForm", "service_zy617c8", "template_gy6bvm5", "submitButtonModal");
+handleFormSubmit("contactForm", "service_glozr3p", "template_34vrw0g", "submitButton");
+handleFormSubmit("modalForm", "service_glozr3p", "template_gy6bvm5", "submitButtonModal");
