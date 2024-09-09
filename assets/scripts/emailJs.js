@@ -60,5 +60,5 @@ function validateForm(form) {
 }
 
 // Configura el envío para ambos formularios
-handleFormSubmit("contactForm", "service_glozr3p", "template_34vrw0g", "submitButton");
-handleFormSubmit("modalForm", "service_glozr3p", "template_gy6bvm5", "submitButtonModal");
+handleFormSubmit("contactForm", "service_rl423du", "template_34vrw0g", "submitButton");
+handleFormSubmit("modalForm", "service_rl423du", "template_gy6bvm5", "submitButtonModal");
