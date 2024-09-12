@@ -11,7 +11,7 @@ function handleFormSubmit(formId, serviceId, templateId, buttonId) {
 
     // Validación básica
     if (!validateForm(form)) {
-      alert("Por favor, completa todos los campos obligatorios.");
+      alert("Por favor, completa todos los campos obligatorios correctamente.");
       return;
     }
 
@@ -46,6 +46,7 @@ function handleFormSubmit(formId, serviceId, templateId, buttonId) {
 function validateForm(form) {
   let isValid = true;
   const inputs = form.querySelectorAll("input[required], textarea[required]");
+  const emailInput = form.querySelector("input[type='email']");
 
   inputs.forEach((input) => {
     if (input.value.trim() === "") {
@@ -55,6 +56,21 @@ function validateForm(form) {
       input.classList.remove("error"); // Elimina la clase si ya no hay error
     }
   });
+
+  // Validar el correo electrónico solo si está presente en el formulario
+  if (emailInput) {
+    const emailValue = emailInput.value.trim();
+    const allowedDomains = ["gmail.com", "hotmail.com"];
+    const emailDomain = emailValue.split("@")[1];
+
+    if (!allowedDomains.includes(emailDomain)) {
+      isValid = false;
+      emailInput.classList.add("error");
+      alert("Solo se permiten correos de Gmail o Hotmail.");
+    } else {
+      emailInput.classList.remove("error");
+    }
+  }
 
   return isValid;
 }
