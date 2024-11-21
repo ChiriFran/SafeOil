@@ -1995,6 +1995,15 @@ label {
     top: 70%;
   }
 
+  #filosofiaVideo {
+    width: 90%;
+    margin-top: 3rem;
+  }
+
+  #filosofiaVideoLogo {
+    width: 90%;
+  }
+
   #serviciosTextContainer {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
@@ -2165,6 +2174,13 @@ label {
     transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
   }
 
+  #contactoTitle,
+  #valoresTitle {
+    text-shadow:
+      2px 2px 0px rgba(0, 0, 0, 1),
+      -2px -2px 1px rgba(255, 255, 255, 0.8);
+  }
+
   #contactoContainer {
     margin-top: 0;
     justify-content: flex-start;
@@ -2174,12 +2190,12 @@ label {
     display: flex;
     flex-flow: column;
     width: 90%;
-    margin-top: 5rem;
+    margin-top: 0;
     height: auto;
   }
 
   #contactoForm {
-    margin-top: 5rem;
+    margin-top: 0rem;
   }
 
   #infoEmail,
@@ -2216,6 +2232,10 @@ label {
     padding: 0 0;
   }
 
+  #contactoText{
+    margin-bottom: 2rem;
+  }
+
   #contactoForm input,
   #contactoForm textarea {
     width: 100%;
@@ -2228,7 +2248,7 @@ label {
   #serviciosTitle,
   #valoresTitle,
   #contactoTitle {
-    font-size: 1.2rem;
+    font-size: 2rem;
     line-height: 1.2;
     padding: 0 10%;
   }
