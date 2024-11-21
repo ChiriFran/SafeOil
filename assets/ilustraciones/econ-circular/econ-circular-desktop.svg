@@ -4,7 +4,7 @@
    data-name="Capa 1"
    viewBox="0 0 612.44 463.67"
    version="1.1"
-   sodipodi:docname="econ-circular-copia.svg"
+   sodipodi:docname="econ-circular-desktop.svg"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -22,9 +22,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="10.292162"
-     inkscape:cx="287.54893"
-     inkscape:cy="393.98915"
+     inkscape:zoom="1.2865203"
+     inkscape:cx="99.493187"
+     inkscape:cy="243.29193"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -34,13 +34,13 @@
   <g
      opacity=".38"
      id="g4"
-     style="fill:#2ed9ad;fill-opacity:0.68235296">
+     style="fill:#0a0a0a;fill-opacity:0.68235296">
     <polygon
        points="460.22 337.96 145.25 151.63 142.63 160.61 141.57 341.2 301.57 434.99 450.77 352.29 467.24 342.9 460.22 337.96"
        fill="#548070"
        stroke-width="0"
        id="polygon2"
-       style="fill:#2ed9ad;fill-opacity:0.68235296" />
+       style="fill:#0a0a0a;fill-opacity:0.68235296" />
   </g>
   <g
      id="g32"
@@ -130,25 +130,25 @@
      fill="#ffeecd"
      stroke-width="0"
      id="path34"
-     style="fill:#2ed9ad;fill-opacity:0.67816091" />
+     style="fill:#0a0a0a;fill-opacity:0.67843139" />
   <polygon
      points="469.45 308.01 465.45 307.99 466.34 155.94 305.06 61.62 305.5 60.86 304.24 58.64 306.08 57.59 470.36 153.65 469.45 308.01"
      fill="#ffeecd"
      stroke-width="0"
      id="polygon36"
-     style="fill:#2ed9ad;fill-opacity:0.6839081" />
+     style="fill:#0a0a0a;fill-opacity:0.68235296" />
   <polygon
      points="303.84 438.41 139.56 342.34 139.68 321.49 143.68 321.51 143.58 340.06 303.87 433.79 465.25 341.73 465.37 317.23 469.37 317.26 469.24 344.06 303.84 438.41"
      fill="#ffeecd"
      stroke-width="0"
      id="polygon38"
-     style="fill:#2ed9ad;fill-opacity:1" />
+     style="fill:#0a0a0a;fill-opacity:1" />
   <polygon
      points="143.77 306.69 139.77 306.67 140.68 151.93 142.07 151.14 143.2 153.1 144.67 153.11 143.77 306.69"
      fill="#ffeecd"
      stroke-width="0"
      id="polygon40"
-     style="fill:#2ed9ad;fill-opacity:1" />
+     style="fill:#0a0a0a;fill-opacity:1" />
   <path
      d="m304.18,28.9l1.11-.64v15.38l-1.56.9v-12.96c-.17.34-.41.66-.73.97-.31.31-.62.55-.92.73v-1.26c.43-.32.84-.75,1.22-1.31.39-.55.68-1.16.88-1.83Z"
      fill="#5dbaa0"
@@ -4432,7 +4432,8 @@
        style="fill:#000000;fill-opacity:1" />
   </g>
   <g
-     id="g1964">
+     id="g1964"
+     style="fill:#0a0a0a;fill-opacity:1">
     <rect
        x="294.35"
        y="72.72"
@@ -4442,18 +4443,18 @@
        fill="#ffeecd"
        stroke-width="0"
        id="rect1960"
-       style="fill:#2ed9ad;fill-opacity:1" />
+       style="fill:#0a0a0a;fill-opacity:1" />
     <polygon
        points="442.84 318.69 449.68 330.76 435.8 330.66 442.84 318.69"
        fill="#ffeecd"
        stroke-width="0"
        id="polygon1962"
-       style="fill:#2ed9ad;fill-opacity:1" />
+       style="fill:#0a0a0a;fill-opacity:1" />
   </g>
   <path
      d="m332.52,207.61c-25.82-28.48-18.83-50.06-23.94-50.06-1.67,0-51.91,53.21-51.91,107.08,0,30.82,35.62,41.48,52.77,41.48,51.76,0,61.18-56.47,23.08-98.5Zm-47.53,72.24c-13.22-12.75-8.21-39.91-6.73-40.12,1.48-.21,9.09,19.55,22.7,20.84,9.33.89,19.17,8.08,19.23,16.74.06,8.47-15.19,21.83-35.2,2.53Z"
      fill="#dcdca8"
      stroke-width="0"
      id="path1966"
-     style="fill:#2ed9ad;fill-opacity:1" />
+     style="fill:#cbb32b;fill-opacity:1" />
 </svg>
