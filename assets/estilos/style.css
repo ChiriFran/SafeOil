@@ -1051,7 +1051,7 @@
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
-  margin: 5% 0;
+  margin: 5% 0 0;
   position: relative;
   /* Añadido para que el contenido hijo con posición absoluta funcione correctamente */
 }
@@ -1076,7 +1076,7 @@
   width: 84%;
   height: 70%;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.5;
   background-color: transparent;
   z-index: 1000;
 }
@@ -1107,6 +1107,81 @@
   font-weight: 800;
   background-color: transparent;
   color: var(--main-color-yellow);
+}
+
+#repContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10%;
+  padding-bottom: 5rem;
+}
+
+#repTextContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+#repTitle {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--main-color-black);
+}
+
+#repText {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #0a0a0a6e;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+/* Slider */
+#slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.repImg {
+  min-width: 100%;
+  height: auto;
+  border: 3px solid var(--main-color-black);
+}
+
+/* Dots */
+#dotsContainer {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  margin: 0 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: var(--main-color-black);
 }
 
 #blockchainInfoContainer {
@@ -2190,6 +2265,15 @@ label {
 
   .serviciosItem p {
     padding: 1rem 1rem;
+  }
+
+  .repImg {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  #dotsContainer {
+    display: flex;
   }
 
   #blockchainGridContainer {
