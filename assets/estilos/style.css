@@ -460,6 +460,7 @@
 }
 
 #estadisticasContainer {
+  position: relative;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -467,6 +468,31 @@
   width: 100%;
   height: 60vh;
   background-color: var(--main-color-aqua-green);
+}
+
+#estadisticasContainer::before {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: 1rem;
+  width: 250px;
+  height: 250px;
+  background-image: url(../ilustraciones/barriles-desechos.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#estadisticasContainer::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 1rem;
+  width: 250px;
+  height: 250px;
+  background-image: url(../ilustraciones/planeta-contaminado.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform: rotate(-10deg);
 }
 
 .counters {
@@ -716,6 +742,59 @@
   justify-content: flex-start;
   background-color: var(--main-color-aqua-green);
   padding-bottom: 6%;
+  overflow: hidden;
+}
+
+#filosofia::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 250px;
+  height: 250px;
+  background-image: url(../gif/triple-r-recicle.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#filosofia::after {
+  content: '';
+  position: absolute;
+  bottom: -280px;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  background-image: url(../ilustraciones/planeta-dual.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform: rotate(180deg);
+  animation: dualPlanteAnim 10s ease-in-out infinite;
+  /* Ajusta 5s según la duración deseada */
+
+}
+
+@keyframes dualPlanteAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+    /* Pausa después de rotar */
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+    /* Pausa antes de reiniciar */
+  }
 }
 
 #filosofia p {
@@ -1286,6 +1365,7 @@
   width: 60%;
   height: 30%;
   margin-top: 8%;
+  z-index: 100;
 }
 
 #contactoInfo h4 {
@@ -1617,7 +1697,7 @@ label {
     align-items: center;
     justify-content: space-between;
     transition: right 0.3s ease;
-    padding: 5rem 0;
+    padding: 5rem 0 80%;
     z-index: 10000;
   }
 
@@ -1643,6 +1723,7 @@ label {
 
   #navMenu ul li a {
     font-size: 1rem;
+    z-index: 1000;
   }
 
   #navIcon {
@@ -1884,6 +1965,14 @@ label {
     padding: 0 0;
   }
 
+  #estadisticasContainer::before {
+    display: none;
+  }
+
+  #estadisticasContainer::after {
+    display: none;
+  }
+
   #estadisticasContainer {
     padding: 10% 0;
     height: auto;
@@ -1999,6 +2088,17 @@ label {
   #filosofiaVideo {
     width: 90%;
     margin-top: 3rem;
+  }
+
+  #filosofia::before {
+    display: none;
+  }
+
+  #filosofia::after {
+    bottom: -200px;
+    left: auto;
+    width: 350px;
+    height: 350px;
   }
 
   #filosofiaVideoLogo {
@@ -2233,7 +2333,7 @@ label {
     padding: 0 0;
   }
 
-  #contactoText{
+  #contactoText {
     margin-bottom: 2rem;
   }
 
