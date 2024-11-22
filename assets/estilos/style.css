@@ -748,11 +748,11 @@
 #filosofia::before {
   content: '';
   position: absolute;
-  top: 20%;
+  bottom: 0;
   right: 10%;
   width: 250px;
   height: 250px;
-  background-image: url(../gif/triple-r-recicle.gif);
+  background-image: url(../ilustraciones/triple-r.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -760,42 +760,16 @@
 #filosofia::after {
   content: '';
   position: absolute;
-  bottom: -280px;
-  left: 0;
-  width: 500px;
-  height: 500px;
-  background-image: url(../ilustraciones/planeta-dual.png);
+  bottom: 0;
+  left: 10%;
+  width: 250px;
+  height: 250px;
+  background-image: url(../ilustraciones/planeta-verde.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  transform: rotate(180deg);
-  animation: dualPlanteAnim 10s ease-in-out infinite;
-  /* Ajusta 5s según la duración deseada */
 
 }
 
-@keyframes dualPlanteAnim {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(180deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-    /* Pausa después de rotar */
-  }
-
-  75% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-    /* Pausa antes de reiniciar */
-  }
-}
 
 #filosofia p {
   display: flex;
@@ -2170,7 +2144,7 @@ label {
   }
 
   #filosofia::after {
-    bottom: -200px;
+    bottom: -150px;
     left: auto;
     width: 350px;
     height: 350px;
