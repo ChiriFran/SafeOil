@@ -1612,11 +1612,13 @@ label {
   cursor: pointer;
   height: 4rem;
   transition: 0.5s;
+  border: 3px solid var(--main-color-aqua-green);
 }
 
 .submit-button:hover {
   background-color: var(--main-color-aqua-green);
   color: var(--main-color-black);
+  border: 3px solid var(--main-color-black);
   transition: 0.4s;
 }
 
