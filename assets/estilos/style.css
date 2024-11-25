@@ -1854,6 +1854,7 @@ label {
   #leftHero p,
   #rightHero p {
     padding: 0 5%;
+    font-size: 1rem;
   }
 
   #openModal {
@@ -1929,6 +1930,7 @@ label {
   }
 
   #mobileHero p {
+    font-size: 1rem;
     line-height: 1.5;
     font-weight: 900;
     text-shadow:
