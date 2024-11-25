@@ -1883,7 +1883,6 @@ label {
 
   #modalFormContainer span {
     background-color: transparent;
-    color: var(--main-color-yellow);
     margin: 1rem 0;
   }
 
@@ -1905,7 +1904,6 @@ label {
 
   #modalFormContainer input {
     border: none;
-    background-color: var(--main-color-yellow);
     color: var(--main-color-black);
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
