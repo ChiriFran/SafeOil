@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const elementsToObserve = [
-    { id: "#leftHero", animationClass: "animate-left" },
-    { id: "#rightHero", animationClass: "animate-right" },
-    { id: "#mobileHero", animationClass: "animate-mobile" },
     { id: "#filosofiaText", animationClass: "animate-filosofia" },
     { id: "#infoEmail", animationClass: "animate-info" },
     { id: "#infoPhone", animationClass: "animate-info" },
@@ -12,17 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const valoresIcons = document.querySelectorAll(".valoresIcon");
 
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.3,
-  };
-
-  const iconObserverOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.6,
-  };
+  const observerOptions = { root: null, rootMargin: "0px", threshold: 0.3 };
+  const iconObserverOptions = { root: null, rootMargin: "0px", threshold: 0.6 };
 
   const observerCallback = (entries, observer) => {
     entries.forEach((entry) => {
@@ -81,14 +69,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
   checkVisibilityOnLoad();
 
-  // Toggle button and visibility logic
+  const heroContent = document.querySelector(".hero-content");
+  const imgLeft = document.querySelector(".img-left");
+  const imgRight = document.querySelector(".img-right");
+
+  if (!imgLeft || !imgRight || !heroContent) return;
+
+  // Estado inicial: fuera de pantalla
+  imgLeft.classList.add("enter-from-left");
+  imgRight.classList.add("enter-from-right");
+
+  const showHeroImages = () => {
+    imgLeft.classList.remove("enter-from-left", "slide-out-left");
+    imgRight.classList.remove("enter-from-right", "slide-out-right");
+
+    requestAnimationFrame(() => {
+      imgLeft.classList.add("visible-left");
+      imgRight.classList.add("visible-right");
+    });
+  };
+
+  const hideHeroImages = () => {
+    imgLeft.classList.remove("visible-left");
+    imgRight.classList.remove("visible-right");
+
+    imgLeft.classList.add("slide-out-left");
+    imgRight.classList.add("slide-out-right");
+  };
+
+  const isHeroVisible = () => {
+    const rect = heroContent.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  };
+
+  // Si está visible al cargar, mostrar
+  if (isHeroVisible()) {
+    showHeroImages();
+  }
+
+  // Observer para manejar scroll
+  const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        showHeroImages();
+      } else {
+        hideHeroImages();
+      }
+    });
+  }, { threshold: 0.1 });
+
+  heroObserver.observe(heroContent);
+
+  /* === Animar background-size de serviciosGrid::before === */
+  const serviciosGrid = document.querySelector("#serviciosGrid");
+  const serviciosGridObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        serviciosGrid.classList.remove("small-bg");
+        serviciosGrid.classList.add("normal-bg");
+      } else {
+        serviciosGrid.classList.remove("normal-bg");
+        serviciosGrid.classList.add("small-bg");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (serviciosGrid) {
+    serviciosGrid.classList.add("small-bg"); // Estado inicial reducido
+    serviciosGridObserver.observe(serviciosGrid);
+  }
+
+  /* Toggle button and visibility logic */
   const serviciosItems = document.querySelectorAll(".serviciosItem");
 
-  const serviciosObserverOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1,
-  };
+  const serviciosObserverOptions = { root: null, rootMargin: "0px", threshold: 1 };
 
   const serviciosObserverCallback = (entries, observer) => {
     entries.forEach((entry) => {
@@ -114,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Handling manual toggle
+  /* Handling manual toggle */
   const handleToggle = (event) => {
     const button = event.target;
     const targetSelector = button.dataset.toggleTarget;
@@ -136,47 +190,9 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", handleToggle);
   });
 
-  // New code for #lubricantes24 and #lubricantes29 animations
-  const lubricantesContainer = document.querySelector("#lubricantesContainer");
-
-  const containerObserverOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.5,
-  };
-
-  const containerObserverCallback = (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const lubricantes24 = document.querySelector("#lubricantes24");
-        const lubricantes29 = document.querySelector("#lubricantes29");
-
-        if (lubricantes24) {
-          lubricantes24.classList.add("animate-lubricantes");
-        }
-
-        if (lubricantes29) {
-          lubricantes29.classList.add("animate-lubricantes-29");
-        }
-
-        observer.unobserve(entry.target);
-      }
-    });
-  };
-
-  const containerObserver = new IntersectionObserver(containerObserverCallback, containerObserverOptions);
-
-  if (lubricantesContainer) {
-    containerObserver.observe(lubricantesContainer);
-  }
-
-  // Nuevo código para animar blockchainItems
+  /* Animar blockchainItems */
   const blockchainItems = document.querySelectorAll(".blockchainItem");
-  const blockchainObserverOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.8,
-  };
+  const blockchainObserverOptions = { root: null, rootMargin: "0px", threshold: 0.8 };
 
   const blockchainObserverCallback = (entries, observer) => {
     entries.forEach((entry, index) => {
@@ -185,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
           blockchainItem.classList.add("animate-blockchain");
-        }, index * 250); // 200ms de delay entre cada uno
+        }, index * 250);
 
         observer.unobserve(blockchainItem);
       }
@@ -200,3 +216,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+

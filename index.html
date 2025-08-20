@@ -46,360 +46,236 @@
     <nav id="navMenu" aria-label="Barra de navegación">
       <div id="closeNavIcon" class="bi bi-x-lg"></div>
       <ul>
-        <li><a href="#servicios" title="Servicios">Servicios</a></li>
+        <li><a href="#serviciosTitleContainer" title="Servicios">Servicios</a></li>
         <li><a href="#valores" title="Valores">Nosotros</a></li>
-        <li><a href="#contactoTitle" title="Contacto">Contacto</a></li>
+        <li><a href="./reciclaje.html" title="reciclaje">Reconversion</a></li>
+        <li><a href="#contactoContainer" title="Contacto">Contacto</a></li>
       </ul>
     </nav>
     <div id="navIcon" class="bi bi-list"></div>
   </header>
 
   <section id="heroContainer">
-    <div id="leftHero">
-      <p>
-        En un compromiso con la economía circular y el reciclaje, aprovechando al máximo los recursos de nuestro
-        planeta.</p>
+    <div class="hero-content">
+      <!-- Imagen izquierda debajo del texto -->
+      <img src="./assets/hero/hero-2.svg" alt="Decoración izquierda" class="img-left">
 
-    </div>
-    <div id="centerHero">
-      <h1>
-        revolucionando la gestión de aceites lubricantes usados con tecnología blockchain
+      <!-- Texto -->
+      <h1 class="hero-title">
+        <span class="bold colorGreen">REVOLUCIONANDO</span>
+        <span class="middle-text">la gestión de aceites lubricantes usados con tecnología</span>
+        <span class="colorYellow">BLOCKCHAIN</span>
       </h1>
 
-      <button id="openModal">
-        <h2>
-          ¡Unete a nuestro sistema de <br> TRAZABILIDAD EN BLOCKCHAIN!
-        </h2>
-      </button>
+      <!-- Botones -->
+      <div class="hero-buttons">
+        <span class="btn-secondary">¿Quieres saber como funciona?</span>
+        <button id="openModal" class="btn-primary">Contacto</button>
+      </div>
 
-      <div class="modal-overlay" id="modalOverlay" aria-labelledby="modalTitle" aria-hidden="true">
-        <div class="modal-content">
-          <div id="modalFormContainer">
-            <span>Nos encantaría escuchar de ti.</span>
-            <span>Por favor, completa el formulario o llámanos para resolver tus dudas.</span>
+      <!-- Imagen derecha encima del texto -->
+      <img src="./assets/hero/hero-2.svg" alt="Decoración derecha" class="img-right">
+    </div>
 
-            <div id="modalContactoMedios">
-              <div class="contactoMediosItem">
-                <img src="./assets/icons/email.svg" alt="Email" title="Email" class="contactoMediosImg">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=safeoil.redes@gmail.com" target="_blank"
-                  title="Email">
-                  <p>contacto@safeoil.com</p>
-                </a>
-              </div>
-              <div class="contactoMediosItem">
-                <img src="./assets/icons/phone.svg" alt="Tel" title="Tel" class="contactoMediosImg">
-                <a href="tel:+5493516549350" target="_blank" rel="nofollow" class="phoneNumberModal" title="Tel">
-                  <p>+54 9 351 654-9350</p>
-                </a>
-              </div>
+    <!-- Modal existente -->
+    <div class="modal-overlay" id="modalOverlay" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-content">
+        <div id="modalFormContainer">
+          <span id="modalTitle">Nos encantaría escuchar de ti.</span>
+          <span id="modalSubtitle">Por favor, completa el formulario o llámanos para resolver tus dudas.</span>
+
+          <div id="modalContactoMedios">
+            <div class="contactoMediosItem">
+              <img src="./assets/icons/email.svg" alt="Email" class="contactoMediosImg">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=soporte@safeoil.com.ar" target="_blank">
+                <p>soporte@safeoil.com.ar</p>
+              </a>
             </div>
-
-            <form id="modalForm">
-              <label for="modalName">Nombre:</label>
-              <input type="text" id="modalName" name="modalName" class="input-field" autocomplete="given-name" required>
-
-              <label for="modalEmail">Email:</label>
-              <input type="email" id="modalEmail" name="modalEmail" class="input-field" autocomplete="email" required>
-
-              <label for="modalMessage">Mensaje:</label>
-              <input type="text" id="modalMessage" name="modalMessage" class="textarea-field" required>
-
-              <button id="submitButtonModal" class="submit-button" type="submit">Enviar</button>
-            </form>
-
-            <div class="modalContacto">
-              <a href="https://www.instagram.com/safeoil.aceiteslubricantes/" target="_blank" rel="nofollow">
-                <img src="./assets/icons/instagram.svg" alt="Instagram" title="Instagram" class="modalRedesImg">
-              </a>
-              <a href="https://www.facebook.com/profile.php?id=61564787620037" target="_blank" rel="nofollow">
-                <img src="./assets/icons/facebook.svg" alt="Facebook" title="Facebook" class="modalRedesImg">
-              </a>
-              <a href="https://x.com/SafeOil_arg" target="_blank" rel="nofollow">
-                <img src="./assets/icons/twitter.svg" alt="Twitter/X" title="X / Twitter" class="modalRedesImg">
-              </a>
-              <a href="https://www.linkedin.com/in/safe-oil-851969325/" target="_blank" rel="nofollow">
-                <img src="./assets/icons/linkedin.svg" alt="Linkedin" title="Linkedin" class="modalRedesImg">
+            <div class="contactoMediosItem">
+              <img src="./assets/icons/phone.svg" alt="Tel" class="contactoMediosImg">
+              <a href="https://wa.me/5493516549350" target="_blank">
+                <p>+54 9 351 654-9350</p>
               </a>
             </div>
           </div>
+
+          <form id="modalForm" action="https://formsubmit.co/a5e55c9e986810ccdd4df5da79f28bdc " method="POST">
+            <label for="modalName">Nombre:</label>
+            <input type="text" id="modalName" name="name" required>
+
+            <label for="modalEmail">Email:</label>
+            <input type="email" id="modalEmail" name="email" required>
+
+            <label for="modalMessage">Mensaje:</label>
+            <textarea id="modalMessage" name="message" required></textarea>
+
+            <button id="submitButtonModal" class="submit-button" type="submit">Enviar</button>
+
+            <!-- Redirección después del envío -->
+            <input type="hidden" name="_next" value="https://safeoil.com.ar/index.html">
+          </form>
+
+          <div class="modalContacto">
+            <a href="https://www.instagram.com/safeoil.aceiteslubricantes/" target="_blank"><img
+                src="./assets/icons/instagram.svg"></a>
+            <a href="https://www.facebook.com/profile.php?id=61564787620037" target="_blank"><img
+                src="./assets/icons/facebook.svg"></a>
+            <a href="https://x.com/SafeOil_arg" target="_blank"><img src="./assets/icons/twitter.svg"></a>
+            <a href="https://www.linkedin.com/in/safe-oil-851969325/" target="_blank"><img
+                src="./assets/icons/linkedin.svg"></a>
+          </div>
         </div>
       </div>
-      <p id="centerHeroFooter">
-        Recicle su aceite usado y conviértalo en un recurso que impulsa la
-        economía circular y protege el medio ambiente.
-      </p>
     </div>
-    <div id="rightHero">
-      <p>
-        Cifrado de datos de extremo a extremo, desde produccion hasta
-        reintegracion al circuito productivo.
-      </p>
-    </div>
-    <div id="mobileHero">
-      <p>Se estima que para el período 2024-2029, una tasa anual de crecimiento mundial del consumo de lubricantes de
-        3,56%, alcanzando 52,36 mil millones de litros.</p>
-    </div>
-  </section>
-
-
-  <div class="problematicaReciclaje">
-    <p>Cada año, miles de litros de aceites lubricantes usados se convierten en residuos peligrosos, contaminando el
-      suelo, el agua y el aire cuando no son gestionados adecuadamente.</p>
-  </div>
-
-  <section id="estadisticasContainer">
-    <div class="counters">
-      <div>
-        <div class="counter">
-          <p class="counterNumber"><span data-count="18">0</span></p>
-          <p class="counterText">Toneladas de residuos generadas ARG en 2023</p>
-        </div>
-        <div class="counter">
-          <p class="counterNumber"><span data-count="93">0</span>%</p>
-          <p class="counterText">Fue reciclado de maneras erroneas</p>
-        </div>
-        <div class="counter">
-          <p class="counterNumber"><span data-count="400">0</span>Mil</p>
-          <p class="counterText">Compañías que generan residuos industriales en el país</p>
-        </div>
-        <div class="counter">
-          <p class="counterNumber"><span data-count="254">0</span>Mil m³</p>
-          <p class="counterText">De aceites lurbicantes se comercializaron en ARG en 2023.</p>
-        </div>
-      </div>
-  </section>
-
-  <div class="problematicaReciclaje">
-    <p> Estos residuos, que contienen sustancias tóxicas y metales pesados,
-      tienen un impacto devastador en el medio ambiente y representan un riesgo para la salud humana.</p>
-  </div>
-
-  <section id="estadisticasMercadoLubricantes">
-    <div id="lubricantesContainer">
-      <div class="lubricantesSides">
-        <p>A nivel mundial la tasa de crecimiento anual compuesto es de 3,52%.</p>
-      </div>
-      <div class="lubricantesMain">
-        <p id="graficoTitle">Mercado mundial de lubricantes<br>(Millones de m³)</p>
-        <div id="lubricantes24">44.05</div>
-        <div id="lubricantes29">52.36</div>
-      </div>
-      <div class="lubricantesSides">
-        <p>En Argentina, el mercado prevé alcanzar 260 millones de litros para el año 2024.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="problematicaReciclaje">
-    <p>La regeneración de aceites lubricantes surge como una respuesta innovadora y necesaria para resolver este
-      problema. En lugar de ver los aceites usados como desechos sin valor, la economía circular propone cerrar el ciclo
-      a través de la reutilización. Safe Oil respaldado en tecnología blockchain se ocupa de trazar cada una de las
-      etapas que transita el aceite lubricante desde que es insertado en el mercado hasta que es regenerado y convertido
-      en una nueva base lubricante.</p>
-  </div>
-
-  <div id="econCircularIlustracion">
-    <div id="econCircularImgContainer">
-      <img src="./assets/ilustraciones/econ-circular/econ-circular-desktop.svg" alt="Economia circular ilustracion"
-        title="Grafico Econ Circular" loading="lazy" id="econCircularImg">
-    </div>
-  </div>
-
-
-  <section id="filosofia">
-    <p id="filosofiaText">
-      Estamos comprometidos con la economía circular y la adopción de
-      prácticas sustentables combatiendo la reducción de la huella ambiental
-      fomentando un futuro más sostenible.
-    </p>
-    <div id="filosofiaVideoContainer">
-      <video id="filosofiaVideo" src="./assets/video/sostenibilidad.mp4" autoplay muted playsinline loop loading="lazy"
-        title="Sostenibilidad Safe Oil"></video>
-
-    </div>
-    <img id="filosofiaVideoLogo" src="./assets/logo/logo-huella-amarillo.webp" alt="Safe Oil" title="Safe Oil">
   </section>
 
   <article id="servicios">
     <div id="serviciosTitleContainer">
-      <h2 id="serviciosTitle">Safe Oil es una plataforma que ofrece seguimiento y control mediante tecnología blockchain
-        para los aceites lubricantes que hayan cumplido la función para la cual fueron diseñados, evitando de esta
-        manera que sean descartados como residuos peligrosos.
+      <h2 id="serviciosTitle">Safe Oil garantiza, mediante blockchain, el control y seguimiento de los aceites
+        lubricantes usados, promoviendo su tratamiento y disposición segura.
       </h2>
     </div>
     <div id="serviciosTextContainer">
-      <p class="serviciosText">Nuestro sistema de trazabilidad basado en blockchain proporciona una red segura para el
-        seguimiento y control del tratamiento de aceites lubricantes usados. Aseguramos el manejo adecuado de los
-        residuos, previniendo fraudes y garantizando un tratamiento correcto y transparente.</p>
-      <p class="serviciosText">Los aceites son monitoreados desde su producción hasta su disposición final. Esta
-        recopilación de datos garantiza una visión clara a lo largo de la cadena de suministro, facilitando la detección
-        de irregularidades y optimizando el proceso de re-refinación.</p>
-      <p class="serviciosText">Garantizamos un control riguroso y transparente del tratamiento de aceites lubricantes
-        usados. Gracias a la tecnología blockchain, ofrecemos un monitoreo continuo en todas las etapas del proceso,
-        optimizando la eficiencia y asegurando el cumplimiento con las normativas legales y ambientales.</p>
+      <p class="serviciosText">Nuestro sistema con blockchain asegura el control de aceites usados, evitando fraudes y
+        garantizando un tratamiento transparente.</p>
+      <p class="serviciosText">Los aceites se monitorean desde la producción hasta el destino final, dando una visión
+        clara y optimizando la re-refinación.</p>
+      <p class="serviciosText">Con tecnología blockchain garantizamos control transparente en todo el proceso, mejorando
+        la eficiencia y cumpliendo normas.</p>
     </div>
 
     <section id="serviciosGrid">
       <div class="serviciosItem backgroundImgLogistica">
-        <img src="./assets/icons/recojida.svg" alt="Recogida Icon" title="Recogida">
-        <h3>Logistica</h3>
-        <p class="serviciosItemsText">El control sobre la manipulación de residuos es un elemento clave para el
-          tratamiento de residuos peligrosos. Es por ello que se lleva un riguroso control en cuanto a la manipulación y
-          transporte de estos productos.</p>
+        <div class="serviciosContent">
+          <img src="./assets/icons/recojida.svg" alt="Recogida Icon" title="Recogida" loading="lazy">
+          <h3>Logistica</h3>
+        </div>
+        <div class="serviciosOverlay">
+          <p>El control en la manipulación y transporte de residuos garantiza un manejo seguro de los productos
+            peligrosos.</p>
+        </div>
       </div>
-      <div class="serviciosItem backgroundImgRefinacion">
-        <img src="./assets/icons/tratamiento.svg" alt="Tratamiento Icon" title="Tratamiento">
-        <h3>Re-refinación</h3>
-        <p class="serviciosItemsText">En el proceso de re-refinación, los aceites usados son revalorizados y vuelven a
-          ser bases lubricantes con óptimas propiedades de funcionamiento. A través de su correcta trazabilidad podremos
-          garantizar su correcta gestión y procedencia.</p>
-      </div>
-      <div class="serviciosItem backgroundImgReintegracion">
-        <img src="./assets/icons/gestion.svg" alt="Reintegracion Icon" title="Reintegracion">
-        <h3>Reintegración</h3>
-        <p class="serviciosItemsText">En su reinserción al circuito productivo, nuestro sistema de trazabilidad toma
-          mayor relevancia, ya que permite asegurar de manera transparente y segura toda la información de los
-          productos.</p>
-      </div>
-    </section>
 
-    <div id="reRefinacion">
-      <img id="reRefinacionImg" src="./assets/ilustraciones/re-refinacion.jpg" alt="Oil factory / Desingned by Freepik"
-        title="Planta de re-refinacion" loading="lazy">
-      <div id="reRefinacionTextContainer">
-        <span>Re-refinación de Aceites Lubricantes Usados: Una Solución Sostenible</span>
-        <p>La <strong class="reRefinacionKeywords">re-refinación</strong> de aceites minerales usados es un proceso
-          avanzado que, similar al refinamiento del petróleo
-          crudo, permite recuperar aceites base y fuel oil. Este proceso es altamente <strong
-            class="reRefinacionKeywords">eficiente y respetuoso</strong> con el medio ambiente, eliminando las impurezas
-          sin generar residuos perjudiciales. <br><br>
-
-          A nivel global, la re-refinación ha demostrado ser <strong class="reRefinacionKeywords">exitosa</strong>, no
-          solo en términos financieros, sino también en
-          su <strong class="reRefinacionKeywords"> impacto ambiental positivo</strong>. En Argentina, aunque la
-          recuperación de aceites minerales no es nueva, la
-          re-refinación para la producción de nuevos productos marca un avance significativo. <br><br>
-
-          Este proceso no solo ofrece una solución eficaz para la gestión de residuos peligrosos, sino que también
-          representa una oportunidad única para alinear los intereses de inversión privada y las políticas
-          gubernamentales en torno a la <strong class="reRefinacionKeywords">sostenibilidad</strong>. Con la expansión
-          de las
-          operaciones de recolección de aceites, se promueve una mayor concienciación sobre las mejores prácticas para
-          la disposición de residuos, contribuyendo así a un
-          futuro más limpio y sostenible.</p>
-      </div>
-    </div>
-
-    <div id="repContainer">
-      <div id="repTextContainer">
-        <p id="repTitle">
-          Responsabilidad Extendida del Productor: Refinamos aceites lubricantes de manera sostenible,
-          alineados con los principios de la REP.
-        </p>
-        <p id="repText">
-          Conoce más acerca de este esquema para la Gestión Integral de Residuos.
-        </p>
-      </div>
-      <div id="repImgContainer">
-        <div id="slider">
-          <div class="slider-track">
-            <img class="repImg" src="./assets/ilustraciones/rep/rep-1.png" alt="">
-            <img class="repImg" src="./assets/ilustraciones/rep/rep-2.png" alt="">
-            <img class="repImg" src="./assets/ilustraciones/rep/rep-3.png" alt="">
-            <img class="repImg" src="./assets/ilustraciones/rep/rep-4.png" alt="">
-            <img class="repImg" src="./assets/ilustraciones/rep/rep-5.png" alt="">
+      <div class="central-column">
+        <div class="serviciosItem backgroundImgRefinacion">
+          <div class="serviciosContent">
+            <img src="./assets/icons/tratamiento.svg" alt="Tratamiento Icon" title="Tratamiento" loading="lazy">
+            <h3>Re-refinación</h3>
+          </div>
+          <div class="serviciosOverlay">
+            <p>Los aceites usados se revalorizan como bases lubricantes, asegurando su correcta gestión y trazabilidad.
+            </p>
           </div>
         </div>
-        <div id="dotsContainer"></div>
-      </div>
-    </div>
 
+        <div class="serviciosItem backgroundImgEnvases">
+          <div class="serviciosContent">
+            <img src="./assets/icons/gestion.svg" alt="Reintegracion Icon" title="Envases Ind" loading="lazy">
+            <h3>Envases Ind</h3>
+          </div>
+          <div class="serviciosOverlay">
+            <p>Los envases industriales se limpian, reutilizan y reintegran al circuito productivo con trazabilidad
+              transparente.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="serviciosItem backgroundImgReintegracion">
+        <div class="serviciosContent">
+          <img src="./assets/icons/reinsercion.svg" alt="Reintegracion Icon" title="Reintegracion" loading="lazy">
+          <h3>Reintegración</h3>
+        </div>
+        <div class="serviciosOverlay">
+          <p>Al reintegrarse al circuito productivo, la trazabilidad asegura de forma transparente la información de los
+            productos.</p>
+        </div>
+      </div>
+    </section>
 
     <section id="blockchainInfoContainer">
       <div id="blockchainInfoTitleContainer">
-        <p>Blockchain: La tecnología que revoluciona el control y trazabilidad en el reciclaje de aceites usados</p>
+        <p>¿Por qué usar blockchain en la trazabilidad?</p>
       </div>
       <div id="blockchainInfoTextContainer">
         <div class="blockchainInfoText">
-          <p> La blockchain o cadena de bloques es una red de operaciones, descentralizada y anónima, que genera una
-            base de datos compartida entre los usuarios, quienes verifican y comparten todos los datos de la red.</p>
-        </div>
-        <div class="blockchainInfoText">
-          <p>Cada bloque posee un Hash o identificación única y la información del bloque anterior, formando una
-            cadena de bloques de información autoprotegida y validada por todos.</p>
-        </div>
-        <div class="blockchainInfoText">
-          <p> Este enfoque garantiza máxima seguridad ya que sus datos son inmutables e
-            incorruptibles, garantizando el control sobre cada proceso y etapa en el reciclaje de los aceites.</p>
+          <p>
+            Porque ofrece un registro transparente, seguro e inalterable de cada etapa, garantizando el control en la
+            gestión de aceites usados y en la limpieza y reutilización de envases industriales, desde la recolección
+            hasta su reintegración al circuito productivo.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="blockchainGridContainer">
-      <div class="blockchainItem">
-        <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/usuario-config.svg" alt="Usuario" title="Usuario">
+    <section id="blockchainTimelineContainer">
+      <!-- Contenido texto -->
+      <div class="timeline-content">
+        <h2 id="timeline-title">Etapa 1</h2>
+        <p id="timeline-desc">El usuario introduce la información detallada del producto para iniciar el proceso de
+          registro en la blockchain.</p>
+      </div>
+      <!-- Barra de etapas -->
+      <div class="timeline-icons">
+        <div class="timeline-step active" data-title="Etapa 1" data-desc="El usuario introduce la información detallada del producto para iniciar el proceso de
+          registro en la blockchain.">
+          <span class="step-number">01</span>
+          <img src="./assets/blockchain/usuario-config.svg" alt="Usuario">
+          <p>Registro</p>
         </div>
-        <div class="blockchainItemDescription">
-          <span>01</span>
-          <p>Registro de información del producto en la red.</p>
+        <div class="timeline-step" data-title="Etapa 2"
+          data-desc="La información registrada se agrupa y se encapsula en un nuevo bloque dentro de la red.">
+          <span class="step-number">02</span>
+          <img src="./assets/blockchain/cubo.svg" alt="Bloque">
+          <p>Bloque</p>
+        </div>
+        <div class="timeline-step" data-title="Etapa 3"
+          data-desc="El bloque creado se transmite a todos los nodos participantes de la blockchain para su verificación.">
+          <span class="step-number">03</span>
+          <img src="./assets/blockchain/distribucion.svg" alt="Transmisión">
+          <p>Transmisión</p>
+        </div>
+        <div class="timeline-step" data-title="Etapa 4"
+          data-desc="Los nodos de la red validan que la información del bloque sea legítima y no haya sido alterada.">
+          <span class="step-number">04</span>
+          <img src="./assets/blockchain/distribucion-aprobada.svg" alt="Validación">
+          <p>Validación</p>
+        </div>
+        <div class="timeline-step" data-title="Etapa 5"
+          data-desc="Una vez validado, el bloque se añade de forma permanente e inmutable a la blockchain.">
+          <span class="step-number">05</span>
+          <img src="./assets/blockchain/bloque-añadido.svg" alt="Añadido">
+          <p>Añadido</p>
+        </div>
+        <div class="timeline-step" data-title="Etapa 6"
+          data-desc="La información del producto queda disponible en la red, accesible para su consulta y trazabilidad.">
+          <span class="step-number">06</span>
+          <img src="./assets/blockchain/informacion-lista.svg" alt="Lista">
+          <p>Disponible</p>
         </div>
       </div>
-
-      <div class="blockchainItem">
-        <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/cubo.svg" alt="Bloque de información" title="Bloque de información">
-        </div>
-        <div class="blockchainItemDescription">
-          <span>02</span>
-          <p>La información es empaquetada en forma de bloque.</p>
-        </div>
-      </div>
-
-      <div class="blockchainItem">
-        <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/distribucion.svg" alt="Transmisión de información"
-            title="Transmisión de información">
-        </div>
-        <div class="blockchainItemDescription">
-          <span>03</span>
-          <p>El bloque es transmitido por toda la red.</p>
-        </div>
-      </div>
-
-      <div class="blockchainItem">
-        <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/distribucion-aprobada.svg" alt="Recepción y validación"
-            title="Recepción y validación">
-        </div>
-        <div class="blockchainItemDescription">
-          <span>04</span>
-          <p>Todos los nodos reciben y validan la información.</p>
-        </div>
-      </div>
-
-      <div class="blockchainItem">
-        <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/bloque-añadido.svg" alt="Bloque añadido" title="Bloque añadido">
-        </div>
-        <div class="blockchainItemDescription">
-          <span>05</span>
-          <p>El bloque se añade a la cadena de bloques.</p>
-        </div>
-      </div>
-
-      <div class="blockchainItem">
-        <div class="blockchainItemImgContainer">
-          <img src="./assets/blockchain/informacion-lista.svg" alt="Información lista" title="Información lista">
-        </div>
-        <div class="blockchainItemDescription">
-          <span>06</span>
-          <p> La información está disponible para su consulta. </p>
-        </div>
-      </div>
-
     </section>
   </article>
+
+  <div class="separador"></div>
+
+  <section class="reciclaje-section">
+    <div class="reciclaje-container">
+      <div class="reciclaje-texto">
+        <h2>Recuperacion y sustentabilidad, nuestro<span class="colorGreenReciclaje"><br>compromiso</span></h2>
+        <p>
+          Conoce más sobre la problemática de los residuos y cómo puedes ser parte de la solución.
+        </p>
+        <a href="./reciclaje.html" class="reciclaje-cta" target="_blank">Conocer más</a>
+      </div>
+
+      <div class="reciclaje-video">
+        <video autoplay muted loop playsinline>
+          <source src="./assets/video/sostenibilidad.mp4" type="video/mp4" />
+          Tu navegador no soporta video.
+        </video>
+      </div>
+    </div>
+  </section>
 
   <section id="valores">
     <h2 id="valoresTitle">Nosotros</h2>
@@ -408,23 +284,24 @@
     </p>
     <div id="valoresGrid">
       <div class="valoresItem">
-        <img src="./assets/ilustraciones/candado-celeste.svg" alt="Seguro" title="Seguro" class="valoresIcon" />
+        <img src="./assets/ilustraciones/candado-celeste.svg" alt="Seguro" title="Seguro" class="valoresIcon"
+          loading="lazy" />
         <h3>Seguro</h3>
         <p>
           Contamos con el respaldo de la blockchain para garantizar máxima seguridad.
         </p>
       </div>
       <div class="valoresItem">
-        <img src="./assets/ilustraciones/huella-pie-celeste.svg" alt="Sostenible" title="Sostenible"
-          class="valoresIcon" />
+        <img src="./assets/ilustraciones/huella-pie-celeste.svg" alt="Sostenible" title="Sostenible" class="valoresIcon"
+          loading="lazy" />
         <h3>Sostenible</h3>
         <p>
           Sostenibilidad es satisfacer las necesidades del presente sin comprometer el futuro.
         </p>
       </div>
       <div class="valoresItem">
-        <img src="./assets/ilustraciones/nube-celeste.svg" alt="Transparente" title="Transparente"
-          class="valoresIcon" />
+        <img src="./assets/ilustraciones/nube-celeste.svg" alt="Transparente" title="Transparente" class="valoresIcon"
+          loading="lazy" />
         <h3>Transparente</h3>
         <p>
           La tecnología blockchain garantiza transparencia en la sostenibilidad de nuestras tareas.
@@ -433,50 +310,49 @@
     </div>
   </section>
 
+  <div class="separador"></div>
+
   <section id="contactoContainer">
     <h3 id="contactoTitle">Contacto</h3>
-    <p id="contactoText">Nos encantaría escuchar de ti. Por favor, completa el formulario o llámanos para resolver tus
-      dudas.</p>
+    <p id="contactoText">Nos encantaría saber de vos. Elegí la forma más cómoda para comunicarte con nosotros.</p>
+
     <div id="contactoInfo">
-      <div id="infoEmail">
-        <h4>Email:</h4>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=safeoil.redes@gmail.com" target="_blank" title="Email">
-          <p>contacto@safeoil.com</p>
-        </a>
-      </div>
-      <div id="infoPhone">
-        <h4>Telefono:</h4>
-        <a href="tel:+5493516549350" target="_blank" rel="nofollow" title="Tel">
-          <p>+54 9 351 654-9350</p>
-        </a>
-      </div>
-      <div id="infoAddress">
-        <h4>Ubicacion:</h4>
-        <p>Argentina</p>
-      </div>
-    </div>
-    <div id="contactoForm">
-      <span id="formTitle">Formulario de contacto</span>
-      <div id="main-container">
-        <div id="form-container" class="container">
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="footerName"> Nombre:</label>
-              <input type="text" id="footerName" name="footerName" class="input-field" autocomplete="given-name"
-                required>
-            </div>
-            <div class="form-group">
-              <label for="footerEmail">Email:</label>
-              <input type="text" id="footerEmail" name="footerEmail" class="input-field" autocomplete="email" required>
-            </div>
-            <div class="form-group">
-              <label for="footerMessage">Mensaje:</label>
-              <input type="text" id="footerMessage" name="footerMessage" class="textarea-field" required>
-            </div>
-            <button id="submitButton" class="submit-button" type="submit">Enviar</button>
-          </form>
+
+      <div class="infoItem">
+        <div class="icon" id="iconEmail"></div>
+        <div class="infoContent">
+          <h4>Email:</h4>
+          <p>Puedes escribirnos a la direccion que desees</p>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=comercial@safeoil.com.ar" target="_blank">
+            <button class="contactBtn">Comunicarse por: <br><span
+                class="correoDeContacto">comercial@safeoil.com.ar</span></button>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=soporte@safeoil.com.ar" target="_blank">
+            <button class="contactBtn">Comunicarse por:<br> <span
+                class="correoDeContacto">soporte@safeoil.com.ar</span></button>
+          </a>
         </div>
       </div>
+
+      <div class="infoItem">
+        <div class="icon" id="iconPhone"></div>
+        <div class="infoContent">
+          <h4>Teléfono:</h4>
+          <p>+54 9 351 654-9350 <br><br></p>
+          <a href="https://wa.me/5493516549350" target="_blank">
+            <button class="contactBtn">Comunicarse por: <br><span class="correoDeContacto">Mensaje</span></button>
+          </a>
+          <a href="tel:+5493516549350">
+            <button class="contactBtn">
+              Comunicarse por: <br>
+              <span class="correoDeContacto">Llamada</span>
+            </button>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <footer id="footerContainer">
@@ -492,41 +368,38 @@
           <a href="#valores" title="Nosotros">Nosotros</a>
         </li>
         <li>
-          <a href="#contactoTitle" title="Contacto">Contacto</a>
+          <a href="#contactoContainer" title="Contacto">Contacto</a>
         </li>
       </ul>
     </div>
     <div id="footerLogo">
       <a href="#logo">
-        <img src="./assets/isotipo/isotipo-negro.webp" alt="Safe Oil" title="Safe Oil">
+        <img src="./assets/isotipo/isotipo-normal.svg" alt="Safe Oil" title="Safe Oil">
       </a>
       <div id="footerRedes">
         <a href="https://www.instagram.com/safeoil.aceiteslubricantes/" target="_blank" rel="nofollow">
-          <img src="./assets/icons/instagram.svg" alt="Instagram" title="Instagram" class="footerRedesImg"
+          <img src="./assets/icons/instagram-grey.svg" alt="Instagram" title="Instagram" class="footerRedesImg"
             loading="lazy">
         </a>
         <a href="https://www.facebook.com/profile.php?id=61564787620037" target="_blank" rel="nofollow">
-          <img src="./assets/icons/facebook.svg" alt="Facebook" title="Facebook" class="footerRedesImg" loading="lazy">
-        </a>
-        <a href="https://x.com/SafeOil_arg" target="_blank" rel="nofollow">
-          <img src="./assets/icons/twitter.svg" alt="Twitter/X" title="Twitter / X" class="footerlRedesImg"
+          <img src="./assets/icons/facebook-grey.svg" alt="Facebook" title="Facebook" class="footerRedesImg"
             loading="lazy">
         </a>
         <a href="https://www.linkedin.com/in/safe-oil-851969325/" target="_blank" rel="nofollow">
-          <img src="./assets/icons/linkedin.svg" alt="Linkedin" title="Linkedin" class="footerRedesImg" loading="lazy">
+          <img src="./assets/icons/linkedin-grey.svg" alt="Linkedin" title="Linkedin" class="footerRedesImg"
+            loading="lazy">
         </a>
       </div>
     </div>
   </footer>
 
+  <script src="./assets/scripts/sticky.js"></script>
   <script src="./assets/scripts/nav.js"></script>
   <script src="./assets/scripts/ilustracionResponsive.js"></script>
+  <script src="./assets/scripts/blockchain.js"></script>
   <script src="./assets/scripts/scrollAnimation.js"></script>
   <script src="./assets/scripts/modal.js"></script>
-  <script src="./assets/scripts/counter.js"></script>
-  <script src="./assets/scripts//repSlider.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="./assets/scripts/emailJs.js"></script>
+  <script src="./assets/scripts/serviciosGridAnim.js"></script>
 </body>
 
 </html>

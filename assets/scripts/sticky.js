@@ -1,10 +1,7 @@
-window.addEventListener("scroll", function () {
-  const stickyNav = document.getElementById("stickyNav");
-  const hero = document.getElementById("hero");
+window.addEventListener("scroll", () => {
+  const header = document.getElementById("headerContainer");
+  const eightyVhInPx = window.innerHeight * 0.8; // 80vh en px
+  const shouldBeScrolled = window.scrollY > eightyVhInPx;
 
-  if (window.scrollY > hero.clientHeight) {
-    stickyNav.style.display = "flex";
-  } else {
-    stickyNav.style.display = "none";
-  }
+  header.classList.toggle("scrolled", shouldBeScrolled);
 });
