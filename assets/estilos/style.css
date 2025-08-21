@@ -706,7 +706,7 @@
   /* separación vertical entre los dos */
 }
 
-.central-column .serviciosItem{
+.central-column .serviciosItem {
   width: 300px;
   height: 300px;
 }
@@ -1981,6 +1981,10 @@ label {
 }
 
 @media screen and (max-width: 700px) {
+
+  .separadorIcon {
+    margin-top: 0;
+  }
 
   #headerContainer {
     padding: 1rem 1rem;
