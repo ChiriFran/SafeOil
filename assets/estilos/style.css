@@ -1007,7 +1007,7 @@
   height: auto;
   /* Cambiado para mantener la proporción de la imagen */
   mask-image: linear-gradient(to bottom, transparent 5%, black 30%, rgb(0, 0, 0) 70%, transparent 90%);
-  opacity: 0.2;
+  opacity: 0.7;
 }
 
 #reRefinacionTextContainer {
@@ -1031,7 +1031,7 @@
 #reRefinacionTextContainer h2 {
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--main-color-black);
+  color: var(--main-color-white);
   background-color: transparent;
 }
 
@@ -1039,8 +1039,7 @@
   font-size: 1.5rem;
   font-weight: 500;
   text-align: start;
-  color: var(--main-color-black);
-  border: 7px dashed var(--main-color-grey);
+  color: var(--main-color-white);
   background-color: transparent;
 }
 
